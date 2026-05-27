@@ -131,7 +131,9 @@ nav.scrolled { box-shadow:var(--shadow); }
 .hero {
   min-height:100vh; display:flex; align-items:center;
   position:relative; overflow:hidden; padding-top:80px;
-  background:linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 50%, #2A7A8C 100%);
+  background:
+    linear-gradient(135deg, rgba(11,45,54,0.85) 0%, rgba(13,61,71,0.80) 50%, rgba(10,46,54,0.88) 100%),
+    url('../images/portfolio/pergolas/arabesque-skylight-pergola.jpg') center/cover no-repeat;
 }
 .hero-pattern {
   position:absolute; inset:0; opacity:0.06;
