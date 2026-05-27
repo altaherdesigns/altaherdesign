@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://altaherdesign.com/sitemap.xml
+
+# Block crawling of assets
+Disallow: /assets/css/
+Disallow: /assets/js/
