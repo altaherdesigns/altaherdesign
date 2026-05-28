@@ -1,20 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+<urlset xmlns="http://www.sitemaps.org/schemas/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://altaherdesign.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://altaherdesign.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://altaherdesign.com/ar/"/>
-    <lastmod>2025-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://altaherdesign.com/"/>
   </url>
+
+  <url>
+    <loc>https://altaherdesign.com/services/</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://altaherdesign.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://altaherdesign.com/ar/services/"/>
+  </url>
+
+  <url>
+    <loc>https://altaherdesign.com/portfolio/</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://altaherdesign.com/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://altaherdesign.com/ar/portfolio/"/>
+  </url>
+
+  <url>
+    <loc>https://altaherdesign.com/about/</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://altaherdesign.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://altaherdesign.com/ar/about/"/>
+  </url>
+
+  <url>
+    <loc>https://altaherdesign.com/contact/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://altaherdesign.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://altaherdesign.com/ar/contact/"/>
+  </url>
+
   <url>
     <loc>https://altaherdesign.com/ar/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://altaherdesign.com/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://altaherdesign.com/ar/"/>
-    <lastmod>2025-05-26</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
+  <url>
+    <loc>https://altaherdesign.com/ar/services/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://altaherdesign.com/ar/portfolio/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://altaherdesign.com/ar/about/</loc>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://altaherdesign.com/ar/contact/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>

@@ -1,83 +1,88 @@
 /* ============================================
    AL TAHER GROUP — main.js
-   altaherdesign.com
+   Shared logic across all pages
    ============================================ */
 
 /* ---- NAV SCROLL ---- */
-const nav = document.querySelector('nav');
+const nav = document.querySelector('.nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-});
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
 
 /* ---- MOBILE NAV ---- */
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
-const mobileClose = document.getElementById('mobileClose');
-hamburger?.addEventListener('click', () => mobileNav.classList.add('open'));
-mobileClose?.addEventListener('click', () => mobileNav.classList.remove('open'));
-mobileNav?.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => mobileNav.classList.remove('open'));
+hamburger?.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
 });
-
-/* ---- LANGUAGE TOGGLE ---- */
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const lang = btn.dataset.lang;
-    if (lang === 'ar') window.location.href = '/ar/';
-    else window.location.href = '/';
+mobileNav?.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    document.body.style.overflow = '';
   });
 });
 
-/* ---- AUDIENCE TABS ---- */
+/* ---- LANGUAGE TOGGLE ----
+   Auto-detection runs inline in <head> before render to avoid flash.
+   This handles user-initiated switching. */
+document.querySelectorAll('[data-lang]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    localStorage.setItem('atg_lang', lang);
+    const current = window.location.pathname;
+    let target;
+    if (lang === 'ar') {
+      target = current.startsWith('/ar') ? current : '/ar' + current;
+    } else {
+      target = current.startsWith('/ar') ? current.replace(/^\/ar/, '') || '/' : current;
+    }
+    window.location.href = target;
+  });
+});
+
+/* ---- AUDIENCE TABS (services page) ---- */
 document.querySelectorAll('.audience-tab').forEach(tab => {
   tab.addEventListener('click', () => {
     const target = tab.dataset.tab;
-    document.querySelectorAll('.audience-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.audience-content').forEach(c => c.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(target)?.classList.add('active');
+    document.querySelectorAll('.audience-tab').forEach(t => t.classList.toggle('active', t === tab));
+    document.querySelectorAll('.audience-content').forEach(c => {
+      c.classList.toggle('active', c.dataset.tab === target);
+    });
   });
 });
 
-/* ---- PORTFOLIO FILTER + MASONRY ---- */
+/* ---- PORTFOLIO FILTER (portfolio page) ---- */
 const filterBtns = document.querySelectorAll('.filter-btn');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 const countEl = document.getElementById('portfolioCount');
 
-function updateCount() {
-  const visible = [...portfolioItems].filter(i => i.style.display !== 'none').length;
-  if (countEl) countEl.textContent = `${visible} projects`;
+function getVisible() {
+  return Array.from(portfolioItems).filter(i => i.style.display !== 'none');
 }
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
     const cat = btn.dataset.cat;
+    filterBtns.forEach(b => b.classList.toggle('active', b === btn));
+    let shown = 0;
     portfolioItems.forEach(item => {
-      if (cat === 'all' || item.dataset.cat === cat) {
-        item.style.display = '';
-        item.style.animation = 'fadeUp 0.3s ease both';
-      } else {
-        item.style.display = 'none';
-      }
+      const show = cat === 'all' || item.dataset.cat === cat;
+      item.style.display = show ? '' : 'none';
+      if (show) shown++;
     });
-    updateCount();
+    if (countEl) countEl.textContent = shown;
   });
 });
-updateCount();
 
 /* ---- LIGHTBOX ---- */
 const lightbox = document.getElementById('lightbox');
 const lbImg = document.getElementById('lbImg');
-const lbCat = document.getElementById('lbCat');
-const lbName = document.getElementById('lbName');
-let currentIdx = 0;
+const lbCaption = document.getElementById('lbCaption');
 let visibleItems = [];
-
-function getVisible() {
-  return [...portfolioItems].filter(i => i.style.display !== 'none');
-}
+let currentIdx = 0;
 
 function openLightbox(idx) {
   visibleItems = getVisible();
@@ -86,18 +91,16 @@ function openLightbox(idx) {
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-
-function showLbItem(idx) {
-  const item = visibleItems[idx];
-  if (!item) return;
-  lbImg.src = item.querySelector('img').src;
-  lbCat.textContent = item.dataset.cat;
-  lbName.textContent = item.dataset.name;
-}
-
 function closeLightbox() {
   lightbox.classList.remove('open');
   document.body.style.overflow = '';
+}
+function showLbItem(idx) {
+  const item = visibleItems[idx];
+  if (!item || !lbImg) return;
+  const img = item.querySelector('img');
+  lbImg.src = img.src;
+  if (lbCaption) lbCaption.textContent = item.dataset.caption || '';
 }
 
 portfolioItems.forEach((item, i) => {
@@ -119,46 +122,38 @@ document.getElementById('lbNext')?.addEventListener('click', () => {
 });
 lightbox?.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => {
-  if (!lightbox.classList.contains('open')) return;
+  if (!lightbox?.classList.contains('open')) return;
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowRight') { currentIdx=(currentIdx+1)%visibleItems.length; showLbItem(currentIdx); }
-  if (e.key === 'ArrowLeft') { currentIdx=(currentIdx-1+visibleItems.length)%visibleItems.length; showLbItem(currentIdx); }
+  if (e.key === 'ArrowLeft')  { currentIdx=(currentIdx-1+visibleItems.length)%visibleItems.length; showLbItem(currentIdx); }
 });
 
-/* ---- FLOATING WHATSAPP TOGGLE ---- */
+/* ---- FLOATING WHATSAPP ---- */
 const waToggle = document.getElementById('waToggle');
 const waPopup = document.getElementById('waPopup');
-waToggle?.addEventListener('click', () => waPopup.classList.toggle('open'));
+waToggle?.addEventListener('click', e => {
+  e.stopPropagation();
+  waPopup.classList.toggle('open');
+});
 document.addEventListener('click', e => {
   if (!e.target.closest('.wa-float')) waPopup?.classList.remove('open');
 });
 
-/* ---- SMOOTH SCROLL NAV ACTIVE ---- */
-const sections = document.querySelectorAll('section[id]');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    const id = e.target.id;
-    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-    if (link) link.style.color = e.isIntersecting ? 'var(--teal)' : '';
-  });
-}, { threshold: 0.3 });
-sections.forEach(s => observer.observe(s));
-
-/* ---- QUOTE FORM ---- */
+/* ---- QUOTE FORM (contact page) ---- */
 const quoteForm = document.getElementById('quoteForm');
 quoteForm?.addEventListener('submit', e => {
   e.preventDefault();
   const name = quoteForm.querySelector('[name="name"]').value;
   const service = quoteForm.querySelector('[name="service"]').value;
   const msg = quoteForm.querySelector('[name="message"]').value;
-  const phone = encodeURIComponent(
+  const text = encodeURIComponent(
     `Hello Al Taher Group, my name is ${name}. I'm interested in: ${service}. ${msg}`
   );
-  window.open(`https://wa.me/971506499697?text=${phone}`, '_blank');
+  window.open(`https://wa.me/971506499697?text=${text}`, '_blank');
 });
 
 /* ---- COUNTER ANIMATION ---- */
-function animateCounter(el, target, suffix='') {
+function animateCounter(el, target, suffix = '') {
   let start = 0;
   const duration = 1800;
   const step = (timestamp) => {
@@ -184,3 +179,21 @@ const statsObserver = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.4 });
 document.querySelectorAll('.hero-stats, .why-inner').forEach(el => statsObserver.observe(el));
+
+/* ---- REVEAL ON SCROLL ---- */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ---- FAQ ACCORDION ---- */
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q')?.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
