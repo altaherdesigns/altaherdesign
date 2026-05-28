@@ -1897,3 +1897,48 @@ section { padding: clamp(64px, 10vw, 128px) 0; position: relative; }
   .division-card { padding: 32px 24px; }
   .timeline__item { grid-template-columns: 60px 1fr; }
 }
+
+/* ============================================
+   ACCESSIBILITY + VISIBILITY FIXES
+   Prevents hero content staying invisible when
+   animation is blocked by OS/browser settings
+   ============================================ */
+
+/* Reduced-motion: skip animations, show content immediately */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up, .fade-up.d1, .fade-up.d2, .fade-up.d3, .fade-up.d4, .fade-up.d5 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Hard fallback: if animation never fires (some browsers/throttling),
+   ensure content is visible after 1.5s */
+.fade-up { animation-fill-mode: both; }
+.hero__content, .hero__side, .page-hero__inner {
+  opacity: 1; /* base state before animation applies */
+}
+
+/* Ensure hero text is always visible regardless of CSS variable resolution */
+.hero__title, .hero__sub, .hero__kicker { color: #1a1a1a; }
+.hero__title em, .hero__title .display em { color: #0d6e5e; }
+.page-hero h1 { color: #1a1a1a; }
+.page-hero p { color: #4a4a4a; }
+
+/* Fix: hero__side image fallback if Google Drive fails to load */
+.hero__side {
+  background: #ede6d8;
+  min-height: 320px;
+}
+
+/* Ensure hero never collapses when image fails */
+.hero__side img {
+  min-height: 320px;
+  object-fit: cover;
+}

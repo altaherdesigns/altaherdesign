@@ -197,3 +197,12 @@ document.querySelectorAll('.faq-item').forEach(item => {
     item.classList.toggle('open');
   });
 });
+
+/* ---- ANIMATION SAFETY NET ----
+   If browser throttles/blocks animations, force content visible after 1.5s */
+setTimeout(function() {
+  document.querySelectorAll('.fade-up, .reveal').forEach(function(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+}, 1500);
