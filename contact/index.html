@@ -29,6 +29,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
+<meta name="theme-color" content="#0d6e5e">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="geo.region" content="AE-FU">
+<meta name="geo.placename" content="Fujairah">
+<meta name="geo.position" content="25.1269;56.3366">
+<meta name="ICBM" content="25.1269, 56.3366">
 <link rel="stylesheet" href="/assets/css/main.css">
 
 <!--
@@ -165,6 +171,17 @@
         }
       ]
     }
+  ]
+}
+</script>
+<!-- Breadcrumb schema for SERP breadcrumbs + sitelinks -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://altaherdesign.com/"},
+    {"@type":"ListItem","position":2,"name":"Contact","item":"https://altaherdesign.com/contact/"}
   ]
 }
 </script>

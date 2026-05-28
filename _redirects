@@ -1,4 +1,7 @@
-# Cloudflare Pages redirects
-/home    /    301
-/index   /    301
-/index.html  /  301
+# Cloudflare Pages redirects — enforce ONE canonical version (avoids duplicate-content SEO penalty)
+
+# Force non-www (pick ONE canonical host — Google treats www and non-www as separate sites otherwise)
+https://www.altaherdesign.com/* https://altaherdesign.com/:splat 301
+
+# Redirect old single-page anchors to their new dedicated pages (preserves any existing links/rankings)
+/index.html / 301

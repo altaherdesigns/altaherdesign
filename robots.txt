@@ -1,5 +1,9 @@
+# Al Taher Group — robots.txt
 User-agent: *
 Allow: /
+
+# Block nothing important — let Google crawl assets for proper rendering
+Disallow: /404.html
+
+# Sitemap
 Sitemap: https://altaherdesign.com/sitemap.xml
-Disallow: /assets/css/
-Disallow: /assets/js/

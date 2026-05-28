@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Al Taher Group | Aluminium, Carpentry & Metal Fabrication Fujairah UAE</title>
+<title>Al Taher Group Fujairah | Metal Gates, Stair Railings, Kitchens & Aluminium Works UAE — Est. 1984</title>
 <meta name="description" content="40+ years of custom metal fabrication, aluminium, glass, carpentry and powder coating in Fujairah. Serving homeowners and contractors across all seven UAE emirates since 1984.">
 <meta name="keywords" content="Al Taher Group, metal fabrication Fujairah, aluminium works UAE, custom gates Fujairah, kitchen design UAE, powder coating Fujairah, carpentry UAE">
 <meta name="robots" content="index, follow">
@@ -62,26 +62,94 @@
 <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
 
 <!-- Styles -->
+<meta name="theme-color" content="#0d6e5e">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="geo.region" content="AE-FU">
+<meta name="geo.placename" content="Fujairah">
+<meta name="geo.position" content="25.1269;56.3366">
+<meta name="ICBM" content="25.1269, 56.3366">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<!-- Schema -->
+<!-- Schema — comprehensive @graph, no duplicate unique properties -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Al Taher Group",
-  "image": "https://altaherdesign.com/assets/images/logo.svg",
-  "url": "https://altaherdesign.com",
-  "telephone": "+971506705015",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Al Hail Industrial Area",
-    "addressLocality": "Fujairah",
-    "addressCountry": "AE"
-  },
-  "foundingDate": "1984",
-  "areaServed": ["Fujairah", "Dubai", "Abu Dhabi", "Sharjah", "Ras Al Khaimah", "Umm Al Quwain", "Ajman"],
-  "openingHours": "Sa-Th 06:00-20:00"
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "GeneralContractor"],
+      "@id": "https://altaherdesign.com/#business",
+      "name": "Al Taher Group",
+      "alternateName": "Al Taher Carpentry, Aluminium & Metal Forming LLC",
+      "image": "https://altaherdesign.com/assets/images/logo.svg",
+      "logo": "https://altaherdesign.com/assets/images/logo.svg",
+      "url": "https://altaherdesign.com",
+      "telephone": "+971506705015",
+      "email": "info@altahergroup.ae",
+      "priceRange": "$$",
+      "description": "Custom metal gates, stair railings, kitchens, aluminium & glass works, pergolas, fabrication and powder coating. Serving homeowners and contractors across all 7 UAE emirates since 1984.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Al Hail Industrial Area",
+        "addressLocality": "Fujairah",
+        "addressRegion": "Fujairah",
+        "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.1269,
+        "longitude": 56.3366
+      },
+      "hasMap": "https://maps.google.com/?q=Al+Hail+Industrial+Fujairah",
+      "foundingDate": "1984",
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+        "opens": "06:00",
+        "closes": "20:00"
+      }],
+      "areaServed": [
+        {"@type":"City","name":"Fujairah"},
+        {"@type":"City","name":"Dubai"},
+        {"@type":"City","name":"Abu Dhabi"},
+        {"@type":"City","name":"Sharjah"},
+        {"@type":"City","name":"Ras Al Khaimah"},
+        {"@type":"City","name":"Umm Al Quwain"},
+        {"@type":"City","name":"Ajman"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Metal Gates & Doors"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Stair Railings"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kitchen Design"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aluminium & Glass Works"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Shed & Pergola"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Metal Fabrication & Welding"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Powder Coating"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Facade Design & Carpentry"}}
+        ]
+      },
+      "sameAs": ["https://www.instagram.com/altaher_design/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://altaherdesign.com/#website",
+      "url": "https://altaherdesign.com",
+      "name": "Al Taher Group",
+      "publisher": {"@id": "https://altaherdesign.com/#business"},
+      "inLanguage": ["en","ar"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://altaherdesign.com/#webpage",
+      "url": "https://altaherdesign.com/",
+      "name": "Al Taher Group Fujairah | Metal Gates, Railings, Kitchens & Aluminium Works UAE",
+      "isPartOf": {"@id": "https://altaherdesign.com/#website"},
+      "about": {"@id": "https://altaherdesign.com/#business"},
+      "inLanguage": "en"
+    }
+  ]
 }
 </script>
 </head>
@@ -473,36 +541,125 @@
 </section>
 
 <!-- ========== CTA BAND ========== -->
-<section class="cta-band">
-  <div class="cta-band__pattern" aria-hidden="true">
+<!-- ========== QUOTE FORM SECTION ========== -->
+<section style="padding:clamp(80px,12vw,140px) 0; background:var(--dark); position:relative; overflow:hidden;" id="quote">
+  <!-- Background pattern -->
+  <div style="position:absolute;inset:0;opacity:0.05;pointer-events:none;" aria-hidden="true">
     <svg viewBox="0 0 400 400" width="100%" height="100%">
-      <defs>
-        <pattern id="mash3" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-          <path d="M40 0 L80 40 L40 80 L0 40 Z" stroke="#c9a84c" stroke-width="1" fill="none"/>
-          <circle cx="40" cy="40" r="14" stroke="#c9a84c" stroke-width="1" fill="none"/>
-        </pattern>
-      </defs>
+      <defs><pattern id="mash3" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+        <path d="M40 0 L80 40 L40 80 L0 40 Z" stroke="#c9a84c" stroke-width="1" fill="none"/>
+        <circle cx="40" cy="40" r="14" stroke="#c9a84c" stroke-width="1" fill="none"/>
+      </pattern></defs>
       <rect width="100%" height="100%" fill="url(#mash3)"/>
     </svg>
   </div>
-  <div class="wrap">
-    <div class="cta-band__inner reveal">
-      <span class="section-num" style="color:var(--gold-light);">05 — Start a Project</span>
-      <h2 class="display">Ready to <em>start</em> your project?</h2>
-      <p>Send us a message on WhatsApp with your idea, your villa address, or your contractor brief — we'll come back with a free, detailed quote.</p>
-      <div class="cta-band__buttons">
-        <a href="https://wa.me/971506499697?text=Hello%20Al%20Taher%20Group%2C%20I%20would%20like%20a%20quotation." target="_blank" rel="noopener" class="btn btn--gold">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3zm-8.5 18.1c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.5-1.5-3.3-1.5-5.1 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9-.1 5.4-4.5 9.7-9.8 9.7z"/></svg>
-          Message on WhatsApp
-        </a>
-        <a href="/contact/" class="btn btn--ghost" style="color:var(--off-white);border-color:rgba(248,245,240,0.4);">
-          Open Contact Form
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
+
+  <div class="wrap" style="position:relative;z-index:2;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,96px);align-items:start;">
+
+      <!-- Left: headline + contact info -->
+      <div class="reveal">
+        <span class="section-num" style="color:var(--gold-light);">05 — Get a Quote</span>
+        <h2 class="display" style="color:var(--off-white);margin:20px 0 28px;font-size:clamp(2rem,4vw,3.4rem);">
+          Ready to <em>start?</em>
+        </h2>
+        <p style="color:rgba(248,245,240,0.7);font-size:15px;line-height:1.75;margin-bottom:40px;">
+          Fill in the form and your details go straight to WhatsApp — we reply within a few hours during working hours. Or call or message any of our three direct lines below.
+        </p>
+
+        <!-- 3 contact items -->
+        <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(248,245,240,0.1);">
+          <a href="https://wa.me/971544463447?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"
+             style="display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid rgba(248,245,240,0.1);text-decoration:none;transition:opacity .2s;"
+             onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
+            <div style="width:40px;height:40px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-light);margin-bottom:3px;">Sales &amp; Operations</div>
+              <div style="font-family:var(--display);font-size:17px;color:var(--off-white);">+971 54 446 3447</div>
+            </div>
+          </a>
+          <a href="https://wa.me/971506705015?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"
+             style="display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid rgba(248,245,240,0.1);text-decoration:none;transition:opacity .2s;"
+             onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
+            <div style="width:40px;height:40px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-light);margin-bottom:3px;">General Manager</div>
+              <div style="font-family:var(--display);font-size:17px;color:var(--off-white);">+971 50 670 5015</div>
+            </div>
+          </a>
+          <a href="https://wa.me/971506499697?text=Hello%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener"
+             style="display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid rgba(248,245,240,0.1);text-decoration:none;transition:opacity .2s;"
+             onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
+            <div style="width:40px;height:40px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-light);margin-bottom:3px;">Marketing &amp; Operations</div>
+              <div style="font-family:var(--display);font-size:17px;color:var(--off-white);">+971 50 649 9697</div>
+            </div>
+          </a>
+          <div style="display:flex;align-items:center;gap:16px;padding:18px 0;">
+            <div style="width:40px;height:40px;border-radius:50%;background:rgba(248,245,240,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(248,245,240,0.5)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div style="font-size:13px;color:rgba(248,245,240,0.5);">Sat–Thu &nbsp;·&nbsp; 6:00 AM – 8:00 PM &nbsp;·&nbsp; Friday closed</div>
+          </div>
+        </div>
       </div>
+
+      <!-- Right: the form -->
+      <div class="reveal" style="background:var(--off-white);padding:clamp(28px,4vw,48px);">
+        <h3 class="display" style="font-size:clamp(1.4rem,2.5vw,2rem);margin-bottom:28px;">Send us your <em>brief.</em></h3>
+        <form id="quoteForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Ahmed Al Mansouri" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+971 50 000 0000" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Required</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="Metal Gates &amp; Doors">Metal Gates &amp; Doors</option>
+              <option value="Stair Railings">Stair Railings</option>
+              <option value="Kitchen Design">Kitchen Design</option>
+              <option value="Aluminium &amp; Glass Works">Aluminium &amp; Glass Works</option>
+              <option value="Shed &amp; Pergola">Shed &amp; Pergola</option>
+              <option value="Metal Fabrication &amp; Welding">Metal Fabrication &amp; Welding</option>
+              <option value="Powder Coating">Powder Coating</option>
+              <option value="Facade Design &amp; Carpentry">Facade Design &amp; Carpentry</option>
+              <option value="Multiple / Full Fit-Out">Multiple / Full Fit-Out</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Describe your project — dimensions, location, materials, timeline..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:16px;">
+            Send via WhatsApp
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
+          </button>
+          <p class="form-note" style="color:var(--muted);margin-top:12px;">Opens WhatsApp with your details pre-filled. We typically reply within 2 hours.</p>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>
+
+<!-- Responsive fix for quote form section -->
+<style>
+@media (max-width: 768px) {
+  #quote .wrap > div { grid-template-columns: 1fr !important; }
+}
+</style>
 
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
