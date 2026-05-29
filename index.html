@@ -31,26 +31,7 @@
 
 <!-- Language auto-detection: runs BEFORE render to prevent flash -->
 <script>
-(function() {
-  try {
-    var saved = localStorage.getItem('atg_lang');
-    var path = window.location.pathname;
-    var onAr = path.indexOf('/ar') === 0;
-    if (!saved) {
-      var lang = (navigator.language || '').toLowerCase();
-      if (lang.indexOf('ar') === 0) {
-        localStorage.setItem('atg_lang', 'ar');
-        if (!onAr) { window.location.replace('/ar' + path); return; }
-      } else {
-        localStorage.setItem('atg_lang', 'en');
-      }
-    } else {
-      // Respect saved choice
-      if (saved === 'ar' && !onAr) { window.location.replace('/ar' + path); return; }
-      if (saved === 'en' && onAr) { window.location.replace(path.replace(/^\/ar/, '') || '/'); return; }
-    }
-  } catch(e) {}
-})();
+(function(){try{var s=localStorage.getItem('atg_lang'),p=window.location.pathname,a=p.indexOf('/ar')===0;if(s==='ar'&&!a){window.location.replace('/ar'+p);}else if(s==='en'&&a){window.location.replace(p.replace(/^\/ar/,'')||'/');}}catch(e){}})();
 </script>
 
 <!-- Fonts -->
@@ -167,10 +148,11 @@
   </a>
 
   <div class="nav__links">
-    <a href="/" class="active">Home</a>
+    <a href="/" class="active" aria-current="page">Home</a>
     <a href="/about/">About</a>
     <a href="/services/">Services</a>
     <a href="/portfolio/">Portfolio</a>
+    <a href="/blog/">Blog</a>
     <a href="/contact/">Contact</a>
   </div>
 
@@ -192,7 +174,8 @@
   <a href="/about/"><span>About</span><span class="num">02</span></a>
   <a href="/services/"><span>Services</span><span class="num">03</span></a>
   <a href="/portfolio/"><span>Portfolio</span><span class="num">04</span></a>
-  <a href="/contact/"><span>Contact</span><span class="num">05</span></a>
+  <a href="/blog/"><span>Blog</span><span class="num">05</span></a>
+  <a href="/contact/"><span>Contact</span><span class="num">06</span></a>
   <div class="mobile-nav__bottom">
     <a href="https://wa.me/971506499697?text=Hello%20Al%20Taher%20Group%2C%20I%20would%20like%20a%20quotation." class="btn btn--primary" target="_blank" rel="noopener" style="justify-content:center;font-size:13px;">Get a Free Quote</a>
   </div>
@@ -250,7 +233,7 @@
     </div>
 
     <div class="hero__side fade-up d2">
-      <img src="https://lh3.googleusercontent.com/d/1xFF60cw4pBYd1BQXW8uOtB_LFvxPGXvR" alt="Custom metal gate by Al Taher Group" loading="eager" fetchpriority="high">
+      <img src="https://lh3.googleusercontent.com/d/1xFF60cw4pBYd1BQXW8uOtB_LFvxPGXvR" alt="Custom metal gate by Al Taher Group" loading="eager" fetchpriority="high" width="900" height="675">
       <div class="hero__side-frame"></div>
       <div class="hero__badge">
         <strong>Custom Gate</strong>
@@ -421,42 +404,42 @@
 
     <div class="portfolio-grid reveal">
       <a href="/portfolio/" class="portfolio-tile t-1">
-        <img src="https://lh3.googleusercontent.com/d/1GoDfRuHtvdLN8HHEXl8DO1_HEyWgSOcr" alt="Custom metal gate" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1GoDfRuHtvdLN8HHEXl8DO1_HEyWgSOcr" alt="Custom metal gate" loading="lazy" width="800" height="600">
         <div class="portfolio-tile__overlay">
           <small>Metal Gates</small>
           <strong>Arched Villa Entrance</strong>
         </div>
       </a>
       <a href="/portfolio/" class="portfolio-tile t-2">
-        <img src="https://lh3.googleusercontent.com/d/1naoiEal7UGa4KwDLo-LmDPI-mWoRU9DP" alt="Modern kitchen design" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1naoiEal7UGa4KwDLo-LmDPI-mWoRU9DP" alt="Modern kitchen design" loading="lazy" width="800" height="600">
         <div class="portfolio-tile__overlay">
           <small>Kitchen Design</small>
           <strong>Modern Villa Kitchen</strong>
         </div>
       </a>
       <a href="/portfolio/" class="portfolio-tile t-3">
-        <img src="https://lh3.googleusercontent.com/d/1tEjXry0JS8eKoy45xrmH2i5xnr1UHTLU" alt="Pergola structure" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1tEjXry0JS8eKoy45xrmH2i5xnr1UHTLU" alt="Pergola structure" loading="lazy" width="800" height="600">
         <div class="portfolio-tile__overlay">
           <small>Pergola</small>
           <strong>Garden Pergola</strong>
         </div>
       </a>
       <a href="/portfolio/" class="portfolio-tile t-4">
-        <img src="https://lh3.googleusercontent.com/d/1zpK-23TmEnINY4MM4QEzUhiQkvz_FuuU" alt="Stair railings" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1zpK-23TmEnINY4MM4QEzUhiQkvz_FuuU" alt="Stair railings" loading="lazy" width="800" height="600">
         <div class="portfolio-tile__overlay">
           <small>Railings</small>
           <strong>Glass Stair Rail</strong>
         </div>
       </a>
       <a href="/portfolio/" class="portfolio-tile t-5">
-        <img src="https://lh3.googleusercontent.com/d/1DytteBNehXmLMkmFLQ_uk-_sTiTjIcIJ" alt="Aluminium windows" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1DytteBNehXmLMkmFLQ_uk-_sTiTjIcIJ" alt="Aluminium windows" loading="lazy" width="800" height="600">
         <div class="portfolio-tile__overlay">
           <small>Aluminium</small>
           <strong>Sliding Windows</strong>
         </div>
       </a>
       <a href="/portfolio/" class="portfolio-tile t-6">
-        <img src="https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq" alt="Powder coated structure" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq" alt="Powder coated structure" loading="lazy" width="800" height="600">
         <div class="portfolio-tile__overlay">
           <small>Powder Coating</small>
           <strong>Black Matte Finish</strong>
@@ -488,7 +471,7 @@
         </a>
       </div>
       <div class="about-blurb__image reveal">
-        <img src="https://lh3.googleusercontent.com/d/1c_8CWG5CQYvVmXo2iQAHzuI0P0oVJyJG" alt="Al Taher Group project Fujairah" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1c_8CWG5CQYvVmXo2iQAHzuI0P0oVJyJG" alt="Al Taher Group project Fujairah" loading="lazy" width="800" height="600">
       </div>
     </div>
   </div>
@@ -690,7 +673,7 @@
         <ul>
           <li><a href="/about/">About</a></li>
           <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li>
           <li><a href="/ar/">العربية</a></li>
           <li><a href="https://www.instagram.com/altaher_design/" target="_blank" rel="noopener">Instagram</a></li>
         </ul>

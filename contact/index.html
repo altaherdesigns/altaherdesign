@@ -22,7 +22,7 @@
 <link rel="alternate" hreflang="x-default" href="https://altaherdesign.com/" />
 
 <script>
-(function(){try{var s=localStorage.getItem('atg_lang'),p=window.location.pathname,a=p.indexOf('/ar')===0;if(!s){var l=(navigator.language||'').toLowerCase();if(l.indexOf('ar')===0){localStorage.setItem('atg_lang','ar');if(!a){window.location.replace('/ar'+p);return;}}else{localStorage.setItem('atg_lang','en');}}else{if(s==='ar'&&!a){window.location.replace('/ar'+p);return;}if(s==='en'&&a){window.location.replace(p.replace(/^\/ar/,'')||'/');return;}}}catch(e){}})();
+(function(){try{var s=localStorage.getItem('atg_lang'),p=window.location.pathname,a=p.indexOf('/ar')===0;if(s==='ar'&&!a){window.location.replace('/ar'+p);}else if(s==='en'&&a){window.location.replace(p.replace(/^\/ar/,'')||'/');}}catch(e){}})();
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -199,7 +199,8 @@
     <a href="/about/">About</a>
     <a href="/services/">Services</a>
     <a href="/portfolio/">Portfolio</a>
-    <a href="/contact/" class="active">Contact</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/" class="active" aria-current="page">Contact</a>
   </div>
   <div class="nav__right">
     <div class="lang-toggle">
@@ -216,7 +217,8 @@
   <a href="/about/"><span>About</span><span class="num">02</span></a>
   <a href="/services/"><span>Services</span><span class="num">03</span></a>
   <a href="/portfolio/"><span>Portfolio</span><span class="num">04</span></a>
-  <a href="/contact/"><span>Contact</span><span class="num">05</span></a>
+  <a href="/blog/"><span>Blog</span><span class="num">05</span></a>
+  <a href="/contact/"><span>Contact</span><span class="num">06</span></a>
   <div class="mobile-nav__bottom">
     <a href="https://wa.me/971544463447?text=Hello%20Al%20Taher%20Group%2C%20I%20would%20like%20a%20quotation." class="btn btn--primary" target="_blank" rel="noopener" style="justify-content:center;font-size:13px;">Get a Free Quote</a>
   </div>
@@ -493,7 +495,7 @@
         <ul>
           <li><a href="/about/">About</a></li>
           <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li>
           <li><a href="/ar/">العربية</a></li>
           <li><a href="https://www.instagram.com/altaher_design/" target="_blank" rel="noopener">Instagram</a></li>
         </ul>

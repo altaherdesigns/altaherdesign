@@ -139,17 +139,51 @@ document.addEventListener('click', e => {
   if (!e.target.closest('.wa-float')) waPopup?.classList.remove('open');
 });
 
-/* ---- QUOTE FORM (contact page) ---- */
-const quoteForm = document.getElementById('quoteForm');
-quoteForm?.addEventListener('submit', e => {
-  e.preventDefault();
-  const name = quoteForm.querySelector('[name="name"]').value;
-  const service = quoteForm.querySelector('[name="service"]').value;
-  const msg = quoteForm.querySelector('[name="message"]').value;
-  const text = encodeURIComponent(
-    `Hello Al Taher Group, my name is ${name}. I'm interested in: ${service}. ${msg}`
-  );
-  window.open(`https://wa.me/971506499697?text=${text}`, '_blank');
+/* ---- QUOTE FORM — all pages ---- */
+/* Routes to the correct WhatsApp number based on service selection.
+   Falls back to mailto: if window.open is blocked.                 */
+function routeFormService(service) {
+  const s = (service || '').toLowerCase();
+  if (/gate|door|fabricat|powder|weld|lchid|bab|bawab|لحام|معدن|طلاء|بواب|باب/.test(s)) {
+    return '971544463447'; // Sales & Operations
+  }
+  if (/railing|درابزين|pergola|برجول|مظل/.test(s)) {
+    return '971506499697'; // Marketing & Operations
+  }
+  return '971506705015'; // General Manager (kitchen, aluminium, glass, facade, etc.)
+}
+
+document.querySelectorAll('form[id="quoteForm"]').forEach(quoteForm => {
+  quoteForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const isAr = document.documentElement.lang === 'ar';
+    const nameEl  = quoteForm.querySelector('[name="name"]');
+    const phoneEl = quoteForm.querySelector('[name="phone"]');
+    const svcEl   = quoteForm.querySelector('[name="service"]');
+    const msgEl   = quoteForm.querySelector('[name="message"]');
+
+    const name    = nameEl?.value?.trim()  || '';
+    const phone   = phoneEl?.value?.trim() || '';
+    const service = svcEl?.value  || '';
+    const msg     = msgEl?.value?.trim()  || '';
+
+    if (!name) { nameEl?.focus(); return; }
+    if (!service) { svcEl?.focus(); return; }
+
+    const number = routeFormService(service);
+    const greeting = isAr ? 'السلام عليكم' : 'Hello Al Taher Group';
+    const intro    = isAr
+      ? `${greeting}، اسمي ${name}. الخدمة المطلوبة: ${service}.${phone ? ' رقم التواصل: '+phone+'.' : ''} ${msg}`
+      : `${greeting}, my name is ${name}. Service needed: ${service}.${phone ? ' My number: '+phone+'.' : ''} ${msg}`;
+
+    const waUrl = `https://wa.me/${number}?text=${encodeURIComponent(intro.trim())}`;
+
+    // Try window.open; fall back to direct location change if blocked
+    const w = window.open(waUrl, '_blank');
+    if (!w || w.closed || typeof w.closed === 'undefined') {
+      window.location.href = waUrl;
+    }
+  });
 });
 
 /* ---- COUNTER ANIMATION ---- */
@@ -199,10 +233,22 @@ document.querySelectorAll('.faq-item').forEach(item => {
 });
 
 /* ---- ANIMATION SAFETY NET ----
-   If browser throttles/blocks animations, force content visible after 1.5s */
+   Checks after 800ms (after all delays finish) whether any animated elements
+   are still invisible. Forces them visible if so — handles Windows with
+   "Show animations" disabled and any other animation-blocking scenario. */
 setTimeout(function() {
-  document.querySelectorAll('.fade-up, .reveal').forEach(function(el) {
-    el.style.opacity = '1';
-    el.style.transform = 'none';
+  document.querySelectorAll('.fade-up').forEach(function(el) {
+    if (parseFloat(window.getComputedStyle(el).opacity) < 0.5) {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.transition = 'opacity .4s ease, transform .4s ease';
+    }
   });
-}, 1500);
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    if (parseFloat(window.getComputedStyle(el).opacity) < 0.5) {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.transition = 'opacity .4s ease, transform .4s ease';
+    }
+  });
+}, 800);
