@@ -2280,3 +2280,124 @@ section { padding: clamp(64px, 10vw, 128px) 0; position: relative; }
 .who-serve-card__list--rtl li { flex-direction: row-reverse; }
 
 @media (max-width: 768px) { .who-serve-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   AESTHETIC BACKGROUND ENHANCEMENT — "Gulf Heritage Luxury"
+   Layered, hero-style depth across the site.
+   Tuned for readability (low-alpha) + performance (CSS only).
+   ============================================================ */
+
+/* 1) SITE-WIDE AMBIENT BACKDROP
+   A fixed, faint mashrabiya weave + warm corner glows behind
+   everything. Shows through the light/transparent sections and
+   gives the whole site gentle dimensionality instead of flat fill. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(58% 48% at 12% 2%, rgba(13,110,94,0.05), transparent 60%),
+    radial-gradient(52% 42% at 100% 6%, rgba(201,168,76,0.06), transparent 58%),
+    var(--off-white);
+  pointer-events: none;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.022;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%230d6e5e' stroke-width='1.1'%3E%3Cpath d='M60 6 L114 60 L60 114 L6 60 Z'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3Cpath d='M60 40 L60 80 M40 60 L80 60'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+/* 2) HERO — rich layered gradient + warm gold & teal glows */
+.hero {
+  background:
+    radial-gradient(46% 58% at 84% 22%, rgba(201,168,76,0.14), transparent 60%),
+    radial-gradient(50% 55% at 4% 80%, rgba(13,110,94,0.10), transparent 62%),
+    linear-gradient(158deg, var(--off-white) 0%, var(--off-white) 48%, #f1ebe0 100%);
+}
+/* make the existing mashrabiya panel more present, then dissolve it elegantly */
+.hero__pattern {
+  opacity: 0.08;
+  -webkit-mask-image: radial-gradient(ellipse 72% 82% at 100% 18%, #000 24%, transparent 78%);
+          mask-image: radial-gradient(ellipse 72% 82% at 100% 18%, #000 24%, transparent 78%);
+}
+/* soft gold light pooled along the lower edge for depth into the next section */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 160px;
+  background: linear-gradient(to top, rgba(201,168,76,0.07), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 3) INNER-PAGE HERO — matching, slightly lighter treatment */
+.page-hero {
+  background:
+    radial-gradient(42% 66% at 90% 14%, rgba(201,168,76,0.11), transparent 62%),
+    radial-gradient(46% 58% at 0% 92%, rgba(13,110,94,0.08), transparent 60%),
+    linear-gradient(158deg, var(--off-white) 0%, var(--off-white) 58%, #f1ebe0 100%);
+}
+.page-hero__pattern {
+  opacity: 0.07;
+  -webkit-mask-image: radial-gradient(ellipse at top right, #000 28%, transparent 80%);
+          mask-image: radial-gradient(ellipse at top right, #000 28%, transparent 80%);
+}
+
+/* 4) LIGHT CONTENT SECTIONS — whisper-subtle tint for depth (text stays crisp) */
+.services {
+  background:
+    radial-gradient(58% 80% at 100% 0%, rgba(201,168,76,0.045), transparent 60%),
+    var(--off-white);
+}
+.about-blurb {
+  background:
+    radial-gradient(55% 72% at 0% 100%, rgba(13,110,94,0.04), transparent 62%),
+    var(--off-white);
+}
+.portfolio-home {
+  background:
+    radial-gradient(50% 70% at 100% 100%, rgba(201,168,76,0.04), transparent 60%),
+    var(--paper);
+}
+
+/* 5) DARK TEAL FEATURE SECTION (.why) — add a warm gold glow so it
+   reads as crafted rather than a flat block */
+.why {
+  background:
+    radial-gradient(48% 60% at 86% 18%, rgba(201,168,76,0.16), transparent 60%),
+    radial-gradient(40% 50% at 0% 100%, rgba(255,255,255,0.05), transparent 60%),
+    var(--teal);
+}
+
+/* 6) RTL: mirror the directional glows for Arabic pages */
+[dir="rtl"] .hero {
+  background:
+    radial-gradient(46% 58% at 16% 22%, rgba(201,168,76,0.14), transparent 60%),
+    radial-gradient(50% 55% at 96% 80%, rgba(13,110,94,0.10), transparent 62%),
+    linear-gradient(202deg, var(--off-white) 0%, var(--off-white) 48%, #f1ebe0 100%);
+}
+[dir="rtl"] .page-hero {
+  background:
+    radial-gradient(42% 66% at 10% 14%, rgba(201,168,76,0.11), transparent 62%),
+    radial-gradient(46% 58% at 100% 92%, rgba(13,110,94,0.08), transparent 60%),
+    linear-gradient(202deg, var(--off-white) 0%, var(--off-white) 58%, #f1ebe0 100%);
+}
+[dir="rtl"] .hero__pattern,
+[dir="rtl"] .page-hero__pattern {
+  right: auto; left: 0;
+  -webkit-mask-image: radial-gradient(ellipse at top left, #000 26%, transparent 80%);
+          mask-image: radial-gradient(ellipse at top left, #000 26%, transparent 80%);
+}
+
+/* 7) Respect reduced-motion / low-end: the backdrop is static, but
+   drop the fixed attachment cost on very small screens */
+@media (max-width: 768px) {
+  body::after { opacity: 0.016; background-size: 96px 96px; }
+}
