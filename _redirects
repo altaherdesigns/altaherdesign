@@ -1,7 +1,11 @@
-# Cloudflare Pages redirects — enforce ONE canonical version (avoids duplicate-content SEO penalty)
+# Cloudflare Pages redirects — canonical host is altaherdesign.ae (ccTLD primary)
 
-# Force non-www (pick ONE canonical host — Google treats www and non-www as separate sites otherwise)
-https://www.altaherdesign.com/* https://altaherdesign.com/:splat 301
+# Migrate altaherdesign.com -> altaherdesign.ae (consolidate authority, 301)
+https://altaherdesign.com/* https://altaherdesign.ae/:splat 301
+https://www.altaherdesign.com/* https://altaherdesign.ae/:splat 301
 
-# Redirect old single-page anchors to their new dedicated pages (preserves any existing links/rankings)
+# Force non-www on the primary domain
+https://www.altaherdesign.ae/* https://altaherdesign.ae/:splat 301
+
+# Old single-page anchors -> home (preserves any existing links/rankings)
 /index.html / 301
