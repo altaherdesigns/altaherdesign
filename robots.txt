@@ -6,4 +6,4 @@ Allow: /
 Disallow: /404.html
 
 # Sitemap
-Sitemap: https://altaherdesign.com/sitemap.xml
+Sitemap: https://altaherdesign.ae/sitemap.xml
