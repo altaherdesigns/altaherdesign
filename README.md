@@ -4,8 +4,8 @@
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Faltaherdesign.com)](https://altaherdesign.com)
 [![Language](https://img.shields.io/badge/Language-EN%20%2F%20AR-1B5E6B)](https://altaherdesign.com)
 
-**Live:** https://altaherdesign.ae
-**Arabic:** https://altaherdesign.ae/ar/  
+**Live:** https://altaherdesign.com  
+**Arabic:** https://altaherdesign.com/ar/  
 
 Official source code for altaherdesign.com — the website of Al Taher Group, a Fujairah-based industrial group established in 1984 specialising in aluminium works, carpentry, metal fabrication, powder coating, custom gates, stair railings, kitchen design and pergolas across all seven UAE emirates.
 
@@ -27,7 +27,7 @@ Al Taher Group operates two divisions from Al Hail Industrial Area, Fujairah, UA
 ## Site Structure
 
 ```
-altaherdesign.ae/
+altaherdesign.com/
 ├── index.html                  ← Home (EN)
 ├── services/index.html         ← Services — 8 disciplines with full descriptions
 ├── portfolio/index.html        ← Portfolio — 49+ projects, filterable gallery, lightbox
