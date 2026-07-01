@@ -43,30 +43,255 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness","GeneralContractor"],
+      "@type": [
+        "LocalBusiness",
+        "GeneralContractor",
+        "HomeAndConstructionBusiness"
+      ],
       "@id": "https://altaherdesign.ae/#business",
-      "name": "مجموعة الطاهر",
-      "alternateName": "Al Taher Group",
-      "url": "https://altaherdesign.ae/ar/",
+      "name": "Al Taher Group",
+      "alternateName": [
+        "Al Taher Carpentry, Aluminium & Metal Forming LLC",
+        "DAT Metal Fabrication"
+      ],
+      "legalName": "Al Taher Carpentry, Aluminium & Metal Forming LLC",
+      "slogan": "Designed. Fabricated. Installed.",
+      "image": "https://altaherdesign.ae/assets/images/logo.png",
+      "logo": "https://altaherdesign.ae/assets/images/logo.png",
+      "url": "https://altaherdesign.ae",
       "telephone": "+971506705015",
       "email": "sales@altaherdesign.ae",
+      "priceRange": "$$",
+      "currenciesAccepted": "AED",
+      "description": "Al Taher Group is a family-run fabrication and fit-out company in the Al Hail Industrial Area, Fujairah, established in 1984. Through its two divisions — Al Taher Carpentry, Aluminium & Metal Forming LLC and DAT Metal Fabrication — it designs, fabricates and installs custom metal gates, automatic gates, stair railings, aluminium and uPVC windows and doors, glass works and partitions, curtain walls, pergolas, fitted kitchens, joinery, marble work and powder coating. All work is produced in-house and installed across all seven UAE emirates.",
+      "foundingDate": "1984",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Fujairah, United Arab Emirates"
+      },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "منطقة الحيل الصناعية",
-        "addressLocality": "الفجيرة",
+        "streetAddress": "Al Hail Industrial Area",
+        "addressLocality": "Fujairah",
+        "addressRegion": "Fujairah",
         "addressCountry": "AE"
       },
-      "foundingDate": "1984",
-      "areaServed": [
-        {"@type":"City","name":"الفجيرة"},
-        {"@type":"City","name":"دبي"},
-        {"@type":"City","name":"أبوظبي"},
-        {"@type":"City","name":"الشارقة"},
-        {"@type":"City","name":"رأس الخيمة"},
-        {"@type":"City","name":"أم القيوين"},
-        {"@type":"City","name":"عجمان"}
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.1269,
+        "longitude": 56.3366
+      },
+      "hasMap": "https://maps.google.com/?q=Al+Hail+Industrial+Fujairah",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "06:00",
+          "closes": "20:00"
+        }
       ],
-      "sameAs": ["https://www.instagram.com/altaher_design/", "https://www.tiktok.com/@datinteriors", "https://altaherdesign.com"]
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "City",
+          "name": "Fujairah"
+        },
+        {
+          "@type": "City",
+          "name": "Dubai"
+        },
+        {
+          "@type": "City",
+          "name": "Abu Dhabi"
+        },
+        {
+          "@type": "City",
+          "name": "Sharjah"
+        },
+        {
+          "@type": "City",
+          "name": "Ras Al Khaimah"
+        },
+        {
+          "@type": "City",
+          "name": "Umm Al Quwain"
+        },
+        {
+          "@type": "City",
+          "name": "Ajman"
+        }
+      ],
+      "knowsAbout": [
+        "Custom metal gates",
+        "Automatic sliding and swing gates",
+        "Cast aluminium fabrication",
+        "Structural steel fabrication",
+        "Stair railings and glass balustrades",
+        "Industrial powder coating",
+        "Aluminium windows and doors",
+        "uPVC windows and doors",
+        "Double glazed windows",
+        "Glass works and partitions",
+        "Frameless glass systems",
+        "Curtain wall systems",
+        "Facade and cladding",
+        "Pergolas and shade structures",
+        "Fitted kitchens and joinery",
+        "Marble work",
+        "Villa renovation and fit-out",
+        "Architectural metalwork"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "name": "Sales & Operations",
+          "telephone": "+971544463447",
+          "email": "sales@altaherdesign.ae",
+          "areaServed": "AE",
+          "availableLanguage": [
+            "en",
+            "ar"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "name": "General Manager",
+          "telephone": "+971506705015",
+          "areaServed": "AE",
+          "availableLanguage": [
+            "en",
+            "ar"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "billing support",
+          "name": "Accounts",
+          "email": "finance@altaherdesign.ae",
+          "areaServed": "AE"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Metal Gates & Doors"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatic Gates"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stair Railings & Glass Balustrades"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Metal Fabrication & Welding"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial Powder Coating"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aluminium Windows & Doors"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "uPVC Windows & Doors"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Glass Works & Partitions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Curtain Wall Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Facade & Cladding"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pergolas & Shade Structures"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fitted Kitchens & Joinery"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Marble Work"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Villa Renovation & Fit-Out"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.instagram.com/altaher_design/",
+        "https://www.tiktok.com/@datinteriors",
+        "https://altaherdesign.com"
+      ]
     },
     {
       "@type": "WebPage",
@@ -74,7 +299,9 @@
       "url": "https://altaherdesign.ae/ar/",
       "name": "مجموعة الطاهر الفجيرة | بوابات معدنية وأعمال ألمنيوم",
       "inLanguage": "ar",
-      "isPartOf": {"@id": "https://altaherdesign.ae/#website"}
+      "isPartOf": {
+        "@id": "https://altaherdesign.ae/#website"
+      }
     }
   ]
 }
