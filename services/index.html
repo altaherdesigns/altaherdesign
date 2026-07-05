@@ -42,15 +42,62 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Al Taher Group",
-    "telephone": "+971506705015",
-    "address": { "@type": "PostalAddress", "addressLocality": "Fujairah", "addressCountry": "AE" }
-  },
-  "areaServed": "United Arab Emirates",
-  "serviceType": ["Metal Gates", "Stair Railings", "Kitchen Design", "Aluminium & Glass Works", "Shed & Pergola", "Metal Fabrication", "Powder Coating", "Facade Design & Carpentry"]
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Al Taher Group",
+        "telephone": "+971506705015",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fujairah",
+          "addressCountry": "AE"
+        }
+      },
+      "areaServed": "United Arab Emirates",
+      "serviceType": [
+        "Metal Gates",
+        "Stair Railings",
+        "Kitchen Design",
+        "Aluminium & Glass Works",
+        "Shed & Pergola",
+        "Metal Fabrication",
+        "Powder Coating",
+        "Facade Design & Carpentry"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do Al Taher's prices compare to smaller workshops?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often closer than people expect, and sometimes lower — because nothing is subcontracted. A small workshop that outsources powder coating, glass or welding pays a margin at each step and passes it on. We fabricate, coat and install with our own team, so there is no markup chain. You pay for materials, our labour and one margin — not three. For a like-for-like specification, ask us to quote against any other offer and compare line by line."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a residential project take? Do homeowners wait behind big contracts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — residential and commercial work run on separate schedules, and every job gets a committed timeline in the quotation before we start. Typical guide times once design is approved: a custom gate runs about 2–3 weeks, stair railings 1–2 weeks, and a full kitchen 3–5 weeks, depending on finish and season. Because fabrication happens in our own workshop, we control the queue — your job is never waiting on a third-party fabricator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to deal with two different companies for a mixed project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Al Taher operates two licensed divisions — carpentry/aluminium and metal fabrication — but you get one project manager who owns your job across both. One quotation, one schedule, one point of contact from site visit to handover."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <!-- Breadcrumb schema for SERP breadcrumbs + sitelinks -->
@@ -344,7 +391,7 @@
         <span class="service-detail__num">04</span>
         <span class="service-detail__division">Al Taher Carpentry Division</span>
         <h2 class="display">Aluminium, uPVC &amp; <em>Glass Works.</em></h2>
-        <p class="service-detail__lead">Windows and doors in <strong>both aluminium and uPVC</strong> — aluminium for slim sightlines and large spans, uPVC for maximum thermal and sound insulation — so you get the right system for every opening. Plus full glass works: frameless glass, shower enclosures, glass partitions and balustrades, shopfronts, curtain walling and skylights. Single units to full-tower fenestration packages, engineered for Gulf heat, salt-air and dust.</p>
+        <p class="service-detail__lead">Windows and doors in <strong>both aluminium and uPVC</strong> — aluminium for slim sightlines and large spans, uPVC for maximum thermal and sound insulation — so you get the right system for every opening. Plus full glass works: frameless glass, shower enclosures, glass partitions and balustrades, shopfronts, curtain walling and skylights. Single units to full-tower fenestration packages, engineered for Gulf heat, salt-air and dust. We also supply and fit <strong>uPVC door and window systems</strong> for external openings and <strong>WPC (wood-plastic composite) doors</strong> — waterproof, termite-resistant internal doors ideal for UAE bathrooms and kitchens.</p>
         <ul class="service-detail__list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l4 4L19 6"/></svg> Aluminium &amp; uPVC windows &amp; doors</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l4 4L19 6"/></svg> Double &amp; triple glazing, sliding systems</li>
@@ -610,6 +657,17 @@
 </section>
 
 <!-- ========== FOOTER ========== -->
+
+  <section class="wrap" style="padding:64px 0;">
+    <h2 class="display">Straight answers on <em>price &amp; timelines</em></h2>
+      <h3>How do Al Taher's prices compare to smaller workshops?</h3>
+      <p style="color:var(--mid);line-height:1.8;">Often closer than people expect, and sometimes lower — because nothing is subcontracted. A small workshop that outsources powder coating, glass or welding pays a margin at each step and passes it on. We fabricate, coat and install with our own team, so there is no markup chain. You pay for materials, our labour and one margin — not three. For a like-for-like specification, ask us to quote against any other offer and compare line by line.</p>
+      <h3>How long does a residential project take? Do homeowners wait behind big contracts?</h3>
+      <p style="color:var(--mid);line-height:1.8;">No — residential and commercial work run on separate schedules, and every job gets a committed timeline in the quotation before we start. Typical guide times once design is approved: a custom gate runs about 2–3 weeks, stair railings 1–2 weeks, and a full kitchen 3–5 weeks, depending on finish and season. Because fabrication happens in our own workshop, we control the queue — your job is never waiting on a third-party fabricator.</p>
+      <h3>Do I have to deal with two different companies for a mixed project?</h3>
+      <p style="color:var(--mid);line-height:1.8;">No. Al Taher operates two licensed divisions — carpentry/aluminium and metal fabrication — but you get one project manager who owns your job across both. One quotation, one schedule, one point of contact from site visit to handover.</p>
+  </section>
+
 <footer class="footer">
   <div class="wrap">
     <div class="footer__top">
