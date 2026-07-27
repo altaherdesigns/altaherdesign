@@ -11,3 +11,5 @@ https://www.altaherdesign.ae/* https://altaherdesign.ae/:splat 301
 /index.html / 301
 /all-services/  /services/  301
 /all-services  /services/  301
+/ar/all-services/  /ar/services/  301
+/ar/all-services  /ar/services/  301
