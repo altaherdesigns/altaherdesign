@@ -4,6 +4,9 @@ Allow: /
 
 # Block nothing important — let Google crawl assets for proper rendering
 Disallow: /404.html
+Disallow: /CLAUDE.md
+Disallow: /KEYWORD-STRATEGY.md
+Disallow: /README.md
 
 # Sitemap
 Sitemap: https://altaherdesign.ae/sitemap.xml
