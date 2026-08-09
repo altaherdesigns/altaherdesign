@@ -24,7 +24,8 @@
 (function(){try{var s=localStorage.getItem('atg_lang'),p=window.location.pathname,a=p.indexOf('/ar')===0;if(s==='en'&&a){window.location.replace(p.replace(/^\/ar/,'')||'/');}else if(s==='ar'&&!a){window.location.replace('/ar'+p);}}catch(e){}})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Outfit:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Outfit:wght@300;400;500;600&display=swap"></noscript>
 <link rel="icon" type="image/png" href="/assets/images/logo.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -34,6 +35,8 @@
 <link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="/assets/css/rtl.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://altaherdesign.ae/ar/"},{"@type":"ListItem","position":2,"name":"من نحن","item":"https://altaherdesign.ae/ar/about/"}]}</script>
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="LzPTGDpJ8znycvxnEVw8kw" async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJT5EGEXTJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QJT5EGEXTJ');</script>
 </head>
 <body>
 <nav class="nav">
@@ -43,7 +46,7 @@
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <a href="/ar/"><span>الرئيسية</span><span class="num">01</span></a><a href="/ar/about/"><span>من نحن</span><span class="num">02</span></a><a href="/ar/services/"><span>خدماتنا</span><span class="num">03</span></a><a href="/ar/portfolio/"><span>أعمالنا</span><span class="num">04</span></a><a href="/ar/contact/"><span>تواصل معنا</span><span class="num">05</span></a>
-  <div class="mobile-nav__bottom"><a href="https://wa.me/971544463447?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1." class="btn btn--primary" target="_blank" style="justify-content:center;" rel="nofollow noopener">عرض مجاني</a></div>
+  <div class="mobile-nav__bottom"><a href="https://wa.me/971544463447?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1." class="btn btn--primary" target="_blank" class="u-jc" rel="nofollow noopener">عرض مجاني</a></div>
 </div>
 
 <section class="page-hero">
@@ -57,9 +60,9 @@
 <!-- Timeline -->
 <section style="padding:clamp(80px,12vw,140px) 0;background:var(--dark);overflow:hidden;position:relative;">
   <div style="position:absolute;inset:0;opacity:0.04;pointer-events:none;"><svg viewBox="0 0 400 400" width="100%" height="100%"><defs><pattern id="t-ar" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M40 0 L80 40 L40 80 L0 40 Z" stroke="#c9a84c" stroke-width="1" fill="none"/></pattern></defs><rect width="100%" height="100%" fill="url(#t-ar)"/></svg></div>
-  <div class="wrap" style="position:relative;z-index:2;">
+  <div class="wrap u-rel2">
     <div class="reveal" style="text-align:right;margin-bottom:clamp(48px,8vw,80px);">
-      <span class="section-num" style="color:var(--gold-light);">تاريخنا</span>
+      <span class="section-num u-gold">تاريخنا</span>
       <h2 class="display" style="color:var(--off-white);margin-top:16px;">مسيرة <em>بنيناها</em><br>خطوة بخطوة.</h2>
     </div>
     <div class="timeline__inner">
@@ -131,9 +134,9 @@
         <h3 style="font-size:1.2rem;margin-bottom:16px;">أصحاب الفلل</h3>
         <p class="u-color-mid u-fs-14 u-lh-18 u-mb-20">تريد بوابة تليق بفيلتك أو مطبخاً على قياسك أو برجولة تحمي مسبحك — نُصمِّم كل شيء حسب فضائك وذوقك.</p>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
-          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid" style="flex-direction:row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>تصميم مخصص بلا أحجام قياسية</li>
-          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid" style="flex-direction:row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>تركيب كامل داخل فيلتك</li>
-          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid" style="flex-direction:row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>ضمان على التصنيع والتشطيب</li>
+          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid u-rev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>تصميم مخصص بلا أحجام قياسية</li>
+          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid u-rev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>تركيب كامل داخل فيلتك</li>
+          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid u-rev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>ضمان على التصنيع والتشطيب</li>
         </ul>
       </div>
       <div class="reveal" style="background:var(--dark);padding:36px;border-top:2px solid var(--gold);">
@@ -149,9 +152,9 @@
         <h3 style="font-size:1.2rem;margin-bottom:16px;">الجهات الحكومية</h3>
         <p class="u-color-mid u-fs-14 u-lh-18 u-mb-20">مشاريع بنية تحتية ومباني حكومية تحتاج مواصفات دقيقة وتسليم منضبط — سجل نظيف وخبرة معتمدة.</p>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
-          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid" style="flex-direction:row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>مواصفات BS وASTM حسب الطلب</li>
-          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid" style="flex-direction:row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>توثيق كامل وشهادات جودة</li>
-          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid" style="flex-direction:row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>سجل تجاري معتمد في الفجيرة</li>
+          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid u-rev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>مواصفات BS وASTM حسب الطلب</li>
+          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid u-rev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>توثيق كامل وشهادات جودة</li>
+          <li class="u-flex-center u-gap-10 u-fs-13 u-color-mid u-rev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0d6e5e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>سجل تجاري معتمد في الفجيرة</li>
         </ul>
       </div>
     </div>
@@ -175,7 +178,7 @@
     <div><h5>خدماتنا</h5><ul><li><a href="/ar/services/metal-gates/">البوابات المعدنية</a></li><li><a href="/ar/services/stair-railings/">درابزين السلالم</a></li><li><a href="/ar/services/aluminium-windows-doors/">نوافذ وأبواب الألمنيوم</a></li><li><a href="/ar/services/upvc-wpc-doors/">أبواب UPVC وWPC</a></li><li><a href="/ar/services/glass-works/">أعمال الزجاج</a></li><li><a href="/ar/services/curtain-walls/">الواجهات الزجاجية الستائرية</a></li><li><a href="/ar/services/kitchens-joinery/">المطابخ والنجارة</a></li><li><a href="/ar/services/pergolas-shades/">البرجولات والمظلات</a></li><li><a href="/ar/services/metal-fabrication/">التصنيع المعدني</a></li><li><a href="/ar/services/powder-coating/">الطلاء الإلكتروستاتيكي</a></li><li><a href="/ar/services/marble-work/">أعمال الرخام</a></li><li><a href="/ar/services/facade-cladding/">الواجهات والكلادينج</a></li><li><a href="/ar/services/">جميع الخدمات</a></li></ul></div>
     <div><h5>مناطق الخدمة</h5><ul><li><a href="/ar/fujairah/">الفجيرة</a></li><li><a href="/ar/sharjah/">الشارقة</a></li><li><a href="/ar/dubai/">دبي</a></li><li><a href="/ar/abu-dhabi/">أبوظبي</a></li><li><a href="/ar/ras-al-khaimah/">رأس الخيمة</a></li><li><a href="/ar/ajman/">عجمان</a></li><li><a href="/ar/umm-al-quwain/">أم القيوين</a></li></ul></div>
     <div><h5>الشركة</h5><ul><li><a href="/ar/about/">من نحن</a></li><li><a href="/ar/portfolio/">أعمالنا</a></li><li><a href="/ar/contact/">اتصل بنا</a></li><li><a href="https://www.instagram.com/altaher_design/" target="_blank" rel="noopener">إنستغرام</a></li><li><a href="https://www.tiktok.com/@altaherdesign" target="_blank" rel="noopener">تيك توك</a></li><li><a href="https://www.youtube.com/@altaherdesign" target="_blank" rel="noopener">يوتيوب</a></li></ul></div>
-    <div><h5>تواصل معنا</h5><a href="tel:+971544463447" class="footer__contact-item" rel="nofollow"><strong>المبيعات والعمليات</strong><span>3447 446 54 971+</span></a><a href="tel:+971506499697" class="footer__contact-item" rel="nofollow"><strong>التسويق والعمليات</strong><span>9697 649 50 971+</span></a><a href="mailto:sales@altaherdesign.ae" class="footer__contact-item"><strong>البريد الإلكتروني</strong>sales@altaherdesign.ae</a><a href="/ar/contact/" class="footer__contact-item"><strong>الورشة</strong><span>منطقة الحيل الصناعية، الفجيرة</span></a></div>
+    <div><h5>تواصل معنا</h5><a href="tel:+971544463447" class="footer__contact-item" rel="nofollow"><strong>المبيعات والعمليات</strong><span>3447 446 54 971+</span></a><a href="tel:+971506499697" class="footer__contact-item" rel="nofollow"><strong>التسويق والعمليات</strong><span>9697 649 50 971+</span></a><a href="mailto:sales@altaherdesign.ae" class="footer__contact-item"><strong>البريد الإلكتروني</strong>sales&#64;altaherdesign&#46;ae</a><a href="/ar/contact/" class="footer__contact-item"><strong>الورشة</strong><span>منطقة الحيل الصناعية، الفجيرة</span></a></div>
   </div>
   <div class="footer__bottom"><div>© 2026 مجموعة الطاهر · altaherdesign.ae</div><div><a href="/ar/services/">الخدمات</a> · <a href="/ar/fujairah/">المناطق</a></div></div>
 </div></footer>

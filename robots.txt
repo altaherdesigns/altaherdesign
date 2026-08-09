@@ -7,6 +7,7 @@ Disallow: /404.html
 Disallow: /CLAUDE.md
 Disallow: /KEYWORD-STRATEGY.md
 Disallow: /README.md
+Disallow: /DEPLOY.md
 
 # Sitemap
 Sitemap: https://altaherdesign.ae/sitemap.xml
