@@ -24,6 +24,8 @@
 (function(){try{var s=localStorage.getItem('atg_lang'),p=window.location.pathname,a=p.indexOf('/ar')===0;if(s==='ar'&&!a){window.location.replace('/ar'+p);}else if(s==='en'&&a){window.location.replace(p.replace(/^\/ar/,'')||'/');}}catch(e){}})();
 </script>
 
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://analytics.ahrefs.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Outfit:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
@@ -42,71 +44,13 @@
 
 <!-- Clean Schema — @graph prevents duplicate unique properties -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://altaherdesign.ae/#organization",
-      "name": "Al Taher Group",
-      "url": "https://altaherdesign.ae",
-      "logo": "https://altaherdesign.ae/assets/images/logo.png",
-      "foundingDate": "1984",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Al Hail Industrial Area",
-        "addressLocality": "Fujairah",
-        "addressCountry": "AE"
-      },
-      "areaServed": "AE",
-      "sameAs": [
-        "https://www.instagram.com/altaher_design/",
-        "https://www.tiktok.com/@altaherdesign",
-        "https://www.youtube.com/@altaherdesign"
-      ]
-    },
-    {
-      "@type": "AboutPage",
-      "@id": "https://altaherdesign.ae/about/#webpage",
-      "url": "https://altaherdesign.ae/about/",
-      "name": "About Al Taher Group — Since 1984, Fujairah UAE",
-      "description": "Al Taher Group was founded in 1984 in Fujairah. Two divisions serving homeowners and contractors across all 7 UAE emirates.",
-      "isPartOf": {
-        "@id": "https://altaherdesign.ae/#website"
-      },
-      "about": {
-        "@id": "https://altaherdesign.ae/#organization"
-      },
-      "inLanguage": "en"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://altaherdesign.ae/#website",
-      "url": "https://altaherdesign.ae",
-      "name": "Al Taher Group",
-      "publisher": {
-        "@id": "https://altaherdesign.ae/#organization"
-      },
-      "inLanguage": [
-        "en",
-        "ar"
-      ]
-    }
-  ]
-}
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://altaherdesign.ae/#organization","name":"Al Taher Group","url":"https://altaherdesign.ae","logo":"https://altaherdesign.ae/assets/images/logo.png","foundingDate":"1984","address":{"@type":"PostalAddress","streetAddress":"Al Hail Industrial Area","addressLocality":"Fujairah","addressCountry":"AE"},"areaServed":"AE","sameAs":["https://www.instagram.com/altaher_design/","https://www.tiktok.com/@altaherdesign","https://www.youtube.com/@altaherdesign"]},{"@type":"AboutPage","@id":"https://altaherdesign.ae/about/#webpage","url":"https://altaherdesign.ae/about/","name":"About Al Taher Group — Since 1984, Fujairah UAE","description":"Al Taher Group was founded in 1984 in Fujairah. Two divisions serving homeowners and contractors across all 7 UAE emirates.","isPartOf":{"@id":"https://altaherdesign.ae/#website"},"about":{"@id":"https://altaherdesign.ae/#organization"},"inLanguage":"en"},{"@type":"WebSite","@id":"https://altaherdesign.ae/#website","url":"https://altaherdesign.ae","name":"Al Taher Group","publisher":{"@id":"https://altaherdesign.ae/#organization"},"inLanguage":["en","ar"]}]}
 </script>
 <!-- Breadcrumb schema for SERP breadcrumbs + sitelinks -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://altaherdesign.ae/"},
-    {"@type":"ListItem","position":2,"name":"About","item":"https://altaherdesign.ae/about/"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://altaherdesign.ae/"},{"@type":"ListItem","position":2,"name":"About","item":"https://altaherdesign.ae/about/"}]}
 </script>
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="LzPTGDpJ8znycvxnEVw8kw" async></script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="LzPTGDpJ8znycvxnEVw8kw" async defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJT5EGEXTJ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QJT5EGEXTJ');</script>
 </head>
@@ -115,7 +59,7 @@
 <!-- NAV -->
 <nav class="nav">
   <a href="/" class="nav__logo">
-    <img src="/assets/images/logo.png" alt="Al Taher Group" width="44" height="44">
+    <img src="/assets/images/logo.png" alt="Al Taher Group" width="44" height="44" fetchpriority="high" decoding="async">
     <div class="nav__logo-text"><strong>Al Taher Group</strong><small>Since 1984</small></div>
   </a>
   <div class="nav__links">
