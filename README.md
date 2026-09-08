@@ -104,7 +104,7 @@ altaherdesign.ae/
 | Role | Number |
 |---|---|
 | General Manager | +971 50 670 5015 |
-| Sales & Operations | +971 54 446 3447 |
+| Sales & Operations | +971 50 649 9697 |
 | Marketing & Operations | +971 50 649 9697 |
 
 **Email:** sales@altaherdesign.ae  

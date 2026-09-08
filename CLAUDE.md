@@ -39,7 +39,7 @@ pergola/shed, powder coating, mall kiosks/retail counters.
 | Role | Name | Phone | WhatsApp routing |
 |---|---|---|---|
 | Owner / GM | Abdulrehman Butt | +971 50 670 5015 | contractors; kitchen, aluminium, pergola, facade |
-| Sales & Operations | Ahmad Butt | +971 54 446 3447 | **default / quotes**; gates, fabrication, powder coating |
+| Sales & Operations | Ahmad Butt | +971 50 649 9697 | **default / quotes**; gates, fabrication, powder coating |
 | Marketing & Operations | Muaaz Butt | +971 50 649 9697 | railings, pergola, general |
 
 **Email:** sales@altaherdesign.ae · **Hours:** Sat–Thu, 6 AM – 9 PM
@@ -136,7 +136,7 @@ flow with service-type routing + fallback. LocalBusiness schema. No orphan pages
 ```
 Al Taher Group
 Al Hail Industrial Area, Fujairah, United Arab Emirates
-Phone: +971 54 446 3447
+Phone: +971 50 649 9697
 Email: sales@altaherdesign.ae
 Hours: Saturday–Thursday, 6 AM – 9 PM
 Web: https://altaherdesign.ae
@@ -172,7 +172,7 @@ Goal: B2B quote enquiries. Targeting: Northern Emirates (Fujairah, Sharjah, RAK)
 Smart/Business-Profile ad caps at **5 headlines + 3 descriptions**; each asset must stand alone.
 - Headlines (≤30): `Al Taher Group | Since 1984` (pin to Pos 1) · `Metal, Aluminium & Fitout` · `Get a Fast Free Quote` · `40+ Years of Experience` · `Serving All UAE Emirates`
 - Descriptions (≤60): `Metal, aluminium, carpentry & fitout experts.` · `Free quotes. Trusted in the UAE since 1984.` · `Get your free quote today via WhatsApp.`
-- Call asset: Sales +971 54 446 3447. Location asset: Fujairah. Pin only Headline 1.
+- Call asset: Sales +971 50 649 9697. Location asset: Fujairah. Pin only Headline 1.
 
 ## 12. Deploy workflow
 Edit files → validate (sitemap well-formed XML; no broken internal links; pages render) → commit & push to `main` → Cloudflare auto-deploys → verify on https://altaherdesign.ae → if page set changed, resubmit sitemap in GSC.
