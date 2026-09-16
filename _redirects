@@ -14,3 +14,5 @@
 /all-services          /services/           301
 /ar/all-services/      /ar/services/        301
 /ar/all-services       /ar/services/        301
+/ar/blog/bwabat-drb/   /ar/blog/custom-metal-gates-fujairah/   301
+/ar/blog/bwabat-drb    /ar/blog/custom-metal-gates-fujairah/   301
