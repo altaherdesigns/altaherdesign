@@ -37,15 +37,15 @@
 </script>
 
 <!-- Fonts -->
-<link rel="preload" as="image" href="https://lh3.googleusercontent.com/d/1xFF60cw4pBYd1BQXW8uOtB_LFvxPGXvR" fetchpriority="high">
+<link rel="preload" as="image" href="https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq=w1179" imagesrcset="https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq=w800 800w, https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq=w1179 1179w" imagesizes="(min-width:1940px) 1280px, (min-width:900px) 66vw, 100vw" fetchpriority="high">
 <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin>
 <link rel="dns-prefetch" href="https://lh3.googleusercontent.com">
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://analytics.ahrefs.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Outfit:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Outfit:wght@300;400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400,30..100&amp;family=Outfit:wght@400;500;600&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400,30..100&amp;family=Outfit:wght@400;500;600&amp;display=swap"></noscript>
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/assets/images/logo.png">
@@ -53,13 +53,13 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <!-- Styles -->
-<meta name="theme-color" content="#0d6e5e">
+<meta name="theme-color" content="#2B5C62">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="geo.region" content="AE-FU">
 <meta name="geo.placename" content="Fujairah">
 <meta name="geo.position" content="25.1269;56.3366">
 <meta name="ICBM" content="25.1269, 56.3366">
-<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css?v=2026092802">
 
 <!-- Schema — comprehensive @graph, no duplicate unique properties -->
 <script type="application/ld+json">
@@ -73,625 +73,198 @@
 <body>
 
 <!-- ========== NAV ========== -->
-<nav class="nav">
-  <a href="/" class="nav__logo">
-    <img src="/assets/images/logo.png" alt="Al Taher Group" width="44" height="44" fetchpriority="high" decoding="async">
-    <div class="nav__logo-text">
-      <strong>Al Taher Group</strong>
-      <small>Since 1984</small>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/"><img src="/assets/images/logo.png" alt="" width="40" height="40" fetchpriority="high" decoding="async"><span class="brand__name">Al Taher Group</span></a>
+    <nav class="site-nav" aria-label="Main"><ul><li><a href="/services/">Services</a></li><li><a href="/portfolio/">Our work</a></li><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></nav>
+    <div class="site-header__actions">
+      <a class="lang-link" href="/ar/" hreflang="ar" lang="ar" data-lang="ar">عربي</a>
+      <a class="btn btn--primary" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit" target="_blank" rel="noopener nofollow">Book a free site visit</a>
     </div>
-  </a>
-
-  <div class="nav__links">
-    <a href="/" class="active" aria-current="page">Home</a>
-    <a href="/about/">About</a>
-    <a href="/services/">Services</a>
-    <a href="/portfolio/">Portfolio</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle__bars" aria-hidden="true"></span><span>Menu</span></button>
   </div>
-
-  <div class="nav__right">
-    <div class="lang-toggle" role="group" aria-label="Language">
-      <button data-lang="en" class="active" aria-label="English">EN</button>
-      <button data-lang="ar" aria-label="Arabic">عربي</button>
-    </div>
-    <a href="https://wa.me/971506499697?text=Hello%20Al%20Taher%20Group%2C%20I%20would%20like%20a%20quotation." class="nav__quote" target="_blank" rel="noopener nofollow">Free Quote</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- Mobile nav -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="/"><span>Home</span><span class="num">01</span></a>
-  <a href="/about/"><span>About</span><span class="num">02</span></a>
-  <a href="/services/"><span>Services</span><span class="num">03</span></a>
-  <a href="/portfolio/"><span>Portfolio</span><span class="num">04</span></a>
-  <a href="/blog/"><span>Blog</span><span class="num">05</span></a>
-  <a href="/contact/"><span>Contact</span><span class="num">06</span></a>
-  <div class="mobile-nav__bottom">
-    <a href="https://wa.me/971506499697?text=Hello%20Al%20Taher%20Group%2C%20I%20would%20like%20a%20quotation." class="btn btn--primary" target="_blank" rel="noopener nofollow" class="u-center-sm">Get a Free Quote</a>
+</header>
+<div class="menu" id="site-menu" hidden>
+  <nav aria-label="Menu"><ul><li><a href="/" aria-current="page">Home</a></li><li><a href="/services/">Services</a></li><li><a href="/portfolio/">Our work</a></li><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></nav>
+  <div class="menu__foot">
+    <a class="btn btn--primary" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit" target="_blank" rel="noopener nofollow">Book a free site visit</a>
+    <p><a class="lang-link" href="/ar/" hreflang="ar" lang="ar" data-lang="ar">عربي</a></p>
+    <p>Call or WhatsApp <a href="tel:+971506499697">+971 50 649 9697</a></p>
   </div>
 </div>
-
-<!-- ========== HERO ========== -->
-<section class="hero">
-  <div class="hero__grain"></div>
-  <div class="hero__pattern" aria-hidden="true">
-    <!-- Mashrabiya-inspired geometric pattern -->
-    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="mash" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-          <path d="M40 0 L80 40 L40 80 L0 40 Z" stroke="#0d6e5e" stroke-width="1" fill="none"/>
-          <circle cx="40" cy="40" r="14" stroke="#0d6e5e" stroke-width="1" fill="none"/>
-          <path d="M40 26 L40 54 M26 40 L54 40" stroke="#0d6e5e" stroke-width="0.5"/>
-        </pattern>
-      </defs>
-      <rect width="400" height="400" fill="url(#mash)"/>
-    </svg>
-  </div>
-
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <img class="hero__img" src="https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq=w1179" srcset="https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq=w800 800w, https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq=w1179 1179w" sizes="(min-width:1940px) 1280px, (min-width:900px) 66vw, 100vw" width="1179" height="1437" alt="Classical stone villa with arched windows and ornate entrance gates, a complete project by Al Taher Group" fetchpriority="high" decoding="async">
+  <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__inner">
-    <div class="hero__content">
-      <div class="hero__kicker fade-up">
-        <span class="eyebrow">Fujairah · Since 1984</span>
-      </div>
-      <h1 class="display hero__title fade-up d1">
-        Gates, Doors, Glass &amp; Marble Works,<br>Built in <em>Fujairah</em> Since 1984
-      </h1>
-      <p class="hero__sub fade-up d2">
-        We design, fabricate and install cast aluminium and steel gates, aluminium and uPVC windows, glass, marble, kitchens and pergolas — for homeowners and contractors across all seven emirates. Family-run since 1984, all from our own workshop in Al Hail Industrial Area, Fujairah.
-      </p>
-      <div class="hero__ctas fade-up d3">
-        <a href="https://wa.me/971506499697?text=Hello%20Al%20Taher%20Group%2C%20I%20would%20like%20a%20quotation." target="_blank" rel="noopener nofollow" class="btn btn--primary">
-          Get Free Quote
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-        <a href="/portfolio/" class="btn btn--ghost">
-          View Our Work
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-
-      <div class="hero__divisions fade-up d4">
-        <div class="hero__division">
-          <strong>Al Taher Carpentry, Aluminium & Metal Forming LLC</strong>
-          <span>Carpentry · Kitchens · Aluminium · Glass · Pergolas</span>
-        </div>
-        <div class="hero__division">
-          <strong>DAT Metal Fabrication</strong>
-          <span>Metal fabrication · Welding · Powder coating · Gates</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero__side fade-up d2">
-      <img src="https://lh3.googleusercontent.com/d/1xFF60cw4pBYd1BQXW8uOtB_LFvxPGXvR" alt="Custom metal gate by Al Taher Group" loading="eager" fetchpriority="high" width="900" height="675" decoding="async">
-      <div class="hero__side-frame"></div>
-      <div class="hero__badge">
-        <strong>Custom Gate</strong>
-        <span>Villa · Fujairah</span>
-      </div>
-    </div>
+    <h1 class="hero__title" id="hero-title">Everything your villa needs, made in one Fujairah workshop.</h1>
+    <p class="hero__lede">Gates, doors, windows, railings, pergolas, kitchens and marble, designed, fabricated and installed by our own team since 1984.</p>
+    <div class="actions"><a class="btn btn--light" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit" target="_blank" rel="noopener nofollow">Book a free site visit</a><a class="link link--light" href="/portfolio/">Our work</a></div>
+    <p class="hero__note">Free site visit within 48 hours, anywhere in the seven emirates.</p>
   </div>
 </section>
-
-<!-- ========== HERO STATS ========== -->
-<section class="hero-stats u-p0">
+<section class="villa" aria-labelledby="villa-title">
   <div class="wrap">
-    <div class="hero-stats__inner">
-      <div class="stat">
-        <div class="stat__num"><span data-count="40" data-suffix="+">40+</span></div>
-        <div class="stat__label">Years of Heritage</div>
+    <div class="sect__head"><h2 id="villa-title">Start at the gate.</h2><p>Choose any part of the villa to see what we make for it.</p></div>
+    <div class="villa__grid">
+      <div class="villa__drawing">
+        <div class="villa__stage"><svg class="villa__svg" viewBox="0 96 1100 510" role="img" aria-labelledby="villa-svg-title" focusable="false"><title id="villa-svg-title">Line drawing of a two storey villa with a cutaway showing the stairs, kitchen and bathroom</title><g class="base"><path class="ln ln--bold" pathLength="1" d="M20 580H1080"/><path class="ln ln--thin ln--faint" pathLength="1" d="M20 590H1080"/><path class="ln ln--bold" pathLength="1" d="M330 452V140H880V580"/><path class="ln ln--thin" pathLength="1" d="M340 452V150H870V580"/><path class="ln" pathLength="1" d="M318 132H892"/><path class="ln ln--thin" pathLength="1" d="M318 122H892"/><path class="ln ln--thin ln--faint" pathLength="1" d="M318 112H892"/><path class="ln" pathLength="1" d="M340 350H870"/><path class="ln ln--thin" pathLength="1" d="M340 360H870"/><path class="ln ln--bold" pathLength="1" d="M600 150V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M608 150V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M340 330H600"/></g><g id="vp-entrance" class="part"><path class="ln" pathLength="1" d="M40 580V470H160"/><path class="ln ln--thin" pathLength="1" d="M36 462H166"/><path class="ln ln--thin ln--faint" pathLength="1" d="M36 454H166"/><path class="ln" pathLength="1" d="M380 470H470V580"/><path class="ln ln--thin" pathLength="1" d="M374 462H476"/><path class="ln ln--thin ln--faint" pathLength="1" d="M374 454H476"/><path class="ln" pathLength="1" d="M160 580V440H172V580"/><path class="ln ln--thin" pathLength="1" d="M154 440H178"/><path class="ln ln--thin" pathLength="1" d="M154 432H178"/><path class="ln" pathLength="1" d="M368 580V440H380V580"/><path class="ln ln--thin" pathLength="1" d="M362 440H386"/><path class="ln ln--thin" pathLength="1" d="M362 432H386"/><path class="ln" pathLength="1" d="M172 452H368"/><path class="ln ln--thin" pathLength="1" d="M172 460H368"/><path class="ln ln--thin" pathLength="1" d="M172 570H368"/><path class="ln ln--thin" pathLength="1" d="M266 452V570"/><path class="ln ln--thin" pathLength="1" d="M274 452V570"/><path class="ln ln--thin" pathLength="1" d="M184 460V570"/><path class="ln ln--thin" pathLength="1" d="M196 460V570"/><path class="ln ln--thin" pathLength="1" d="M208 460V570"/><path class="ln ln--thin" pathLength="1" d="M220 460V570"/><path class="ln ln--thin" pathLength="1" d="M232 460V570"/><path class="ln ln--thin" pathLength="1" d="M244 460V570"/><path class="ln ln--thin" pathLength="1" d="M256 460V570"/><path class="ln ln--thin" pathLength="1" d="M280 460V570"/><path class="ln ln--thin" pathLength="1" d="M292 460V570"/><path class="ln ln--thin" pathLength="1" d="M304 460V570"/><path class="ln ln--thin" pathLength="1" d="M316 460V570"/><path class="ln ln--thin" pathLength="1" d="M328 460V570"/><path class="ln ln--thin" pathLength="1" d="M340 460V570"/><path class="ln ln--thin" pathLength="1" d="M352 460V570"/><path class="ln" pathLength="1" d="M404 580V484H444V580"/><path class="ln ln--thin" pathLength="1" d="M411 580V491H437V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M40 540H160"/><path class="ln ln--thin ln--faint" pathLength="1" d="M444 540H470"/><path class="ln ln--thin ln--faint" pathLength="1" d="M380 540H404"/></g><g id="vp-windows" class="part"><path class="ln" pathLength="1" d="M372 180h64v110h-64Z"/><path class="ln ln--thin" pathLength="1" d="M379 187h50v96h-50Z"/><path class="ln ln--thin" pathLength="1" d="M404 187V283"/><path class="ln" pathLength="1" d="M470 180h64v110h-64Z"/><path class="ln ln--thin" pathLength="1" d="M477 187h50v96h-50Z"/><path class="ln ln--thin" pathLength="1" d="M502 187V283"/><path class="ln" pathLength="1" d="M430 470V386H492V470"/><path class="ln ln--thin" pathLength="1" d="M437 470V393H485V470"/><path class="ln ln--thin" pathLength="1" d="M461 393V470"/><path class="ln" pathLength="1" d="M522 386h58v64h-58Z"/><path class="ln ln--thin" pathLength="1" d="M528 392h46v52h-46Z"/></g><g id="vp-stairs" class="part"><path class="ln" pathLength="1" d="M356 330H560"/><path class="ln ln--thin" pathLength="1" d="M356 298H560"/><path class="ln ln--thin" pathLength="1" d="M356 298V330"/><path class="ln ln--thin" pathLength="1" d="M560 298V330"/><path class="ln ln--thin" pathLength="1" d="M368 298V330"/><path class="ln ln--thin" pathLength="1" d="M380 298V330"/><path class="ln ln--thin" pathLength="1" d="M392 298V330"/><path class="ln ln--thin" pathLength="1" d="M404 298V330"/><path class="ln ln--thin" pathLength="1" d="M416 298V330"/><path class="ln ln--thin" pathLength="1" d="M428 298V330"/><path class="ln ln--thin" pathLength="1" d="M440 298V330"/><path class="ln ln--thin" pathLength="1" d="M452 298V330"/><path class="ln ln--thin" pathLength="1" d="M464 298V330"/><path class="ln ln--thin" pathLength="1" d="M476 298V330"/><path class="ln ln--thin" pathLength="1" d="M488 298V330"/><path class="ln ln--thin" pathLength="1" d="M500 298V330"/><path class="ln ln--thin" pathLength="1" d="M512 298V330"/><path class="ln ln--thin" pathLength="1" d="M524 298V330"/><path class="ln ln--thin" pathLength="1" d="M536 298V330"/><path class="ln ln--thin" pathLength="1" d="M548 298V330"/><path class="ln" pathLength="1" d="M622 580v-24.7h16.7v-24.7h16.7v-24.7h16.7v-24.7h16.7v-24.7h16.7v-24.7h16.7v-24.7h16.7v-24.7h16.7v-24.7h16.7"/><path class="ln ln--thin" pathLength="1" d="M640 580L772 384"/><path class="ln ln--thin" pathLength="1" d="M622 528L772 306"/><path class="ln ln--thin" pathLength="1" d="M630.3 555.3V515.7"/><path class="ln ln--thin" pathLength="1" d="M647.0 530.7V491.0"/><path class="ln ln--thin" pathLength="1" d="M663.7 506.0V466.3"/><path class="ln ln--thin" pathLength="1" d="M680.3 481.3V441.7"/><path class="ln ln--thin" pathLength="1" d="M697.0 456.7V417.0"/><path class="ln ln--thin" pathLength="1" d="M713.7 432.0V392.3"/><path class="ln ln--thin" pathLength="1" d="M730.3 407.3V367.7"/><path class="ln ln--thin" pathLength="1" d="M747.0 382.7V343.0"/><path class="ln ln--thin" pathLength="1" d="M763.7 358.0V318.3"/><path class="ln ln--thin" pathLength="1" d="M608 312H772"/><path class="ln ln--thin" pathLength="1" d="M608 350V312"/><path class="ln ln--thin ln--faint" pathLength="1" d="M620 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M636 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M652 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M668 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M684 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M700 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M716 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M732 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M748 312V350"/><path class="ln ln--thin ln--faint" pathLength="1" d="M764 312V350"/></g><g id="vp-kitchen" class="part"><path class="ln" pathLength="1" d="M786 514H876"/><path class="ln ln--thin" pathLength="1" d="M786 522H876"/><path class="ln ln--thin" pathLength="1" d="M792 522V580H870V522"/><path class="ln ln--thin" pathLength="1" d="M818 528V574"/><path class="ln ln--thin" pathLength="1" d="M844 528V574"/><path class="ln" pathLength="1" d="M798 420h72v44h-72Z"/><path class="ln ln--thin" pathLength="1" d="M822 424V460"/><path class="ln ln--thin" pathLength="1" d="M846 424V460"/><path class="ln ln--thin ln--faint" pathLength="1" d="M818 486H850"/></g><g id="vp-floors" class="part"><path class="ln ln--thin" pathLength="1" d="M608 572H880"/><path class="ln ln--thin" pathLength="1" d="M780 344H870"/><path class="ln ln--thin ln--faint" pathLength="1" d="M624 572V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M652 572V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M680 572V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M708 572V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M736 572V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M764 572V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M792 572V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M820 572V580"/><path class="ln ln--thin ln--faint" pathLength="1" d="M848 572V580"/><path class="ln ln--thin" pathLength="1" d="M780 150V350"/><path class="ln" pathLength="1" d="M834 236V344"/><path class="ln ln--thin" pathLength="1" d="M840 236V344"/><path class="ln ln--thin" pathLength="1" d="M830 236H844"/><path class="ln ln--thin" pathLength="1" d="M862 196H848V212"/><path class="ln ln--thin" pathLength="1" d="M842 216H854"/><path class="ln" pathLength="1" d="M790 298H822"/><path class="ln ln--thin" pathLength="1" d="M794 298V344H818V298"/><path class="ln ln--thin" pathLength="1" d="M794 226h24v40h-24Z"/></g><g id="vp-garden" class="part"><path class="ln" pathLength="1" d="M912 580V432"/><path class="ln ln--thin" pathLength="1" d="M920 580V440"/><path class="ln" pathLength="1" d="M1052 580V432"/><path class="ln ln--thin" pathLength="1" d="M1060 580V440"/><path class="ln" pathLength="1" d="M898 432H1074"/><path class="ln ln--thin" pathLength="1" d="M898 424H1074"/><path class="ln ln--thin" pathLength="1" d="M904 424V412"/><path class="ln ln--thin" pathLength="1" d="M918 424V412"/><path class="ln ln--thin" pathLength="1" d="M932 424V412"/><path class="ln ln--thin" pathLength="1" d="M946 424V412"/><path class="ln ln--thin" pathLength="1" d="M960 424V412"/><path class="ln ln--thin" pathLength="1" d="M974 424V412"/><path class="ln ln--thin" pathLength="1" d="M988 424V412"/><path class="ln ln--thin" pathLength="1" d="M1002 424V412"/><path class="ln ln--thin" pathLength="1" d="M1016 424V412"/><path class="ln ln--thin" pathLength="1" d="M1030 424V412"/><path class="ln ln--thin" pathLength="1" d="M1044 424V412"/><path class="ln ln--thin" pathLength="1" d="M1058 424V412"/><path class="ln ln--thin ln--faint" pathLength="1" d="M934 580V548H1038V580"/></g></svg>
+<button class="hotspot hotspot--below" type="button" data-part="entrance" aria-pressed="true" aria-controls="part-entrance" aria-label="Entrance" style="left:24.5%;top:81.2%"><span class="hotspot__dot" aria-hidden="true"></span><span class="hotspot__label" aria-hidden="true">Entrance</span></button>
+<button class="hotspot hotspot--below" type="button" data-part="windows" aria-pressed="false" aria-controls="part-windows" aria-label="Windows and doors" style="left:41.2%;top:29.2%"><span class="hotspot__dot" aria-hidden="true"></span><span class="hotspot__label" aria-hidden="true">Windows and doors</span></button>
+<button class="hotspot hotspot--above" type="button" data-part="garden" aria-pressed="false" aria-controls="part-garden" aria-label="Garden and roof" style="left:89.5%;top:73.3%"><span class="hotspot__dot" aria-hidden="true"></span><span class="hotspot__label" aria-hidden="true">Garden and roof</span></button>
+<button class="hotspot hotspot--left" type="button" data-part="stairs" aria-pressed="false" aria-controls="part-stairs" aria-label="Stairs and balconies" style="left:61.8%;top:67.5%"><span class="hotspot__dot" aria-hidden="true"></span><span class="hotspot__label" aria-hidden="true">Stairs and balconies</span></button>
+<button class="hotspot hotspot--below" type="button" data-part="kitchen" aria-pressed="false" aria-controls="part-kitchen" aria-label="Kitchen" style="left:75.5%;top:77.3%"><span class="hotspot__dot" aria-hidden="true"></span><span class="hotspot__label" aria-hidden="true">Kitchen</span></button>
+<button class="hotspot hotspot--left" type="button" data-part="floors" aria-pressed="false" aria-controls="part-floors" aria-label="Floors and bathrooms" style="left:75.1%;top:34.1%"><span class="hotspot__dot" aria-hidden="true"></span><span class="hotspot__label" aria-hidden="true">Floors and bathrooms</span></button>
+        </div>
+        <ul class="villa__parts" aria-label="Parts of the villa"><li><button type="button" data-part="entrance" aria-pressed="true" aria-controls="part-entrance"><img src="https://lh3.googleusercontent.com/d/16Nf9G96HmSJWZMIs0RKxkR5z3aOuj7Ye=w120" width="44" height="44" alt="" loading="lazy" decoding="async"><span>Entrance</span></button></li><li><button type="button" data-part="windows" aria-pressed="false" aria-controls="part-windows"><img src="https://lh3.googleusercontent.com/d/1LowfKGLIHAl32mXqcZBQSgcjvqlyD4D1=w120" width="44" height="44" alt="" loading="lazy" decoding="async"><span>Windows and doors</span></button></li><li><button type="button" data-part="garden" aria-pressed="false" aria-controls="part-garden"><img src="https://lh3.googleusercontent.com/d/1G16O0g5F-UJEg_rvnoxE0kfDE-8VgRLg=w120" width="44" height="44" alt="" loading="lazy" decoding="async"><span>Garden and roof</span></button></li><li><button type="button" data-part="stairs" aria-pressed="false" aria-controls="part-stairs"><img src="https://lh3.googleusercontent.com/d/17GD7SjHpwsL__Y0QF8yqS4oIyZV305X9=w120" width="44" height="44" alt="" loading="lazy" decoding="async"><span>Stairs and balconies</span></button></li><li><button type="button" data-part="kitchen" aria-pressed="false" aria-controls="part-kitchen"><img src="https://lh3.googleusercontent.com/d/18vZXwTL4HXYtF6jjwGw9QxAFt-S8-aNC=w120" width="44" height="44" alt="" loading="lazy" decoding="async"><span>Kitchen</span></button></li><li><button type="button" data-part="floors" aria-pressed="false" aria-controls="part-floors"><img src="https://lh3.googleusercontent.com/d/1uq1dLPX2zPQK4fkPNwk5h995p4t7r0W-=w120" width="44" height="44" alt="" loading="lazy" decoding="async"><span>Floors and bathrooms</span></button></li></ul>
       </div>
-      <div class="stat">
-        <div class="stat__num"><span data-count="12">12</span></div>
-        <div class="stat__label">Specialised Services</div>
-      </div>
-      <div class="stat">
-        <div class="stat__num"><span data-count="7">7</span></div>
-        <div class="stat__label">Emirates Served</div>
-      </div>
-      <div class="stat">
-        <div class="stat__num"><span data-count="2">2</span></div>
-        <div class="stat__label">Divisions, One Group</div>
+      <div class="villa__panels" aria-live="polite">
+<div class="part-panel" id="part-entrance" role="region" aria-label="Entrance">
+  <figure><img src="https://lh3.googleusercontent.com/d/16Nf9G96HmSJWZMIs0RKxkR5z3aOuj7Ye=w900" srcset="https://lh3.googleusercontent.com/d/16Nf9G96HmSJWZMIs0RKxkR5z3aOuj7Ye=w600 600w, https://lh3.googleusercontent.com/d/16Nf9G96HmSJWZMIs0RKxkR5z3aOuj7Ye=w900 900w, https://lh3.googleusercontent.com/d/16Nf9G96HmSJWZMIs0RKxkR5z3aOuj7Ye=w1200 1200w" sizes="(min-width:1024px) 38vw, 100vw" width="1179" height="1471" alt="Black gate with gold scrollwork at a villa entrance, made by Al Taher Group" loading="lazy" decoding="async"></figure>
+  <div class="part-panel__body">
+    <h3>Entrance</h3>
+    <p>Cast aluminium and steel gates, automatic gates, boundary fencing and side doors.</p>
+    <p>One pattern and one powder coat batch for the gate, the fence and the side door, so the front of the villa reads as one piece.</p>
+    <div class="actions"><a class="btn btn--light" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit%20for%20the%20entrance%3A%20gates%2C%20fencing%20and%20side%20doors." target="_blank" rel="noopener nofollow">Book a site visit for this</a><a class="link link--light" href="/services/metal-gates/">See our entrance work</a></div>
+  </div>
+</div>
+<div class="part-panel" id="part-windows" role="region" aria-label="Windows and doors" hidden>
+  <figure><img src="https://lh3.googleusercontent.com/d/1LowfKGLIHAl32mXqcZBQSgcjvqlyD4D1=w900" srcset="https://lh3.googleusercontent.com/d/1LowfKGLIHAl32mXqcZBQSgcjvqlyD4D1=w600 600w, https://lh3.googleusercontent.com/d/1LowfKGLIHAl32mXqcZBQSgcjvqlyD4D1=w900 900w, https://lh3.googleusercontent.com/d/1LowfKGLIHAl32mXqcZBQSgcjvqlyD4D1=w1200 1200w" sizes="(min-width:1024px) 38vw, 100vw" width="1179" height="883" alt="Room with black aluminium sliding doors and windows fitted by Al Taher Group" loading="lazy" decoding="async"></figure>
+  <div class="part-panel__body">
+    <h3>Windows and doors</h3>
+    <p>Aluminium and uPVC windows, double glazing, and aluminium, WPC and wooden doors.</p>
+    <p>We measure every opening as it was built, then choose aluminium or uPVC opening by opening.</p>
+    <div class="actions"><a class="btn btn--light" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit%20for%20windows%20and%20doors." target="_blank" rel="noopener nofollow">Book a site visit for this</a><a class="link link--light" href="/services/aluminium-windows-doors/">See our windows and doors work</a></div>
+  </div>
+</div>
+<div class="part-panel" id="part-garden" role="region" aria-label="Garden and roof" hidden>
+  <figure><img src="https://lh3.googleusercontent.com/d/1G16O0g5F-UJEg_rvnoxE0kfDE-8VgRLg=w900" srcset="https://lh3.googleusercontent.com/d/1G16O0g5F-UJEg_rvnoxE0kfDE-8VgRLg=w600 600w, https://lh3.googleusercontent.com/d/1G16O0g5F-UJEg_rvnoxE0kfDE-8VgRLg=w900 900w, https://lh3.googleusercontent.com/d/1G16O0g5F-UJEg_rvnoxE0kfDE-8VgRLg=w1200 1200w" sizes="(min-width:1024px) 38vw, 100vw" width="1179" height="1326" alt="Pergola with a patterned metal screen over a villa balcony, lit at dusk, made by Al Taher Group" loading="lazy" decoding="async"></figure>
+  <div class="part-panel__body">
+    <h3>Garden and roof</h3>
+    <p>Pergolas, shades and parking sheds for the garden, the roof terrace and the driveway.</p>
+    <p>Framed for the sun and the salt air, and powder coated on our own line.</p>
+    <div class="actions"><a class="btn btn--light" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit%20for%20the%20garden%20and%20roof%3A%20pergolas%2C%20shades%20and%20parking%20sheds." target="_blank" rel="noopener nofollow">Book a site visit for this</a><a class="link link--light" href="/services/pergolas-shades/">See our garden and roof work</a></div>
+  </div>
+</div>
+<div class="part-panel" id="part-stairs" role="region" aria-label="Stairs and balconies" hidden>
+  <figure><img src="https://lh3.googleusercontent.com/d/17GD7SjHpwsL__Y0QF8yqS4oIyZV305X9=w900" srcset="https://lh3.googleusercontent.com/d/17GD7SjHpwsL__Y0QF8yqS4oIyZV305X9=w600 600w, https://lh3.googleusercontent.com/d/17GD7SjHpwsL__Y0QF8yqS4oIyZV305X9=w900 900w, https://lh3.googleusercontent.com/d/17GD7SjHpwsL__Y0QF8yqS4oIyZV305X9=w1200 1200w" sizes="(min-width:1024px) 38vw, 100vw" width="1179" height="1168" alt="Staircase with a black and gold metal railing fitted by Al Taher Group" loading="lazy" decoding="async"></figure>
+  <div class="part-panel__body">
+    <h3>Stairs and balconies</h3>
+    <p>Glass, steel and aluminium railings and balustrades for stairs, landings and balconies.</p>
+    <p>Fabricated to your stair as it was built, so posts, rails and landings line up.</p>
+    <div class="actions"><a class="btn btn--light" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit%20for%20stairs%20and%20balconies%3A%20railings%20and%20balustrades." target="_blank" rel="noopener nofollow">Book a site visit for this</a><a class="link link--light" href="/services/stair-railings/">See our stairs and balconies work</a></div>
+  </div>
+</div>
+<div class="part-panel" id="part-kitchen" role="region" aria-label="Kitchen" hidden>
+  <figure><img src="https://lh3.googleusercontent.com/d/18vZXwTL4HXYtF6jjwGw9QxAFt-S8-aNC=w900" srcset="https://lh3.googleusercontent.com/d/18vZXwTL4HXYtF6jjwGw9QxAFt-S8-aNC=w600 600w, https://lh3.googleusercontent.com/d/18vZXwTL4HXYtF6jjwGw9QxAFt-S8-aNC=w900 900w, https://lh3.googleusercontent.com/d/18vZXwTL4HXYtF6jjwGw9QxAFt-S8-aNC=w1200 1200w" sizes="(min-width:1024px) 38vw, 100vw" width="1179" height="1176" alt="Fitted kitchen with an island made in the Al Taher Group carpentry workshop" loading="lazy" decoding="async"></figure>
+  <div class="part-panel__body">
+    <h3>Kitchen</h3>
+    <p>Fitted kitchens and joinery from our own carpentry workshop.</p>
+    <p>Cabinets, worktops and any steel or glass details come from the same group, on one schedule.</p>
+    <div class="actions"><a class="btn btn--light" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit%20for%20the%20kitchen." target="_blank" rel="noopener nofollow">Book a site visit for this</a><a class="link link--light" href="/services/kitchens-joinery/">See our kitchen work</a></div>
+  </div>
+</div>
+<div class="part-panel" id="part-floors" role="region" aria-label="Floors and bathrooms" hidden>
+  <figure><img src="https://lh3.googleusercontent.com/d/1uq1dLPX2zPQK4fkPNwk5h995p4t7r0W-=w900" srcset="https://lh3.googleusercontent.com/d/1uq1dLPX2zPQK4fkPNwk5h995p4t7r0W-=w600 600w, https://lh3.googleusercontent.com/d/1uq1dLPX2zPQK4fkPNwk5h995p4t7r0W-=w900 900w, https://lh3.googleusercontent.com/d/1uq1dLPX2zPQK4fkPNwk5h995p4t7r0W-=w1200 1200w" sizes="(min-width:1024px) 38vw, 100vw" width="1179" height="1158" alt="Polished marble worktop fitted by Al Taher Group" loading="lazy" decoding="async"></figure>
+  <div class="part-panel__body">
+    <h3>Floors and bathrooms</h3>
+    <p>Marble floors, stairs and worktops, shower glass and glass partitions.</p>
+    <p>Stone and glass are fitted by the same team that makes the metal and joinery around them.</p>
+    <div class="actions"><a class="btn btn--light" href="https://wa.me/971506499697?text=I%20would%20like%20to%20book%20a%20free%20site%20visit%20for%20floors%20and%20bathrooms%3A%20marble%20and%20shower%20glass." target="_blank" rel="noopener nofollow">Book a site visit for this</a><a class="link link--light" href="/services/marble-work/">See our floors and bathrooms work</a></div>
+  </div>
+</div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ========== SERVICES ========== -->
-<section class="services" id="services">
+<section class="sect sect--stone" aria-labelledby="workshop-title">
+  <div class="wrap split split--wide-last">
+    <figure class="workshop__photo"><img src="/assets/images/blog/powder-coated-frame-workshop.webp" width="1024" height="572" alt="A powder coated steel frame on the bench in our workshop" loading="lazy" decoding="async"></figure>
+    <div class="workshop__copy">
+      <h2 id="workshop-title">Why does in house fabrication matter?</h2>
+      <p>Most companies quoting for metalwork, aluminium or glass in the UAE do not make any of it. They coordinate a welding shop, a glazier and a coating line, each with its own queue and its own idea of the colour you asked for.</p>
+      <p>We work the other way round. Cutting, welding, glazing, joinery, stone and powder coating happen in our own workshops in the Al Hail Industrial Area, and our own crews install. A villa gate, its boundary fence, the stair railing inside and the window frames upstairs pass through the same workshop and the same colour batch.</p>
+      <blockquote class="pull"><p>That is why they read as one job rather than four purchases that nearly match.</p></blockquote>
+      <h2>What does the coast do to metalwork?</h2>
+      <p>Fujairah sits on the Gulf of Oman, as do Dibba and the east coast towns of Kalba and Khorfakkan, and salt air decides how long exterior metal lasts here. The metal is rarely what fails first. The finish is: thin coating on edges, uncovered drill points and poor preparation are where corrosion starts, and none of it shows on handover day.</p>
+      <p>That is why we run our own coating line. Preparation and film thickness at the edges decide how long a coat lasts, and they are exactly where a cheap job saves money. We specify cast aluminium where corrosion resistance leads, and steel where span and security lead.</p>
+    </div>
+  </div>
+</section>
+<section class="sect" aria-labelledby="villas-title">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="section-head__left">
-        <span class="section-num">01 — Our Services</span>
-        <h2 class="display">What we <em>build</em> and <em>finish</em>.</h2>
-      </div>
-      <div class="u-mw340">
-        <p class="u-note">Everything from a single villa gate to a developer's full fit-out package, designed, fabricated and finished in our own workshop in Al Hail Industrial Area, Fujairah.</p>
-        <a href="/services/" class="btn btn--ghost u-btn-sm">
-          See all services
-          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+    <div class="sect__head"><h2 id="villas-title">Finished villas</h2><p>Recent villas we have worked on.</p></div>
+    <div class="villas">
+      <figure class="villa-story"><img src="https://lh3.googleusercontent.com/d/1mJc5oiIzVhe249B0PPIMfGPDD8oLJf3r=w900" srcset="https://lh3.googleusercontent.com/d/1mJc5oiIzVhe249B0PPIMfGPDD8oLJf3r=w600 600w, https://lh3.googleusercontent.com/d/1mJc5oiIzVhe249B0PPIMfGPDD8oLJf3r=w900 900w, https://lh3.googleusercontent.com/d/1mJc5oiIzVhe249B0PPIMfGPDD8oLJf3r=w1080 1080w" sizes="(min-width:900px) 30vw, 100vw" width="1080" height="1080" alt="Modern villa with a black gate and matching side door, a complete project by Al Taher Group" loading="lazy" decoding="async"><figcaption><h3>Modern villa with a black gate and matching side door</h3></figcaption></figure>
+      <figure class="villa-story"><img src="https://lh3.googleusercontent.com/d/1P7xToVcHHN-xbjvqRpcZ1i_B1WXWcxdN=w900" srcset="https://lh3.googleusercontent.com/d/1P7xToVcHHN-xbjvqRpcZ1i_B1WXWcxdN=w600 600w, https://lh3.googleusercontent.com/d/1P7xToVcHHN-xbjvqRpcZ1i_B1WXWcxdN=w900 900w, https://lh3.googleusercontent.com/d/1P7xToVcHHN-xbjvqRpcZ1i_B1WXWcxdN=w1200 1200w" sizes="(min-width:900px) 30vw, 100vw" width="1179" height="870" alt="Classical villa with a paved forecourt, a complete project by Al Taher Group" loading="lazy" decoding="async"><figcaption><h3>Classical villa with a paved forecourt</h3></figcaption></figure>
+      <figure class="villa-story"><img src="https://lh3.googleusercontent.com/d/1gQZvwxnTPHcT10ptVWWZGj18ceFrd_D3=w900" srcset="https://lh3.googleusercontent.com/d/1gQZvwxnTPHcT10ptVWWZGj18ceFrd_D3=w600 600w, https://lh3.googleusercontent.com/d/1gQZvwxnTPHcT10ptVWWZGj18ceFrd_D3=w900 900w, https://lh3.googleusercontent.com/d/1gQZvwxnTPHcT10ptVWWZGj18ceFrd_D3=w1200 1200w" sizes="(min-width:900px) 30vw, 100vw" width="1179" height="1158" alt="Modern white villa with arched windows, a complete project by Al Taher Group" loading="lazy" decoding="async"><figcaption><h3>Modern villa with arched windows</h3></figcaption></figure>
     </div>
-
-    <div class="services__grid reveal">
-      <a href="/services/metal-gates/" class="service-card">
-        <span class="service-card__num">01</span>
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-          <path d="M3 21V6.5A2.5 2.5 0 015.5 4h13A2.5 2.5 0 0121 6.5V21"/>
-          <line x1="3" y1="21" x2="21" y2="21"/>
-          <line x1="7" y1="8" x2="7" y2="21"/>
-          <line x1="11" y1="8" x2="11" y2="21"/>
-          <line x1="13" y1="8" x2="13" y2="21"/>
-          <line x1="17" y1="8" x2="17" y2="21"/>
-          <path d="M5 8h14" stroke-linecap="round"/>
-        </svg>
-        <h3 class="service-card__title">Metal Gates &amp; Doors</h3>
-        <p class="service-card__desc">Cast aluminium and steel gates, villa entrances, side doors and decorative panels — built, powder coated and installed by our own team.</p>
-        <span class="service-card__link">Get a Quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-      </a>
-
-      <a href="/services/stair-railings/" class="service-card">
-        <span class="service-card__num">02</span>
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-          <path d="M3 20h4v-4h4v-4h4V8h4V4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M2 22L20 4" stroke-linecap="round" opacity="0.7"/>
-          <circle cx="7" cy="20" r="0.8" fill="currentColor"/>
-          <circle cx="11" cy="16" r="0.8" fill="currentColor"/>
-          <circle cx="15" cy="12" r="0.8" fill="currentColor"/>
-          <circle cx="19" cy="8" r="0.8" fill="currentColor"/>
-        </svg>
-        <h3 class="service-card__title">Stair Railings</h3>
-        <p class="service-card__desc">Interior and exterior railings in steel, aluminium and glass — modern, classic or fully custom designs for villas and projects.</p>
-        <span class="service-card__link">Get a Quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-      </a>
-
-      <a href="/services/kitchens-joinery/" class="service-card">
-        <span class="service-card__num">03</span>
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-          <rect x="3" y="3" width="18" height="18" rx="1"/>
-          <line x1="3" y1="9" x2="21" y2="9"/>
-          <line x1="3" y1="15" x2="21" y2="15"/>
-          <line x1="12" y1="3" x2="12" y2="21"/>
-          <circle cx="7.5" cy="6" r="0.7" fill="currentColor"/>
-          <circle cx="16.5" cy="6" r="0.7" fill="currentColor"/>
-          <circle cx="7.5" cy="12" r="0.7" fill="currentColor"/>
-          <circle cx="16.5" cy="12" r="0.7" fill="currentColor"/>
-          <circle cx="7.5" cy="18" r="0.7" fill="currentColor"/>
-          <circle cx="16.5" cy="18" r="0.7" fill="currentColor"/>
-        </svg>
-        <h3 class="service-card__title">Kitchen Design</h3>
-        <p class="service-card__desc">Bespoke modular and built-in kitchens, full carpentry, finishes from veneer to lacquer — measured, made and fitted by us.</p>
-        <span class="service-card__link">Get a Quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-      </a>
-
-      <a href="/services/aluminium-windows-doors/" class="service-card">
-        <span class="service-card__num">04</span>
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-          <rect x="3" y="3" width="18" height="18" rx="0.5"/>
-          <line x1="12" y1="3" x2="12" y2="21"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="6" y1="6" x2="9" y2="9" opacity="0.4"/>
-          <line x1="15" y1="6" x2="18" y2="9" opacity="0.4"/>
-          <line x1="6" y1="15" x2="9" y2="18" opacity="0.4"/>
-          <line x1="15" y1="15" x2="18" y2="18" opacity="0.4"/>
-        </svg>
-        <h3 class="service-card__title">Aluminium &amp; Glass</h3>
-        <p class="service-card__desc">Aluminium and uPVC windows and doors, double glazing, glass partitions, shower enclosures and curtain walls — measured, fabricated and installed by one team.</p>
-        <span class="service-card__link">Get a Quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-      </a>
-
-      <a href="/services/pergolas-shades/" class="service-card">
-        <span class="service-card__num">05</span>
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-          <path d="M3 8h18" stroke-linecap="round"/>
-          <path d="M3 11h18" stroke-linecap="round" opacity="0.6"/>
-          <line x1="5" y1="8" x2="5" y2="21"/>
-          <line x1="19" y1="8" x2="19" y2="21"/>
-          <path d="M2 8L7 3h10l5 5" stroke-linejoin="round"/>
-          <line x1="5" y1="21" x2="19" y2="21" stroke-linecap="round"/>
-          <line x1="9" y1="11" x2="9" y2="21" opacity="0.4"/>
-          <line x1="15" y1="11" x2="15" y2="21" opacity="0.4"/>
-        </svg>
-        <h3 class="service-card__title">Shed &amp; Pergola</h3>
-        <p class="service-card__desc">Outdoor structures, garden pergolas, parking sheds and gazebos — built to handle Fujairah sun and Gulf coastal climate.</p>
-        <span class="service-card__link">Get a Quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-      </a>
-
-      <a href="/services/metal-fabrication/" class="service-card">
-        <span class="service-card__num">06</span>
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-          <path d="M14 4l-7 7M9.5 9.5l5 5M4 14l6 6 1.5-1.5L5.5 12.5z" stroke-linejoin="round"/>
-          <path d="M14 4l4-2 2 4-4 2z" stroke-linejoin="round"/>
-          <circle cx="20" cy="20" r="0.8" fill="currentColor"/>
-          <circle cx="18" cy="18" r="0.5" fill="currentColor" opacity="0.6"/>
-          <circle cx="22" cy="17" r="0.5" fill="currentColor" opacity="0.4"/>
-        </svg>
-        <h3 class="service-card__title">Metal Fabrication</h3>
-        <p class="service-card__desc">Structural welding, custom brackets, frames and architectural metalwork — for homes, contractors and developers.</p>
-        <span class="service-card__link">Get a Quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-      </a>
-      <a href="/services/upvc-wpc-doors/" class="service-card">
-        <span class="service-card__num">07</span>
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="3" width="14" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><circle cx="12" cy="12" r="0.8" fill="currentColor"/></svg>
-        <h3 class="service-card__title">Doors: Aluminium, WPC &amp; Wooden</h3>
-        <p class="service-card__desc">Aluminium door systems for external openings, waterproof termite-resistant WPC doors for bathrooms and interiors, and carpentry-made wooden doors — supplied and fitted across the UAE.</p>
-        <span class="service-card__link">Explore doors →</span>
-      </a>
-      <a href="/services/marble-work/" class="service-card">
-        <span class="service-card__num">08</span>
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 5h18v14H3z"/><path d="M3 12c4-3 8 3 12 0s6-2 6-2"/></svg>
-        <h3 class="service-card__title">Marble &amp; Glass Works</h3>
-        <p class="service-card__desc">Marble flooring, staircases and countertops alongside glass partitions, balustrades and frameless shower enclosures — stone and glass under the same roof as our metalwork.</p>
-        <span class="service-card__link">See marble &amp; glass →</span>
-      </a>
-    </div>
+    <p class="villas-foot"><a class="link" href="/portfolio/">See all our work</a></p>
   </div>
 </section>
-
-<!-- ========== PORTFOLIO HIGHLIGHTS ========== -->
-<section class="portfolio-home" id="portfolio">
+<section class="sect sect--stone" aria-labelledby="steps-title">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="section-head__left">
-        <span class="section-num">02 — Selected Work</span>
-        <h2 class="display">A few projects we're <em>proud of.</em></h2>
-      </div>
-      <div class="u-mw340">
-        <p class="u-note">From villa gates in Fujairah to fit-outs in Dubai, every project leaves our workshop measured, finished and tested.</p>
-        <a href="/portfolio/" class="btn btn--ghost u-btn-sm">
-          See full portfolio
-          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+    <div class="sect__head"><h2 id="steps-title">How does a project run?</h2><p>Four steps, the same for a single gate or a whole villa.</p></div>
+    <ol class="steps"><li><h3>Free site visit within 48 hours</h3><p>Anywhere in the seven emirates. We measure what was actually built, not the drawing.</p></li><li><h3>Itemised quotation within 24 hours of the visit</h3><p>Materials, fabrication, finish, delivery and installation each on its own line.</p></li><li><h3>Fabrication in our own workshop</h3><p>A gate takes 2 to 3 weeks, railings 1 to 2 weeks and a kitchen 3 to 5 weeks.</p></li><li><h3>Installation by our own crew</h3><p>Dates are written into the quotation before any work starts.</p></li></ol>
+  </div>
+</section>
+<section class="sect" id="book" aria-labelledby="book-title">
+  <div class="wrap book">
+    <div class="book__reviews">
+      <h2>What do clients say on Google?</h2>
+      <div class="rating"><span class="rating__num">5.0</span><span class="rating__stars" role="img" aria-label="Rated 5.0 out of 5"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span></div>
+      <p class="reviews-note">We point you to Google rather than quoting ourselves. A Google review is tied to a real account and dated, and we cannot edit or remove it.</p>
+      <div class="reviews-links"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Al+Taher+Carpentry+and+Aluminium+Fujairah" target="_blank" rel="noopener">Read reviews on Google</a><a class="link" href="https://g.page/r/CZ3O3ORc-W5WEAE/review" target="_blank" rel="noopener">Leave a Google review</a></div>
     </div>
-
-    <div class="portfolio-grid reveal">
-      <a href="/portfolio/" class="portfolio-tile t-1">
-        <img src="https://lh3.googleusercontent.com/d/1GoDfRuHtvdLN8HHEXl8DO1_HEyWgSOcr" alt="Geometric aluminium villa gate, Fujairah" loading="lazy" width="800" height="600" decoding="async">
-        <div class="portfolio-tile__overlay">
-          <small>Metal Gates</small>
-          <strong>Arched Villa Entrance</strong>
-        </div>
-      </a>
-      <a href="/portfolio/" class="portfolio-tile t-2">
-        <img src="https://lh3.googleusercontent.com/d/1naoiEal7UGa4KwDLo-LmDPI-mWoRU9DP" alt="Custom fitted kitchen, Fujairah villa" loading="lazy" width="800" height="600" decoding="async">
-        <div class="portfolio-tile__overlay">
-          <small>Kitchen Design</small>
-          <strong>Modern Villa Kitchen</strong>
-        </div>
-      </a>
-      <a href="/portfolio/" class="portfolio-tile t-3">
-        <img src="https://lh3.googleusercontent.com/d/1FisRne2IQKAZXPnzwm55JV20M_f9TOdm" alt="Aluminium pergola shade structure, Fujairah" loading="lazy" width="800" height="600" decoding="async">
-        <div class="portfolio-tile__overlay">
-          <small>Pergola</small>
-          <strong>Garden Pergola</strong>
-        </div>
-      </a>
-      <a href="/portfolio/" class="portfolio-tile t-4">
-        <img src="https://lh3.googleusercontent.com/d/1zpK-23TmEnINY4MM4QEzUhiQkvz_FuuU" alt="Glass stair railing, Fujairah" loading="lazy" width="800" height="600" decoding="async">
-        <div class="portfolio-tile__overlay">
-          <small>Railings</small>
-          <strong>Glass Stair Rail</strong>
-        </div>
-      </a>
-      <a href="/portfolio/" class="portfolio-tile t-5">
-        <img src="https://lh3.googleusercontent.com/d/1DytteBNehXmLMkmFLQ_uk-_sTiTjIcIJ" alt="Aluminium sliding windows, Fujairah" loading="lazy" width="800" height="600" decoding="async">
-        <div class="portfolio-tile__overlay">
-          <small>Aluminium</small>
-          <strong>Sliding Windows</strong>
-        </div>
-      </a>
-      <a href="/portfolio/" class="portfolio-tile t-6">
-        <img src="https://lh3.googleusercontent.com/d/1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq" alt="Powder-coated villa exterior works, Fujairah" loading="lazy" width="800" height="600" decoding="async">
-        <div class="portfolio-tile__overlay">
-          <small>Powder Coating</small>
-          <strong>Black Matte Finish</strong>
-        </div>
-      </a>
+    <div class="book__form">
+      <h2 id="book-title">Book a free site visit</h2>
+      <p>Tell us a little about the villa. The form opens WhatsApp with your details filled in, ready to send.</p>
+      <form class="form" data-wa-form novalidate>
+        <div class="form-row"><div class="field"><label for="bk-name">Your name</label><input id="bk-name" name="name" type="text" autocomplete="name" required></div><div class="field"><label for="bk-phone">Phone</label><input id="bk-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr"></div></div>
+        <div class="field"><label for="bk-part">Part of the villa</label><select id="bk-part" name="part"><option value="">Choose a part</option><option>Entrance</option><option>Windows and doors</option><option>Garden and roof</option><option>Stairs and balconies</option><option>Kitchen</option><option>Floors and bathrooms</option><option>Whole villa</option></select></div>
+        <div class="field"><label for="bk-details">Details</label><textarea id="bk-details" name="details" rows="4"></textarea></div>
+        <p class="form-error" role="alert" hidden>Please add your name so we know who to reply to.</p>
+        <div><button class="btn btn--primary" type="submit">Send on WhatsApp</button></div>
+      </form>
+      <ul class="contact-lines">
+        <li><strong>Phone</strong><a href="tel:+971506499697" dir="ltr">+971 50 649 9697</a></li>
+        <li><strong>Email</strong><a href="mailto:sales@altaherdesign.ae">sales@altaherdesign.ae</a></li>
+        <li><strong>Hours</strong><span>Saturday to Thursday, 6:00 AM to 9:00 PM. Friday closed.</span></li>
+      </ul>
     </div>
   </div>
 </section>
-
-<!-- ========== ABOUT BLURB ========== -->
-<section class="about-blurb" id="about">
+</main>
+<footer class="site-footer">
   <div class="wrap">
-    <div class="about-blurb__inner">
-      <div class="about-blurb__text reveal">
-        <span class="section-num">03 — Our Story</span>
-        <h2 class="display">Built in Fujairah,<br>working across the <em>UAE.</em></h2>
-        <p>
-          Al Taher Group started as a single carpentry workshop in 1984. Over four decades, we've grown into two complementary divisions — one for carpentry, aluminium and glass, the other for metal fabrication and powder coating — operating under one name from Al Hail Industrial Area, Fujairah.
-        </p>
-        <div class="about-blurb__pullquote">
-          "Everything we deliver leaves our own workshop — measured, welded, finished and installed by our team."
-        </div>
-        <p>
-          Today we serve homeowners building villas across the emirates and contractors who need a reliable trade partner. We don't sub out the work. We do it.
-        </p>
-        <a href="/about/" class="btn btn--ghost u-mt20">
-          Read our story
-          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="brand" href="/"><img src="/assets/images/logo.png" alt="" width="40" height="40" loading="lazy" decoding="async"><span class="brand__name">Al Taher Group</span></a>
+        <p>Gates, doors, windows, railings, pergolas, kitchens and marble, designed, fabricated and installed by our own team from the Al Hail Industrial Area, Fujairah, since 1984.</p>
+        <ul class="site-footer__contact">
+          <li>Call or WhatsApp <a href="tel:+971506499697">+971 50 649 9697</a></li>
+          <li><a href="mailto:sales@altaherdesign.ae">sales@altaherdesign.ae</a></li>
+          <li>Saturday to Thursday, 6:00 AM to 9:00 PM. Friday closed.</li>
+          <li>Al Hail Industrial Area, Fujairah</li>
+        </ul>
       </div>
-      <div class="about-blurb__image reveal">
-        <img src="https://lh3.googleusercontent.com/d/1c_8CWG5CQYvVmXo2iQAHzuI0P0oVJyJG" alt="Villa interior fit-out, Fujairah" loading="lazy" width="800" height="600" decoding="async">
+      <div class="site-footer__cols">
+        <div><h2 class="site-footer__h">Services</h2><ul class="site-footer__list"><li><a href="/services/metal-gates/">Metal gates</a></li><li><a href="/services/stair-railings/">Stair railings</a></li><li><a href="/services/aluminium-windows-doors/">Aluminium windows and doors</a></li><li><a href="/services/upvc-wpc-doors/">uPVC and WPC doors</a></li><li><a href="/services/glass-works/">Glass works</a></li><li><a href="/services/curtain-walls/">Curtain walls</a></li><li><a href="/services/kitchens-joinery/">Kitchens and joinery</a></li><li><a href="/services/pergolas-shades/">Pergolas and shades</a></li><li><a href="/services/metal-fabrication/">Metal fabrication</a></li><li><a href="/services/powder-coating/">Powder coating</a></li><li><a href="/services/marble-work/">Marble work</a></li><li><a href="/services/facade-cladding/">Facade and cladding</a></li><li><a href="/services/">All services</a></li></ul></div>
+        <div><h2 class="site-footer__h">Areas we serve</h2><ul class="site-footer__list"><li><a href="/fujairah/">Fujairah</a></li><li><a href="/sharjah/">Sharjah</a></li><li><a href="/dubai/">Dubai</a></li><li><a href="/abu-dhabi/">Abu Dhabi</a></li><li><a href="/ras-al-khaimah/">Ras Al Khaimah</a></li><li><a href="/ajman/">Ajman</a></li><li><a href="/umm-al-quwain/">Umm Al Quwain</a></li></ul></div>
+        <div><h2 class="site-footer__h">Company</h2><ul class="site-footer__list"><li><a href="/about/">About</a></li><li><a href="/portfolio/">Our work</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://www.instagram.com/altaher_design/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@altaherdesign" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.youtube.com/@altaherdesign" target="_blank" rel="noopener">YouTube</a></li></ul></div>
       </div>
     </div>
+    <p class="site-footer__trade">Contractors and fit out firms: <a href="/steel-fabrication-fujairah/">trade enquiries</a>. Steel fabrication for projects in <a href="/steel-fabrication-sharjah/">Sharjah</a>, <a href="/steel-fabrication-abu-dhabi/">Abu Dhabi</a> and <a href="/steel-fabrication-ajman/">Ajman</a>.</p>
+    <div class="site-footer__bottom"><p>© 2026 Al Taher Group</p><p>Two licensed divisions: Al Taher Carpentry, Aluminium &amp; Metal Forming LLC and DAT Metal Fabrication.</p></div>
   </div>
-</section>
+  <a class="wa-float" href="https://wa.me/971506499697?text=Hello%20Al%20Taher%20Group" target="_blank" rel="noopener nofollow" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.5 0 .2 5.3.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3zM12 21.6c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.5-1.5-3.3-1.5-5.1 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c-.1 5.4-4.5 9.7-9.8 9.7zm5.4-7.3c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2.1c-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.2 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4l-.6-.3z"/></svg></a>
+</footer>
 
-<!-- ========== WHY ========== -->
-<section class="wrap u-sec-pad">
-  <div class="u-mw820">
-    <h2 class="display">Why does in-house fabrication matter?</h2>
-    <p>Most companies quoting for metalwork, aluminium or glass in the UAE do not make any of it. They coordinate: a welding shop here, a glazier there, a coating line somewhere else, each with its own queue, its own tolerances and its own idea of the colour you asked for. When something arrives wrong, responsibility moves to a supplier you have no contract with.</p>
-    <p>Al Taher works the other way round. Cutting, welding, glazing, joinery, stone and <a href="/services/powder-coating/">powder coating</a> all happen in one building in the Al Hail Industrial Area, and installation is carried out by our own crews. A villa gate, its matching boundary fencing, the stair railing inside and the window frames upstairs pass through the same workshop and the same colour batch — which is why they read as one job rather than four purchases that nearly match.</p>
-    <p>It also changes what a revision costs. Design changes mid-project are normal; when the fabricator owns the schedule, a change is a conversation rather than a re-tender.</p>
-
-    <h2 class="display u-mt48">What does the coast do to metalwork?</h2>
-    <p>Fujairah sits on the Gulf of Oman, and salt-laden air is the single biggest factor in how long exterior metal lasts here. The metal itself is rarely what fails first — <strong>the finish is</strong>. Thin coating on edges, uncovered drill points and poor surface preparation are where corrosion starts, and they are invisible on handover day.</p>
-    <p>That is the reason we run our own coating line rather than sending work out. Degreasing, mechanical preparation and pre-treatment decide adhesion more than the powder does, and film thickness at edges is exactly where a cheap job economises. Cast aluminium is specified where corrosion resistance leads; steel where span and security lead, prepared and coated to match the exposure.</p>
-
-    <h2 class="display u-mt48">How does a project actually run?</h2>
-    <p>A free site visit within 48 hours, anywhere in the seven emirates. We measure the opening, structure or room as it was actually built rather than as drawn — as-built dimensions vary everywhere, and fabricating to a drawing is how gates arrive that do not fit. An itemised quotation follows within 24 hours of that visit: materials, fabrication, finish, delivery and installation each visible as its own line, so you can add or remove an element and see exactly what it changes.</p>
-    <p>Fabrication times are predictable because nothing waits in a third party's queue: a custom gate is typically 2–3 weeks from design approval, railings 1–2 weeks, a fitted kitchen 3–5 weeks. Committed dates are written into the quotation before any work starts. <a href="/services/">See all 12 services →</a></p>
-  </div>
-</section>
-<section class="why">
-  <div class="why__pattern" aria-hidden="true">
-    <svg viewBox="0 0 400 400" width="100%" height="100%">
-      <defs>
-        <pattern id="mash2" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-          <path d="M40 0 L80 40 L40 80 L0 40 Z" stroke="#e8c96a" stroke-width="1" fill="none"/>
-          <circle cx="40" cy="40" r="14" stroke="#e8c96a" stroke-width="1" fill="none"/>
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#mash2)"/>
-    </svg>
-  </div>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="section-head__left">
-        <span class="section-num">04 — Why Al Taher</span>
-        <h2 class="display">Forty years, one <em>standard.</em></h2>
-      </div>
-    </div>
-
-    <div class="why-inner">
-      <div class="why-item reveal">
-        <div class="why-item__num"><span data-count="40" data-suffix="+">40+</span></div>
-        <div class="why-item__label">Years of Heritage</div>
-        <p class="why-item__desc">Founded in Fujairah in 1984 and still family-run — four decades of gates, kitchens and fit-out for homeowners and contractors across the UAE.</p>
-      </div>
-      <div class="why-item reveal">
-        <div class="why-item__num"><em>All</em> 7</div>
-        <div class="why-item__label">Emirates Served</div>
-        <p class="why-item__desc">From Fujairah to Abu Dhabi — we deliver and install across every emirate.</p>
-      </div>
-      <div class="why-item reveal">
-        <div class="why-item__num">100<em>%</em></div>
-        <div class="why-item__label">In-House Work</div>
-        <p class="why-item__desc">Own workshop, own powder coating, own welders. Nothing sub-contracted.</p>
-      </div>
-      <div class="why-item reveal">
-        <div class="why-item__num"><span data-count="2">2</span></div>
-        <div class="why-item__label">Divisions, One Group</div>
-        <p class="why-item__desc">Carpentry, aluminium &amp; glass on one side; metal fabrication &amp; powder coating on the other.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== CTA BAND ========== -->
-<!-- ========== QUOTE FORM SECTION ========== -->
-<section class="u-sec-dark" id="quote">
-  <!-- Background pattern -->
-  <div class="u-bg-pattern" aria-hidden="true">
-    <svg viewBox="0 0 400 400" width="100%" height="100%">
-      <defs><pattern id="mash3" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-        <path d="M40 0 L80 40 L40 80 L0 40 Z" stroke="#c9a84c" stroke-width="1" fill="none"/>
-        <circle cx="40" cy="40" r="14" stroke="#c9a84c" stroke-width="1" fill="none"/>
-      </pattern></defs>
-      <rect width="100%" height="100%" fill="url(#mash3)"/>
-    </svg>
-  </div>
-
-  <div class="wrap u-rel2">
-    <div class="u-grid2">
-
-      <!-- Left: headline + contact info -->
-      <div class="reveal">
-        <span class="section-num u-gold">05 — Get a Quote</span>
-        <h2 class="display u-h-light">
-          Ready to <em>start?</em>
-        </h2>
-        <p class="u-p-light">
-          Fill in the form and your details go straight to WhatsApp — we reply within a few hours during working hours. Or call or message any of our three direct lines below.
-        </p>
-
-        <!-- 3 contact items -->
-        <div class="u-stack">
-          <a href="https://wa.me/971506499697?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener nofollow"
-             class="u-row-line"
-             onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
-            <div class="u-wa-dot">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
-            </div>
-            <div>
-              <div class="u-label">Sales &amp; Operations</div>
-              <div class="u-val">+971 50 649 9697</div>
-            </div>
-          </a>
-          <a href="https://wa.me/971506499697?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener nofollow"
-             class="u-row-line"
-             onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
-            <div class="u-wa-dot">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
-            </div>
-            <div>
-              <div class="u-label">Enquiries</div>
-              <div class="u-val">+971 50 649 9697</div>
-            </div>
-          </a>
-          <a href="https://wa.me/971506499697?text=Hello%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener nofollow"
-             class="u-row-line"
-             onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
-            <div class="u-wa-dot">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
-            </div>
-            <div>
-              <div class="u-label">Marketing &amp; Operations</div>
-              <div class="u-val">+971 50 649 9697</div>
-            </div>
-          </a>
-          <div class="u-row">
-            <div class="u-dot">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(248,245,240,0.5)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="u-dim-sm">Sat–Thu &nbsp;·&nbsp; 6:00 AM – 9:00 PM &nbsp;·&nbsp; Friday closed</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: the form -->
-      <div class="reveal u-panel">
-        <h3 class="display u-panel-h">Send us your <em>brief.</em></h3>
-        <form id="quoteForm" novalidate>
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Ahmed Al Mansouri" autocomplete="name" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone / WhatsApp</label>
-            <input type="tel" id="phone" name="phone" placeholder="+971 50 000 0000" autocomplete="tel">
-          </div>
-          <div class="form-group">
-            <label for="service">Service Required</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service</option>
-              <option value="Metal Gates &amp; Doors">Metal Gates &amp; Doors</option>
-              <option value="Stair Railings">Stair Railings</option>
-              <option value="Kitchen Design">Kitchen Design</option>
-              <option value="Aluminium &amp; Glass Works">Aluminium &amp; Glass Works</option>
-              <option value="Shed &amp; Pergola">Shed &amp; Pergola</option>
-              <option value="Metal Fabrication &amp; Welding">Metal Fabrication &amp; Welding</option>
-              <option value="Powder Coating">Powder Coating</option>
-              <option value="Facade Design &amp; Carpentry">Facade Design &amp; Carpentry</option>
-              <option value="Multiple / Full Fit-Out">Multiple / Full Fit-Out</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Project Details</label>
-            <textarea id="message" name="message" placeholder="Describe your project — dimensions, location, materials, timeline..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary u-btn-full">
-            Send via WhatsApp
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
-          </button>
-          <p class="form-note u-muted-mt">Opens WhatsApp with your details pre-filled. We typically reply within 2 hours.</p>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Responsive fix for quote form section -->
-<style>
-@media (max-width: 768px) {
-  #quote .wrap > div { grid-template-columns: 1fr !important; }
-}
-</style>
-
-<!-- ========== FOOTER ========== -->
-<section class="reviews" id="reviews">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">06 — Reviews</span>
-      <h2 class="display">What our <em>clients say.</em></h2>
-      <p class="section-head__sub">Every rating below is a verified Google review from a real customer. We don't write our own testimonials.</p>
-    </div>
-
-    <div class="reviews__grid reveal">
-      <div class="reviews__score">
-        <div class="reviews__num">5.0</div>
-        <div class="reviews__stars" role="img" aria-label="Rated 5.0 out of 5">
-          <svg width="112" height="20" viewBox="0 0 112 20" aria-hidden="true" fill="#c9a84c"><path d="M10 0l2.6 6.5L19.5 7l-5 4.6 1.4 6.9L10 15l-5.9 3.5 1.4-6.9-5-4.6 6.9-.5z"/><path d="M33 0l2.6 6.5L42.5 7l-5 4.6 1.4 6.9L33 15l-5.9 3.5 1.4-6.9-5-4.6 6.9-.5z"/><path d="M56 0l2.6 6.5L65.5 7l-5 4.6 1.4 6.9L56 15l-5.9 3.5 1.4-6.9-5-4.6 6.9-.5z"/><path d="M79 0l2.6 6.5L88.5 7l-5 4.6 1.4 6.9L79 15l-5.9 3.5 1.4-6.9-5-4.6 6.9-.5z"/><path d="M102 0l2.6 6.5 6.9.5-5 4.6 1.4 6.9-5.9-3.5-5.9 3.5 1.4-6.9-5-4.6 6.9-.5z"/></svg>
-        </div>
-        <p class="reviews__meta">Based on verified Google reviews</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=Al+Taher+Carpentry+and+Aluminium+Fujairah" target="_blank" rel="noopener" class="btn btn--ghost u-btn-sm">Read reviews on Google</a>
-      </div>
-
-      <div class="reviews__body">
-        <h3>Why we point you to Google rather than quoting ourselves</h3>
-        <p>Anyone can publish flattering quotes on their own website. A Google review is tied to a real account, timestamped, and impossible for us to edit or remove — which is exactly why it's worth more. Read them there, not here.</p>
-        <p>Four decades of work across Fujairah, Sharjah and the wider UAE stands behind that rating: over 600 completed projects, from a single villa gate to full fit-out packages for contractors.</p>
-        <h3>Worked with us before?</h3>
-        <p>A short review helps the next homeowner or contractor decide who to trust with their project. It takes under a minute.</p>
-        <a href="https://g.page/r/CZ3O3ORc-W5WEAE/review" target="_blank" rel="noopener" class="btn btn--gold">Leave a Google review
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-<footer class="footer"><div class="wrap">
-  <div class="footer__top">
-    <div class="footer__brand"><h3>Al Taher Group</h3><p>Metal gates, railings, aluminium, uPVC, glass, kitchens, pergolas, marble and powder coating — designed, fabricated and installed in-house from Fujairah since 1984.</p><span class="footer__since">Est. 1984 · Made in Fujairah</span></div>
-    <div><h5>Services</h5><ul><li><a href="/services/metal-gates/">Metal Gates</a></li><li><a href="/services/stair-railings/">Stair Railings</a></li><li><a href="/services/aluminium-windows-doors/">Aluminium Windows &amp; Doors</a></li><li><a href="/services/upvc-wpc-doors/">uPVC &amp; WPC Doors</a></li><li><a href="/services/glass-works/">Glass Works</a></li><li><a href="/services/curtain-walls/">Curtain Walls</a></li><li><a href="/services/kitchens-joinery/">Kitchens &amp; Joinery</a></li><li><a href="/services/pergolas-shades/">Pergolas &amp; Shades</a></li><li><a href="/services/metal-fabrication/">Metal Fabrication</a></li><li><a href="/services/powder-coating/">Powder Coating</a></li><li><a href="/services/marble-work/">Marble Work</a></li><li><a href="/services/facade-cladding/">Facade &amp; Cladding</a></li><li><a href="/services/">All Services</a></li></ul></div>
-    <div><h5>Areas We Serve</h5><ul><li><a href="/fujairah/">Fujairah</a></li><li><a href="/sharjah/">Sharjah</a></li><li><a href="/dubai/">Dubai</a></li><li><a href="/abu-dhabi/">Abu Dhabi</a></li><li><a href="/ras-al-khaimah/">Ras Al Khaimah</a></li><li><a href="/ajman/">Ajman</a></li><li><a href="/umm-al-quwain/">Umm Al Quwain</a></li></ul></div>
-    <div><h5>Company</h5><ul><li><a href="/about/">About</a></li><li><a href="/portfolio/">Portfolio</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://www.instagram.com/altaher_design/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@altaherdesign" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.youtube.com/@altaherdesign" target="_blank" rel="noopener">YouTube</a></li></ul></div>
-    <div><h5>Contact</h5><a href="tel:+971506499697" class="footer__contact-item" rel="nofollow"><strong>Call or WhatsApp</strong><span>+971 50 649 9697</span></a><a href="mailto:sales@altaherdesign.ae" class="footer__contact-item"><strong>Email</strong>sales&#64;altaherdesign&#46;ae</a><a href="/contact/" class="footer__contact-item"><strong>Workshop</strong><span>Al Hail Industrial Area, Fujairah</span></a></div>
-    
-  </div>
-  <div class="footer__bottom"><div>© 2026 Al Taher Group · altaherdesign.ae</div><div><a href="/services/">Services</a> · <a href="/fujairah/">Areas</a></div></div>
-</div></footer>
 
 <!-- ========== FLOATING WHATSAPP ========== -->
-<div class="wa-float">
-  <button class="wa-toggle" id="waToggle" aria-label="Open WhatsApp menu">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3zm-8.5 18.1c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.5-1.5-3.3-1.5-5.1 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9-.1 5.4-4.5 9.7-9.8 9.7zm5.4-7.3c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4-.1-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
-  </button>
-  <div class="wa-popup" id="waPopup">
-    <div class="wa-popup__head">
-      <strong>Chat on WhatsApp</strong>
-      <span>Pick a department</span>
-    </div>
-    <a href="https://wa.me/971506499697?text=Hello%20Al%20Taher%20Group%2C%20I%20would%20like%20a%20quotation." target="_blank" rel="noopener nofollow" class="wa-card">
-      <div class="wa-card__icon">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
-      </div>
-      <div class="wa-card__text">
-        <strong>Sales &amp; Operations</strong>
-        <span>+971 50 649 9697</span>
-      </div>
-    </a>
-    <a href="https://wa.me/971506499697?text=Hello%2C%20I%20need%20a%20quote%20for%20your%20services." target="_blank" rel="noopener nofollow" class="wa-card">
-      <div class="wa-card__icon">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
-      </div>
-      <div class="wa-card__text">
-        <strong>Enquiries</strong>
-        <span>+971 50 649 9697</span>
-      </div>
-    </a>
-    <a href="https://wa.me/971506499697?text=Hello%2C%20I%20have%20a%20project%20enquiry." target="_blank" rel="noopener nofollow" class="wa-card">
-      <div class="wa-card__icon">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12 0 5.5 0 0.2 5.3 0.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.1-3.3-8.3z"/></svg>
-      </div>
-      <div class="wa-card__text">
-        <strong>Call or WhatsApp</strong>
-        <span>+971 50 649 9697</span>
-      </div>
-    </a>
-  </div>
-</div>
 
-<script src="/assets/js/main.js" defer></script>
+
+<script src="/assets/js/main.js?v=2026092802" defer></script>
 </body>
 </html>

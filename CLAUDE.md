@@ -6,7 +6,7 @@
 > equivalent page/section as your template so nav, footer, schema, and styling stay identical.
 >
 > **Repo:** `altaherdesigns/altaherdesign` · **Live:** https://altaherdesign.ae
-> **Hosting:** Cloudflare Pages, auto-deploys from `main` (no build step) · **This file last reconciled against the live repo: 14 Jun 2026.**
+> **Hosting:** Cloudflare Pages, auto-deploys from `main` (no build step) · **§2 to §8 updated for the Sep 2026 redesign on 28 Sep 2026; other sections last reconciled 14 Jun 2026.**
 
 ---
 
@@ -42,7 +42,9 @@ pergola/shed, powder coating, mall kiosks/retail counters.
 | Sales & Operations | Ahmad Butt | +971 50 649 9697 | **default / quotes**; gates, fabrication, powder coating |
 | Marketing & Operations | Muaaz Butt | +971 50 649 9697 | railings, pergola, general |
 
-**Email:** sales@altaherdesign.ae · **Hours:** Sat–Thu, 6 AM – 9 PM
+> Since Sep 2026 every call and WhatsApp link on the website uses **+971 50 649 9697**; the table records who handles what.
+
+**Email:** sales@altaherdesign.ae · **Hours:** Sat–Thu, 6 AM – 9 PM (site, schema and llms.txt agree; the Google listing may say 06:00 to 20:00, owner to confirm)
 **Website priorities (in order):** (1) generate quote enquiries, (2) trust/credibility, (3) showcase portfolio, (4) serve B2B + B2C.
 
 ## 2. Tech / repo
@@ -56,38 +58,46 @@ pergola/shed, powder coating, mall kiosks/retail counters.
 ```
 / (index.html)  /about/  /services/  /portfolio/  /blog/  /contact/      ← EN
 /ar/ + /ar/about/ /ar/services/ /ar/portfolio/ /ar/contact/              ← AR (RTL mirror)
-/blog/<slug>/index.html                                                  ← 5 articles
-/assets/css/main.css   (~2400 lines, ALL styling)
-/assets/js/main.js     (nav toggle, lang toggle, WhatsApp popup, reveal, quote-form router)
-/assets/images/logo.svg
+/blog/<slug>/index.html                ← 38 articles; 17 mirrored at /ar/blog/<slug>/ (see EN-AR-ARTICLE-MAP.md)
+/assets/css/main.src.css  (readable source, numbered sections) → minified to main.css
+/assets/css/main.css      (ALL styling, minified) + rtl.css (Arabic only)
+/assets/js/main.js        (menu, language toggle, villa hotspots and draw in, WhatsApp form, portfolio filter + lightbox, FAQ toggles)
+/assets/images/logo.png   /assets/images/blog/*.webp   /assets/images/og/*.jpg
 /sitemap.xml  /robots.txt  /_redirects  /_headers  /404.html  /site.webmanifest
 ```
 
-## 3. Design system — "Gulf Heritage Luxury" (match exactly)
-- Colours (CSS vars in `main.css :root`): `--teal:#0d6e5e` · `--gold:#c9a84c` · `--off-white:#f8f5f0` · `--cream:#ede6d8` · `--paper:#fff` · `--dark:#1a1a1a` (full ramp already defined). `theme-color` = `#0d6e5e`.
-- Fonts: **Fraunces** (display/headings), **Outfit** (body/UI), **Noto Naskh Arabic** (AR). Google Fonts.
-- Logo: teal oval, gold border, wordmark "Al Taher Group", strapline **"Since 1984"**. `/assets/images/logo.svg`.
-- Motif: **mashrabiya** geometric SVG (diamond + circle + cross) used in hero/section pattern backgrounds.
+## 3. Design system: "From the gate inward" (Sep 2026 redesign, match exactly)
+Homeowner first, phone first. The homepage walks through one villa from the gate inward; the teal villa band is the only bold element.
+- **Tokens** (`:root` in `assets/css/main.src.css`): `--teal:#2B5C62` (sampled from logo.png; primary buttons, villa band, footer) · `--teal-deep:#1F454A` (hover, pressed) · `--gold:#C9A84C` (thin rules, hotspots, focus ring on teal; never text on cream, 2.1:1) · `--cream:#F8F5F0` (page) · `--stone:#EDE6D8` (alternate sections) · `--ink:#1A1A1A` · `--ink-soft:#5C5650` · `--on-teal-soft:#CFD6D4` · `--wa:#25D366` (WhatsApp float only). `theme-color` = `#2B5C62`. The old green teal `#0d6e5e` must not come back anywhere.
+- **Fonts:** Fraunces 400 (headings: upright, sentence case, one weight, SOFT axis via `font-variation-settings`), Outfit 400/500/600 (body and UI), Cairo 400/500/600 (all Arabic text). EN pages load Fraunces + Outfit; AR pages load Cairo + Outfit.
+- **Type:** body 17px on phones, 18px from 1024px, line height 1.6, measure 68ch, scale about 1.25 (`--fs-*` tokens). The homepage hero H1 is the only very large type.
+- **Never:** numbered eyebrows ("01 — Our Services"), numbered or bordered card grids, card shadows, italic accent words in headings, tracked ALL CAPS labels, stat bars, arrows appended to links, " · " strings, em dashes in copy, sliders, pattern backgrounds (the mashrabiya motif is retired).
+- **Components:** radius 0 on photos, 2px on buttons and inputs (`--r-btn`). Primary button: teal fill, cream text. Secondary: underlined text link. Separate sections with space and the stone background.
+- **Motion:** only the homepage villa drawing (draws in once, about 1.2s). Everything honours `prefers-reduced-motion`.
+- **Photos:** our own work only, Drive lh3 URLs with a `=w600/=w900/=w1200/=w1600` srcset, `width` + `height` always, `loading="lazy"` except the hero (`fetchpriority="high"`), consistent aspect ratios.
+- **Accessibility:** text contrast at least 4.5:1, visible focus everywhere (gold on teal), real `<button>`s for controls. axe run 28 Sep 2026: 0 violations on home, service, blog, about, services, portfolio, contact and 404 pages, EN and AR, at 390px and 1440px.
+- Logo: `/assets/images/logo.png` (teal oval, gold border).
 
 ## 4. Conventions every page must follow (copy verbatim from an existing page)
-- `<head>`: charset, viewport, unique `<title>` (≤~60 chars), meta description (~150–160 chars), `<link rel="canonical">` (https non-www trailing-slash), OG tags, fonts preconnect+stylesheet, favicon, `theme-color`, `/assets/css/main.css`.
-- **Nav** (`.nav`): logo + Home / About / Services / Portfolio / Blog / Contact + EN/عربي toggle + "Free Quote" WhatsApp button + hamburger. Mark current page `class="active" aria-current="page"`.
-- **Mobile nav** (`.mobile-nav`): same links, numbered 01–06.
-- **Footer** (`.footer`): brand blurb, Services list, Company list (incl. **Instagram + TikTok** social links), Contact (Sales/GM/Email), © 2026.
-- **WhatsApp float** (`.wa-float`): button + popup (Sales + GM cards).
-- `<script src="/assets/js/main.js" defer></script>` before `</body>`.
-- WhatsApp links: correct department number + URL-encoded prefilled text + `target="_blank" rel="noopener"`.
-- Images: always `width`, `height`, `alt`, `loading="lazy"`.
+- `<head>`: charset, viewport, unique `<title>` (≤~60 chars), meta description (~150–160 chars), canonical (https non-www trailing-slash), hreflang pair, OG + Twitter tags, fonts preconnect + stylesheet, favicon, `theme-color`, then `/assets/css/main.css?v=YYYYMMDD` (plus `/assets/css/rtl.css?v=…` on /ar/ pages).
+- **Cache busting:** `_headers` caches `/assets/*` as immutable for a year, so every CSS or JS change must bump the `?v=` date on every page (current: `v=2026092802`). Edit `main.src.css`, re-minify to `main.css` (for example `npx clean-css-cli -O1 -o main.css main.src.css`), keep braces balanced.
+- **Header** (`.site-header`): logo, nav Services / Our work / About / Blog / Contact (current page gets `aria-current="page"`), language toggle, primary button "Book a free site visit". Below 1080px the nav sits behind the "Menu" button (`.menu-toggle` opens `#site-menu`); no numbering.
+- **Footer** (`.site-footer`, teal): brand blurb; phone, email, hours and address once each; Services, Areas we serve, Company (incl. Instagram, TikTok, YouTube); trade line "Contractors and fit out firms: trade enquiries" linking to `/steel-fabrication-fujairah/`; bottom line naming both licensed divisions. The WhatsApp float (`.wa-float`, WhatsApp green) sits inside `<footer>`.
+- **CTA wording everywhere:** "Book a free site visit", opening WhatsApp prefilled "I would like to book a free site visit" (AR: "أرغب في حجز زيارة موقع مجانية").
+- **Service pages:** full width photo (`figure.page-photo`, `fetchpriority="high"`), then `.article-header` with a kicker placing the service in the villa ("Part of the entrance"), then the existing content and the same CTA.
+- `<script src="/assets/js/main.js?v=…" defer></script>` before `</body>`. Content never depends on JS (all six villa panels are in the HTML, toggled with `hidden`).
+- WhatsApp links: `https://wa.me/971506499697?text=…` (URL encoded) + `target="_blank" rel="noopener nofollow"`.
+- Images: always `width`, `height`, `alt`, `loading="lazy"` (except the hero).
 
 **Schema (JSON-LD):** site-wide `LocalBusiness`+`GeneralContractor` node `@id https://altaherdesign.ae/#business` with `sameAs` (Instagram + TikTok + YouTube). Blog posts use a `@graph`: `BreadcrumbList` + `Article` + `FAQPage`; `Article.publisher` → `{"@id":"https://altaherdesign.ae/#business"}`.
 
 ## 5. Blog — the primary SEO engine
 No Fujairah competitor has a functioning website, so well-targeted articles rank fast.
-**Current 5 articles:** `metal-gate-designs-uae`, `powder-coating-vs-painting-uae`,
-`pergola-guide-uae`, `fitted-kitchen-cost-uae`, `aluminium-vs-upvc-windows-uae`.
+**38 English articles** (28 Sep 2026); 17 have Arabic mirrors at `/ar/blog/<same slug>/`.
+Track mirrors in `EN-AR-ARTICLE-MAP.md` (repo root). English is the source of truth.
 
 **House style:** honest, specific, Fujairah-grounded, from real workshop experience. Each post:
-SVG-pattern hero (not a photo) → intro → H2 sections → ≥1 comparison `<table>` → 1 `<blockquote>`
+article header (category, date, read time, byline, H1, excerpt) → intro → H2 sections → ≥1 comparison `<table>` → 1 `<blockquote>`
 → `.article-cta` WhatsApp box → `## Frequently Asked Questions` (3× H3) → 3–4 "Related guides" cards → footer.
 
 **To add an article:** copy an existing post; fill `<head>` (unique title ≤~60, meta, canonical, OG image = real Drive ID); fill JSON-LD `@graph` (BreadcrumbList + Article + FAQPage matching on-page FAQ); write hero + body; add 3–4 related-guide cards (point to real posts + one `/services/#anchor`); **add a card to `/blog/index.html`** (`.blog-grid`); **add `<url>` to `sitemap.xml`** (today's lastmod, monthly, 0.6); **add an inbound related-card from 1–2 existing posts** (no orphans); validate XML + links.
@@ -108,7 +118,7 @@ Good untapped long-tail targets: `stair railing cost UAE`, `glass partition cost
 ## 6. Sitemap rules
 `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` — **never** revert to `http://sitemaps.org`
 (that bug got the sitemap rejected; it is fixed). All `<loc>` = https/non-www/trailing-slash.
-Currently **16 URLs** (10 EN incl. blog index + 5 posts, + AR pages). Resubmit in GSC after any page-set change.
+Currently **113 URLs** (28 Sep 2026). Resubmit in GSC after any page-set change.
 
 ## 7. HARD RULES / guardrails (break these = break the site or SEO)
 1. Sitemap namespace = `http://www.sitemaps.org/schemas/sitemap/0.9`. Never revert.
@@ -121,8 +131,21 @@ Currently **16 URLs** (10 EN incl. blog index + 5 posts, + AR pages). Resubmit i
 8. **NAP consistency** is critical — use the §9 block verbatim across site + every directory.
 9. Offline/PDF docs must base64-embed images, not Drive-link.
 10. No frameworks / build steps. Static, hand-built.
+11. **Copy rules (owner's standing instructions):** no em dashes and no hyphens as connectors in copy; no external links in content; never name a competitor; never claim certified welders; Kalba and Khorfakkan belong to Sharjah, so write "the east coast towns of Kalba and Khorfakkan", never inside a seven emirates list and never as part of Fujairah; uPVC is complementary to aluminium; every photo is presented as our own work; laser cutting goes to partners (CNC cutting is in house); double glazing only; CAD designs on request.
+12. Bump the `?v=` asset version on every CSS or JS change (see §4).
 
-## 8. CURRENT STATE & this-session changelog (14 Jun 2026)
+## 8. CURRENT STATE (28 Sep 2026): the "From the gate inward" redesign
+- Visual and UX redesign for homeowners (brief: `claude/WEBSITE-REDESIGN-HOMEOWNER-BRIEF-2026-09.md` in the claude.ai project). Homepage: A photo hero, B teal villa band (inline SVG, six gold hotspot buttons, six panels), C one workshop, D finished villas, E four steps, F Google reviews + WhatsApp form, G teal footer. Mirrored on /ar/ (the drawing is never flipped).
+- New shared header and footer on every page; service pages got photo heroes and villa kickers; about, services, portfolio, contact, blog index and 404 rebuilt on the new system.
+- Visible copy cleaned sitewide: em dashes, en dashes, arrows and " · " strings removed. Head tags, meta and JSON-LD untouched.
+- Hours standardised to Saturday to Thursday, 6:00 AM to 9:00 PM (site, one FAQ JSON-LD in `metal-gate-designs-uae`, llms.txt).
+- Three new articles published 28 Sep 2026: `marble-countertops-fujairah`, `metal-fabrication-companies-uae`, `custom-welding-fujairah` (English only so far).
+- Unchanged by design: JSON-LD (except that one hours answer), titles, meta descriptions, canonicals, hreflang, OG/Twitter, robots, `_redirects`, `_headers`. The sitemap only gained the three new URLs.
+- Later on 28 Sep 2026: hero photo is now `complete-project-al-taher-fujairah-02` (Drive `1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq`, the owner's pick). It is portrait, so from 900px up it sits on the far side of the hero and fades into the dark text side (mirrored on /ar/). Finished villas now show photos 12, 10 and 05 from the Drive folder "Complete projects" (18 single photos, no place or scope recorded per villa). The powder coating pages (EN and AR) gained a 16 colour RAL chart drawn from standard RAL Classic values (no copied images). Asset version bumped to `v=2026092802`.
+- Photo rule (from the redesign brief: "our own work only, from Drive"): pictures from supplier blogs, colour chart sites or Google Images are not used on the site.
+- Open items: workshop and curing oven photos (owner shooting them) for homepage section C and the powder coating process section; OG images still use Pexels; Arabic mirrors for 21 articles; a few older pages still place Kalba inside Fujairah ("across the emirate") and need a copy pass that also touches JSON-LD.
+
+## 8b. June 2026 state & changelog (historical; the background treatment below was removed by the Sep 2026 redesign)
 **State:** Fully bilingual EN/AR, responsive, RTL. 16 HTML pages. Blog = 5 articles. WhatsApp quote
 flow with service-type routing + fallback. LocalBusiness schema. No orphan pages. SEO hygiene done
 (title lengths, single H1, meta, `aria-current`, image dims, visible `<time>`/bylines on articles).

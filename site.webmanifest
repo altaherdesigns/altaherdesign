@@ -1,16 +1,21 @@
 {
   "name": "Al Taher Group",
   "short_name": "Al Taher",
-  "description": "Custom metal gates, railings, kitchens, aluminium & pergolas. Fujairah, UAE — since 1984.",
+  "description": "Custom metal gates, railings, kitchens, aluminium and pergolas. Fujairah, UAE, since 1984.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8f5f0",
-  "theme_color": "#0d6e5e",
+  "background_color": "#F8F5F0",
+  "theme_color": "#2B5C62",
   "icons": [
     {
-      "src": "/assets/images/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/assets/images/logo.png",
+      "sizes": "140x140",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ]
 }
