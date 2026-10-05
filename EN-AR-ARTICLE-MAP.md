@@ -1,8 +1,10 @@
 # English → Arabic article map
 
-**17 of 38 mirrored.** English is the source of truth; any Arabic page without an English counterpart is removed.
+**19 of 40 mirrored.** English is the source of truth; any Arabic page without an English counterpart is removed.
 
-Updated 28 Sep 2026: added the three English articles published that day (`custom-welding-fujairah`, `marble-countertops-fujairah`, `metal-fabrication-companies-uae`).
+Updated 5 Oct 2026: added `car-parking-shade-uae` and `hafr-house-name-plates`, published in English and Arabic together.
+
+Earlier, 28 Sep 2026: added the three English articles published that day (`custom-welding-fujairah`, `marble-countertops-fujairah`, `metal-fabrication-companies-uae`).
 
 | # | English article | AR | Arabic title |
 |---|---|---|---|
@@ -44,6 +46,8 @@ Updated 28 Sep 2026: added the three English articles published that day (`custo
 | 36 | `villa-renovation-contractor-fujairah`<br>Villa Renovation Contractor in Fujairah: 2026 Guide | ⬜ | — |
 | 37 | `welding-services-uae`<br>Welding Services UAE: Site Work Buyer&rsquo;s Guide | ⬜ | — |
 | 38 | `wood-vs-aluminium-interior-uae`<br>Wood vs Aluminium Interior for UAE Homes (2026) | ⬜ | — |
+| 39 | `car-parking-shade-uae`<br>Car Parking Shades in the UAE: Steel or Aluminium? | ✅ | مظلات سيارات في الإمارات: حديد أم ألمنيوم؟ |
+| 40 | `hafr-house-name-plates`<br>Introducing Hafr: House Name Plates Cut in Metal | ✅ | نقدّم لكم «حفر»: لوحات أسماء البيوت من المعدن |
 
 ## Remaining 21
 
@@ -74,7 +78,7 @@ Updated 28 Sep 2026: added the three English articles published that day (`custo
 - First person as Al Taher; no em-dashes or hyphens as connectors
 - **Kalba is a town in Sharjah emirate on the east coast**, never inside the seven-emirates list
 - Translate from the English source text, not the title
-- **No external links of any kind** — all stripped site-wide
+- **No external links of any kind**, with one owner approved exception (5 Oct 2026): followed links to our group brand **hafr.ae**
 - **Never name a competitor**, UAE or otherwise
 
 ## Current capability facts

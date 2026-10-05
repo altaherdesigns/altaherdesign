@@ -58,7 +58,7 @@ pergola/shed, powder coating, mall kiosks/retail counters.
 ```
 / (index.html)  /about/  /services/  /portfolio/  /blog/  /contact/      ← EN
 /ar/ + /ar/about/ /ar/services/ /ar/portfolio/ /ar/contact/              ← AR (RTL mirror)
-/blog/<slug>/index.html                ← 38 articles; 17 mirrored at /ar/blog/<slug>/ (see EN-AR-ARTICLE-MAP.md)
+/blog/<slug>/index.html                ← 40 articles; 19 mirrored at /ar/blog/<slug>/ (see EN-AR-ARTICLE-MAP.md)
 /assets/css/main.src.css  (readable source, numbered sections) → minified to main.css
 /assets/css/main.css      (ALL styling, minified) + rtl.css (Arabic only)
 /assets/js/main.js        (menu, language toggle, villa hotspots and draw in, WhatsApp form, portfolio filter + lightbox, FAQ toggles)
@@ -93,7 +93,7 @@ Homeowner first, phone first. The homepage walks through one villa from the gate
 
 ## 5. Blog — the primary SEO engine
 No Fujairah competitor has a functioning website, so well-targeted articles rank fast.
-**38 English articles** (28 Sep 2026); 17 have Arabic mirrors at `/ar/blog/<same slug>/`.
+**40 English articles** (5 Oct 2026); 19 have Arabic mirrors at `/ar/blog/<same slug>/`.
 Track mirrors in `EN-AR-ARTICLE-MAP.md` (repo root). English is the source of truth.
 
 **House style:** honest, specific, Fujairah-grounded, from real workshop experience. Each post:
@@ -118,7 +118,7 @@ Good untapped long-tail targets: `stair railing cost UAE`, `glass partition cost
 ## 6. Sitemap rules
 `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` — **never** revert to `http://sitemaps.org`
 (that bug got the sitemap rejected; it is fixed). All `<loc>` = https/non-www/trailing-slash.
-Currently **113 URLs** (28 Sep 2026). Resubmit in GSC after any page-set change.
+Currently **117 URLs** (5 Oct 2026). Resubmit in GSC after any page-set change.
 
 ## 7. HARD RULES / guardrails (break these = break the site or SEO)
 1. Sitemap namespace = `http://www.sitemaps.org/schemas/sitemap/0.9`. Never revert.
@@ -131,7 +131,7 @@ Currently **113 URLs** (28 Sep 2026). Resubmit in GSC after any page-set change.
 8. **NAP consistency** is critical — use the §9 block verbatim across site + every directory.
 9. Offline/PDF docs must base64-embed images, not Drive-link.
 10. No frameworks / build steps. Static, hand-built.
-11. **Copy rules (owner's standing instructions):** no em dashes and no hyphens as connectors in copy; no external links in content; never name a competitor; never claim certified welders; Kalba and Khorfakkan belong to Sharjah, so write "the east coast towns of Kalba and Khorfakkan", never inside a seven emirates list and never as part of Fujairah; uPVC is complementary to aluminium; every photo is presented as our own work; laser cutting goes to partners (CNC cutting is in house); double glazing only; CAD designs on request.
+11. **Copy rules (owner's standing instructions):** no em dashes and no hyphens as connectors in copy; no external links in content (one exception, approved by the owner on 5 Oct 2026: followed links to the group brand hafr.ae, Hafr / حفر, exterior metal signage for villas, parent Al Taher Group); never name a competitor; never claim certified welders; Kalba and Khorfakkan belong to Sharjah, so write "the east coast towns of Kalba and Khorfakkan", never inside a seven emirates list and never as part of Fujairah; uPVC is complementary to aluminium; every photo is presented as our own work; laser cutting goes to partners (CNC cutting is in house); double glazing only; CAD designs on request.
 12. Bump the `?v=` asset version on every CSS or JS change (see §4).
 
 ## 8. CURRENT STATE (28 Sep 2026): the "From the gate inward" redesign
@@ -144,6 +144,9 @@ Currently **113 URLs** (28 Sep 2026). Resubmit in GSC after any page-set change.
 - Later on 28 Sep 2026: hero photo is now `complete-project-al-taher-fujairah-02` (Drive `1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq`, the owner's pick). It is portrait, so from 900px up it sits on the far side of the hero and fades into the dark text side (mirrored on /ar/). Finished villas now show photos 12, 10 and 05 from the Drive folder "Complete projects" (18 single photos, no place or scope recorded per villa). The powder coating pages (EN and AR) gained a 16 colour RAL chart drawn from standard RAL Classic values (no copied images). Asset version bumped to `v=2026092802`.
 - Photo rule (from the redesign brief: "our own work only, from Drive"): pictures from supplier blogs, colour chart sites or Google Images are not used on the site.
 - Open items: workshop and curing oven photos (owner shooting them) for homepage section C and the powder coating process section; OG images still use Pexels; Arabic mirrors for 21 articles; a few older pages still place Kalba inside Fujairah ("across the emirate") and need a copy pass that also touches JSON-LD.
+
+## 8a. 5 Oct 2026 additions
+- New articles, EN + AR together: `car-parking-shade-uae` (targets car parking shade, car shade, car shed, parking shed; AR مظلات سيارات, تركيب مظلات سيارات) and `hafr-house-name-plates` (launch post for the group brand Hafr, with followed links to hafr.ae). EN pages carry proper hreflang alternates. Inbound links added from `services/pergolas-shades` (EN, AR), `pergola-guide-uae` (EN, AR) and `metal-gate-designs-uae` (EN, AR). Price line "most villa car shades AED 5,000 to 25,000" reuses the carport range already published in `pergola-guide-uae`; owner to confirm.
 
 ## 8b. June 2026 state & changelog (historical; the background treatment below was removed by the Sep 2026 redesign)
 **State:** Fully bilingual EN/AR, responsive, RTL. 16 HTML pages. Blog = 5 articles. WhatsApp quote
