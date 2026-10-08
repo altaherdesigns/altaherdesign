@@ -6,7 +6,7 @@
 > equivalent page/section as your template so nav, footer, schema, and styling stay identical.
 >
 > **Repo:** `altaherdesigns/altaherdesign` · **Live:** https://altaherdesign.ae
-> **Hosting:** Cloudflare Pages, auto-deploys from `main` (no build step) · **§2 to §8 updated for the Sep 2026 redesign on 28 Sep 2026; other sections last reconciled 14 Jun 2026.**
+> **Hosting:** Cloudflare Pages, auto-deploys from `main` (no build step) · **§2 to §8 updated for the Sep 2026 redesign on 28 Sep 2026; §2 to §4, §7 and §8c updated 6 Oct 2026 for the technical SEO and speed pass; other sections last reconciled 14 Jun 2026.**
 
 ---
 
@@ -60,27 +60,31 @@ pergola/shed, powder coating, mall kiosks/retail counters.
 /ar/ + /ar/about/ /ar/services/ /ar/portfolio/ /ar/contact/              ← AR (RTL mirror)
 /blog/<slug>/index.html                ← 40 articles; 19 mirrored at /ar/blog/<slug>/ (see EN-AR-ARTICLE-MAP.md)
 /assets/css/main.src.css  (readable source, numbered sections) → minified to main.css
-/assets/css/main.css      (ALL styling, minified) + rtl.css (Arabic only)
+/assets/css/main.css      (ALL styling, minified; the Arabic RTL rules are section 29, there is no rtl.css any more)
+/assets/fonts/            (self-hosted woff2: Fraunces, Outfit, Cairo, plus their OFL licence files)
 /assets/js/main.js        (menu, language toggle, villa hotspots and draw in, WhatsApp form, portfolio filter + lightbox, FAQ toggles)
-/assets/images/logo.png   /assets/images/blog/*.webp   /assets/images/og/*.jpg
+/assets/images/logo.png (schema, OG, favicon)   logo-120.webp (header and footer)   /assets/images/blog/*.webp   /assets/images/og/*.jpg
 /sitemap.xml  /robots.txt  /_redirects  /_headers  /404.html  /site.webmanifest
 ```
 
 ## 3. Design system: "From the gate inward" (Sep 2026 redesign, match exactly)
 Homeowner first, phone first. The homepage walks through one villa from the gate inward; the teal villa band is the only bold element.
 - **Tokens** (`:root` in `assets/css/main.src.css`): `--teal:#2B5C62` (sampled from logo.png; primary buttons, villa band, footer) · `--teal-deep:#1F454A` (hover, pressed) · `--gold:#C9A84C` (thin rules, hotspots, focus ring on teal; never text on cream, 2.1:1) · `--cream:#F8F5F0` (page) · `--stone:#EDE6D8` (alternate sections) · `--ink:#1A1A1A` · `--ink-soft:#5C5650` · `--on-teal-soft:#CFD6D4` · `--wa:#25D366` (WhatsApp float only). `theme-color` = `#2B5C62`. The old green teal `#0d6e5e` must not come back anywhere.
-- **Fonts:** Fraunces 400 (headings: upright, sentence case, one weight, SOFT axis via `font-variation-settings`), Outfit 400/500/600 (body and UI), Cairo 400/500/600 (all Arabic text). EN pages load Fraunces + Outfit; AR pages load Cairo + Outfit.
+- **Fonts (self-hosted since 6 Oct 2026; never load Google Fonts again):** Fraunces 400 (headings: upright, sentence case, one weight), Outfit 400 to 600 (body and UI), Cairo (all Arabic text). Files are in `/assets/fonts/` and declared with `@font-face` (`font-display:swap`, `unicode-range`) in section 0 of `main.src.css`. Fraunces is a static instance with SOFT 50 and WONK 0 baked in (optical size axis kept), so the `"SOFT" 40/60` values in the CSS no longer change anything; to vary softness, rebuild the woff2 with fontTools `instancer`. EN pages preload `fraunces-latin-400.woff2` and `outfit-latin.woff2`; AR pages preload `cairo-arabic.woff2`. The language toggle word is styled so EN pages never download Cairo and AR pages never download Outfit.
 - **Type:** body 17px on phones, 18px from 1024px, line height 1.6, measure 68ch, scale about 1.25 (`--fs-*` tokens). The homepage hero H1 is the only very large type.
 - **Never:** numbered eyebrows ("01 — Our Services"), numbered or bordered card grids, card shadows, italic accent words in headings, tracked ALL CAPS labels, stat bars, arrows appended to links, " · " strings, em dashes in copy, sliders, pattern backgrounds (the mashrabiya motif is retired).
 - **Components:** radius 0 on photos, 2px on buttons and inputs (`--r-btn`). Primary button: teal fill, cream text. Secondary: underlined text link. Separate sections with space and the stone background.
 - **Motion:** only the homepage villa drawing (draws in once, about 1.2s). Everything honours `prefers-reduced-motion`.
 - **Photos:** our own work only, Drive lh3 URLs with a `=w600/=w900/=w1200/=w1600` srcset, `width` + `height` always, `loading="lazy"` except the hero (`fetchpriority="high"`), consistent aspect ratios.
 - **Accessibility:** text contrast at least 4.5:1, visible focus everywhere (gold on teal), real `<button>`s for controls. axe run 28 Sep 2026: 0 violations on home, service, blog, about, services, portfolio, contact and 404 pages, EN and AR, at 390px and 1440px.
-- Logo: `/assets/images/logo.png` (teal oval, gold border).
+- Logo: `/assets/images/logo.png` (teal oval, gold border; used by schema, OG and the favicon). The header and footer show `/assets/images/logo-120.webp` (120px, about 11 KB).
 
 ## 4. Conventions every page must follow (copy verbatim from an existing page)
-- `<head>`: charset, viewport, unique `<title>` (≤~60 chars), meta description (~150–160 chars), canonical (https non-www trailing-slash), hreflang pair, OG + Twitter tags, fonts preconnect + stylesheet, favicon, `theme-color`, then `/assets/css/main.css?v=YYYYMMDD` (plus `/assets/css/rtl.css?v=…` on /ar/ pages).
-- **Cache busting:** `_headers` caches `/assets/*` as immutable for a year, so every CSS or JS change must bump the `?v=` date on every page (current: `v=2026092802`). Edit `main.src.css`, re-minify to `main.css` (for example `npx clean-css-cli -O1 -o main.css main.src.css`), keep braces balanced.
+- `<head>`: charset, viewport, unique `<title>` (≤~60 chars), meta description (~150–160 chars), robots, canonical (https non-www trailing-slash), hreflang, OG + Twitter tags, the lh3 preconnect (no `crossorigin`: Drive images are not CORS requests), icons, `theme-color`, font preloads, `/assets/css/main.css?v=…`, the Ahrefs analytics tag (async) and the GA snippet, and all JSON-LD blocks last.
+- **hreflang on every page:** `en-AE`, `ar-AE` and `x-default` (pointing at the English URL) on both pages of an EN/AR pair, each returning the other. An English page without an Arabic twin lists itself as `en-AE` and `x-default`. When an Arabic mirror is added, update the English page's hreflang in the same commit.
+- **OG and Twitter set on every indexable page:** `og:type`, `og:site_name` ("Al Taher Group" / "مجموعة الطاهر"), `og:url`, `og:title`, `og:description`, `og:image`, `og:locale` (`en_AE` / `ar_AE`) and `og:locale:alternate` only when a twin exists; `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`. OG images are our own photos (no stock).
+- **Google Analytics** (`G-QJT5EGEXTJ`): the inline snippet defines `gtag()` and injects gtag.js only after the window `load` event, so analytics never competes with the first render. Keep that snippet; do not paste Google's default async tag back in.
+- **Cache busting:** `_headers` caches `/assets/*` as immutable for a year, so every CSS or JS change must bump the `?v=` date on every page (current: `v=2026100601`). Never add `Cache-Control` to the `/*` block of `_headers`: Pages joins same-name headers from overlapping rules with a comma, assets then get `max-age=0, …, max-age=31536000` and browsers obey the first value (that bug made every view re-check every asset until 6 Oct 2026). Edit `main.src.css`, re-minify to `main.css` (for example `npx clean-css-cli -O1 -o main.css main.src.css`), keep braces balanced.
 - **Header** (`.site-header`): logo, nav Services / Our work / About / Blog / Contact (current page gets `aria-current="page"`), language toggle, primary button "Book a free site visit". Below 1080px the nav sits behind the "Menu" button (`.menu-toggle` opens `#site-menu`); no numbering.
 - **Footer** (`.site-footer`, teal): brand blurb; phone, email, hours and address once each; Services, Areas we serve, Company (incl. Instagram, TikTok, YouTube); trade line "Contractors and fit out firms: trade enquiries" linking to `/steel-fabrication-fujairah/`; bottom line naming both licensed divisions. The WhatsApp float (`.wa-float`, WhatsApp green) sits inside `<footer>`.
 - **CTA wording everywhere:** "Book a free site visit", opening WhatsApp prefilled "I would like to book a free site visit" (AR: "أرغب في حجز زيارة موقع مجانية").
@@ -89,7 +93,7 @@ Homeowner first, phone first. The homepage walks through one villa from the gate
 - WhatsApp links: `https://wa.me/971506499697?text=…` (URL encoded) + `target="_blank" rel="noopener nofollow"`.
 - Images: always `width`, `height`, `alt`, `loading="lazy"` (except the hero).
 
-**Schema (JSON-LD):** site-wide `LocalBusiness`+`GeneralContractor` node `@id https://altaherdesign.ae/#business` with `sameAs` (Instagram + TikTok + YouTube). Blog posts use a `@graph`: `BreadcrumbList` + `Article` + `FAQPage`; `Article.publisher` → `{"@id":"https://altaherdesign.ae/#business"}`.
+**Schema (JSON-LD):** every page carries the `Organization` node `@id https://altaherdesign.ae/#organization`; the homepage, about, contact, service and area pages also carry the `LocalBusiness`+`GeneralContractor` node `@id https://altaherdesign.ae/#business` (with `image` and `sameAs`: Instagram + TikTok + YouTube). Blog posts use a `@graph`: `BreadcrumbList` + `Article` (with `mainEntityOfPage`) + `FAQPage`. Google does not follow an `@id` to another page, so every `{"@id":…}` reference must point at a node defined on the same page; blog posts point `publisher` at `#organization`.
 
 ## 5. Blog — the primary SEO engine
 No Fujairah competitor has a functioning website, so well-targeted articles rank fast.
@@ -133,6 +137,8 @@ Currently **117 URLs** (5 Oct 2026). Resubmit in GSC after any page-set change.
 10. No frameworks / build steps. Static, hand-built.
 11. **Copy rules (owner's standing instructions):** no em dashes and no hyphens as connectors in copy; no external links in content (one exception, approved by the owner on 5 Oct 2026: followed links to the group brand hafr.ae, Hafr / حفر, exterior metal signage for villas, parent Al Taher Group); never name a competitor; never claim certified welders; Kalba and Khorfakkan belong to Sharjah, so write "the east coast towns of Kalba and Khorfakkan", never inside a seven emirates list and never as part of Fujairah; uPVC is complementary to aluminium; every photo is presented as our own work; laser cutting goes to partners (CNC cutting is in house); double glazing only; CAD designs on request.
 12. Bump the `?v=` asset version on every CSS or JS change (see §4).
+13. Speed: no Google Fonts or other third party CSS, fonts stay self-hosted and preloaded, GA stays deferred to `load`, `Cache-Control` only on `/assets/*` and the feeds in `_headers`, every image keeps `width` and `height`.
+14. Every page keeps the full hreflang, OG and Twitter set from §4, and every JSON-LD `@id` reference resolves on the same page.
 
 ## 8. CURRENT STATE (28 Sep 2026): the "From the gate inward" redesign
 - Visual and UX redesign for homeowners (brief: `claude/WEBSITE-REDESIGN-HOMEOWNER-BRIEF-2026-09.md` in the claude.ai project). Homepage: A photo hero, B teal villa band (inline SVG, six gold hotspot buttons, six panels), C one workshop, D finished villas, E four steps, F Google reviews + WhatsApp form, G teal footer. Mirrored on /ar/ (the drawing is never flipped).
@@ -143,10 +149,20 @@ Currently **117 URLs** (5 Oct 2026). Resubmit in GSC after any page-set change.
 - Unchanged by design: JSON-LD (except that one hours answer), titles, meta descriptions, canonicals, hreflang, OG/Twitter, robots, `_redirects`, `_headers`. The sitemap only gained the three new URLs.
 - Later on 28 Sep 2026: hero photo is now `complete-project-al-taher-fujairah-02` (Drive `1kgFMq_fHjS1UPZA4UhG8Lrmk9Z9dhsNq`, the owner's pick). It is portrait, so from 900px up it sits on the far side of the hero and fades into the dark text side (mirrored on /ar/). Finished villas now show photos 12, 10 and 05 from the Drive folder "Complete projects" (18 single photos, no place or scope recorded per villa). The powder coating pages (EN and AR) gained a 16 colour RAL chart drawn from standard RAL Classic values (no copied images). Asset version bumped to `v=2026092802`.
 - Photo rule (from the redesign brief: "our own work only, from Drive"): pictures from supplier blogs, colour chart sites or Google Images are not used on the site.
-- Open items: workshop and curing oven photos (owner shooting them) for homepage section C and the powder coating process section; OG images still use Pexels; Arabic mirrors for 21 articles; a few older pages still place Kalba inside Fujairah ("across the emirate") and need a copy pass that also touches JSON-LD.
+- Open items: workshop and curing oven photos (owner shooting them) for homepage section C and the powder coating process section; Arabic mirrors for 21 articles; a few older pages still place Kalba inside Fujairah ("across the emirate") and need a copy pass that also touches JSON-LD.
 
 ## 8a. 5 Oct 2026 additions
 - New articles, EN + AR together: `car-parking-shade-uae` (targets car parking shade, car shade, car shed, parking shed; AR مظلات سيارات, تركيب مظلات سيارات) and `hafr-house-name-plates` (launch post for the group brand Hafr, with followed links to hafr.ae). EN pages carry proper hreflang alternates. Inbound links added from `services/pergolas-shades` (EN, AR), `pergola-guide-uae` (EN, AR) and `metal-gate-designs-uae` (EN, AR). Price line "most villa car shades AED 5,000 to 25,000" reuses the carport range already published in `pergola-guide-uae`; owner to confirm.
+
+## 8c. 6 Oct 2026: technical SEO and speed pass
+- **hreflang:** added to the 23 English pages that had none (13 with an Arabic twin, 10 English only); every page now has a complete, return linked set (§4).
+- **Metadata:** `og:site_name` on all 117 indexable pages, `og:locale` where missing, `og:locale:alternate` removed from 26 pages that have no twin, missing Twitter tags added on 10 pages, homepage Twitter title and description replaced (they still carried the old tagline), last Pexels OG image (`aluminium-windows-villa-uae`) replaced with our own Drive photo, Hafr post description cut to 158 characters, Arabic blog index title rewritten.
+- **Schema:** dangling `#business` references pointed at `#organization` on the 7 pages without that node, `#website` inlined on /ar/, `mainEntityOfPage` added to 4 articles, `image` added to the LocalBusiness node on 47 pages, Hafr publisher logo added.
+- **Speed:** fonts self-hosted (the render blocking Google Fonts stylesheet and the font downloads from a second domain are gone from every page), `rtl.css` merged into `main.css` (one request fewer on /ar/), GA loads after `load`, header and footer logo is an 11 KB webp instead of the 25 KB png, JSON-LD moved to the end of `<head>`, empty lightbox `src` removed (invalid markup that audit tools flag), lh3 preconnect fixed.
+- **Caching and security:** `_headers` rewritten (assets are cached for a year now, see §4), HSTS added, `.md` working docs sent `noindex` and `no-store`; `robots.txt` also disallows `EN-AR-ARTICLE-MAP.md`.
+- **Accessibility:** empty table header cell on `car-parking-shade-uae` named "Factor"; axe clean on the 10 page sample at 390px and 1440px.
+- Asset version `v=2026100601`.
+- Still open: 77 meta descriptions and 14 titles still contain em dashes (written before the copy rules; the Sep redesign deliberately left head tags alone). Clean them in one pass when the owner agrees.
 
 ## 8b. June 2026 state & changelog (historical; the background treatment below was removed by the Sep 2026 redesign)
 **State:** Fully bilingual EN/AR, responsive, RTL. 16 HTML pages. Blog = 5 articles. WhatsApp quote

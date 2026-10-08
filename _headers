@@ -1,30 +1,28 @@
-# Cloudflare Pages headers — performance & security
+# Cloudflare Pages headers: performance and security
+#
+# How Pages combines rules: a request inherits the headers of EVERY rule whose
+# pattern matches it, and when two matching rules set the same header the
+# values are joined with a comma. So Cache-Control must never be set in /*
+# as well as in /assets/*: assets would get "max-age=0, must-revalidate, ...,
+# max-age=31536000, immutable" and browsers read the first max-age (0), which
+# made every page view re-check every CSS, JS, font and image file.
+#
+# HTML pages get the Pages default (public, max-age=0, must-revalidate).
 
-# Default: HTML pages. Clean URLs (/services/metal-gates/) are served as HTML,
-# so this must be /* rather than /*.html — the old rule never matched a real
-# page request. stale-while-revalidate serves instantly from cache while
-# refreshing in the background.
 /*
-  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=31536000
 
-# Fingerprint-free static assets — safe to cache hard, they change by filename
+# Static assets: cached for a year. CSS and JS are referenced as ?v=YYYYMMDDNN,
+# so bump that number on every CSS or JS change. Fonts and images change name
+# when they change.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-/assets/css/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/js/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/images/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Feeds and maps — short cache, they change with content
+# Feeds and maps: short cache, they change with content
 /sitemap.xml
   Cache-Control: public, max-age=3600
 /robots.txt

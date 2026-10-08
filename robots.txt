@@ -8,6 +8,7 @@ Disallow: /CLAUDE.md
 Disallow: /KEYWORD-STRATEGY.md
 Disallow: /README.md
 Disallow: /DEPLOY.md
+Disallow: /EN-AR-ARTICLE-MAP.md
 
 # Sitemap
 Sitemap: https://altaherdesign.ae/sitemap.xml
