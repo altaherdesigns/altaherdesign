@@ -1,8 +1,10 @@
 # English → Arabic article map
 
-**19 of 40 mirrored.** English is the source of truth; any Arabic page without an English counterpart is removed.
+**23 of 44 mirrored.** English is the source of truth; any Arabic page without an English counterpart is removed.
 
-Updated 9 Oct 2026: added `custom-wardrobes-fujairah`, `aluminium-glass-khorfakkan-kalba` and `gate-name-plate-planning`, published in English and Arabic together. (5 Oct 2026: `car-parking-shade-uae` and `hafr-house-name-plates`.)
+Updated 18 Oct 2026: added `blacksmith-fujairah` (Arabic led, targets حداد في الفجيرة), English and Arabic together.
+
+Earlier, 9 Oct 2026: added `custom-wardrobes-fujairah`, `aluminium-glass-khorfakkan-kalba` and `gate-name-plate-planning`, published in English and Arabic together. (5 Oct 2026: `car-parking-shade-uae` and `hafr-house-name-plates`.)
 
 Earlier, 28 Sep 2026: added the three English articles published that day (`custom-welding-fujairah`, `marble-countertops-fujairah`, `metal-fabrication-companies-uae`).
 
@@ -51,6 +53,7 @@ Earlier, 28 Sep 2026: added the three English articles published that day (`cust
 | 41 | `custom-wardrobes-fujairah`<br>Custom Wardrobes in Fujairah: Hinged, Sliding or Walk In | ✅ | خزائن ملابس حسب الطلب في الفجيرة |
 | 42 | `aluminium-glass-khorfakkan-kalba`<br>Aluminium and Glass in Khorfakkan and Kalba | ✅ | الألمنيوم والزجاج في خورفكان وكلباء |
 | 43 | `gate-name-plate-planning`<br>A Name Plate for Your Gate: What to Plan First | ✅ | لوحة اسم لبوابتك: ما الذي تخطط له قبل صنع البوابة |
+| 44 | `blacksmith-fujairah`<br>Blacksmith in Fujairah: Gates, Railings and Steel Work | ✅ | حداد في الفجيرة: بوابات ودرابزين وأعمال حديد |
 
 ## Remaining 21
 
