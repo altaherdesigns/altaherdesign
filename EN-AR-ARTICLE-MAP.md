@@ -1,8 +1,10 @@
 # English → Arabic article map
 
-**23 of 44 mirrored.** English is the source of truth; any Arabic page without an English counterpart is removed.
+**24 of 45 mirrored.** English is the source of truth; any Arabic page without an English counterpart is removed.
 
-Updated 18 Oct 2026: added `blacksmith-fujairah` (Arabic led, targets حداد في الفجيرة), English and Arabic together.
+Updated 28 Oct 2026: added `window-tinting-fujairah` (targets window tinting Fujairah and تظليل زجاج النوافذ), English and Arabic together.
+
+Earlier, 18 Oct 2026: added `blacksmith-fujairah` (Arabic led, targets حداد في الفجيرة), English and Arabic together.
 
 Earlier, 9 Oct 2026: added `custom-wardrobes-fujairah`, `aluminium-glass-khorfakkan-kalba` and `gate-name-plate-planning`, published in English and Arabic together. (5 Oct 2026: `car-parking-shade-uae` and `hafr-house-name-plates`.)
 
@@ -54,6 +56,7 @@ Earlier, 28 Sep 2026: added the three English articles published that day (`cust
 | 42 | `aluminium-glass-khorfakkan-kalba`<br>Aluminium and Glass in Khorfakkan and Kalba | ✅ | الألمنيوم والزجاج في خورفكان وكلباء |
 | 43 | `gate-name-plate-planning`<br>A Name Plate for Your Gate: What to Plan First | ✅ | لوحة اسم لبوابتك: ما الذي تخطط له قبل صنع البوابة |
 | 44 | `blacksmith-fujairah`<br>Blacksmith in Fujairah: Gates, Railings and Steel Work | ✅ | حداد في الفجيرة: بوابات ودرابزين وأعمال حديد |
+| 45 | `window-tinting-fujairah`<br>Window Tinting in Fujairah: Heat, Privacy and Cost | ✅ | تظليل زجاج النوافذ في الفجيرة: عازل حراري وخصوصية |
 
 ## Remaining 21
 

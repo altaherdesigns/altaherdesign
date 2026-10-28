@@ -59,7 +59,7 @@ pergola/shed, powder coating, mall kiosks/retail counters.
 ```
 / (index.html)  /about/  /services/  /portfolio/  /blog/  /contact/      ← EN
 /ar/ + /ar/about/ /ar/services/ /ar/portfolio/ /ar/contact/              ← AR (RTL mirror)
-/blog/<slug>/index.html                ← 40 articles; 19 mirrored at /ar/blog/<slug>/ (see EN-AR-ARTICLE-MAP.md)
+/blog/<slug>/index.html                ← 45 articles; 24 mirrored at /ar/blog/<slug>/ (see EN-AR-ARTICLE-MAP.md)
 /assets/css/main.src.css  (readable source, numbered sections) → minified to main.css
 /assets/css/main.css      (ALL styling, minified; the Arabic RTL rules are section 29, there is no rtl.css any more)
 /assets/fonts/            (self-hosted woff2: Fraunces, Outfit, Cairo, plus their OFL licence files)
@@ -100,7 +100,7 @@ Homeowner first, phone first. The homepage walks through one villa from the gate
 
 ## 5. Blog — the primary SEO engine
 No Fujairah competitor has a functioning website, so well-targeted articles rank fast.
-**43 English articles** (9 Oct 2026); 22 have Arabic mirrors at `/ar/blog/<same slug>/`.
+**45 English articles** (28 Oct 2026); 24 have Arabic mirrors at `/ar/blog/<same slug>/`.
 Track mirrors in `EN-AR-ARTICLE-MAP.md` (repo root). English is the source of truth.
 
 **House style:** honest, specific, Fujairah-grounded, from real workshop experience. Each post:
@@ -117,7 +117,7 @@ Good untapped long-tail targets: `stair railing cost UAE`, `glass partition cost
 ## 6. Sitemap rules
 `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` — **never** revert to `http://sitemaps.org`
 (that bug got the sitemap rejected; it is fixed). All `<loc>` = https/non-www/trailing-slash.
-Currently **123 URLs** (9 Oct 2026). Resubmit in GSC after any page-set change.
+Currently **127 URLs** (28 Oct 2026). Resubmit in GSC after any page-set change.
 
 ## 7. HARD RULES / guardrails (break these = break the site or SEO)
 1. Sitemap namespace = `http://www.sitemaps.org/schemas/sitemap/0.9`. Never revert.
@@ -178,6 +178,14 @@ Currently **123 URLs** (9 Oct 2026). Resubmit in GSC after any page-set change.
 - **Booking forms** (home and contact): the first line names the chosen part ("I need a quote for a kitchen. I would like to book a free site visit."); the part options now have ids as values; the villa list, if any, is added as a last line; a submit also counts as `whatsapp_click` (link_text "booking form").
 - **My villa list** (homepage, built by main.js, nothing without JS): a tick on each part panel ("Add to my villa list") and under each photo ("Save"). Parts on the list turn gold in the drawing and their hotspot shows a check. The list sits under the drawing on desktop (it stays in view with it) and after the open panel on phones; "Send my list on WhatsApp" sends one message with the parts in villa order and the saved photos. Kept in localStorage `atg_villa_list` for 60 days, on that device only. Every other page shows a small "My villa list (n)" link back to `/#villa-list` while the list has something in it (on the homepage only once the villa band is out of view), in the corner opposite the WhatsApp button. GA4: `villa_list_add`, `villa_list_remove`, `villa_list_clear`, `villa_list_send`, `villa_list_chip`.
 - Asset version `v=2026100902`.
+
+## 8f. 18 to 28 Oct 2026: blacksmith and window tinting articles, homepage meta, gate keywords
+- **18 Oct 2026 (separate session):** new article `blacksmith-fujairah` in EN and AR (blog index cards, sitemap, inbound links from `/fujairah/`, `/services/metal-fabrication/` and their Arabic twins, `custom-welding-fujairah`, llms.txt); the "عربي" toggle on blog posts with an Arabic twin now opens that twin instead of `/ar/`.
+- **Homepage meta (28 Oct 2026, from the SEO doc "SEO Optimized Meta Title And Description"):** title "Metal Works & Fabrication in Fujairah | Al Taher Group" (54 characters) and description "Looking for metal works in Fujairah? Al Taher Group offers custom gates, aluminium windows, WPC doors, glass and marble works. Since 1984. Call today!" (150 characters), in `<title>`, meta description, OG, Twitter and the WebPage node. Target phrase: "metal works Fujairah". The Arabic homepage is unchanged.
+- **Gate keywords (28 Oct 2026, from the SEO doc "Metal gates | Content Optimization"):** `services/metal-gates/` carries six sentences placed by the SEO team for metal gates Dubai, steel gate, gate door, house gate, door gate, gate door design, metal gates manufacture, modern metal side gates and "what is the best paint for metal gates". Keep them when editing the page. One sits in the FAQ answer "How long does a custom gate take?", and the FAQPage JSON-LD matches it word for word. The Arabic gates page is unchanged (English keywords).
+- **Window tinting article (28 Oct 2026, from the ready copy "Window tinting article: window-tinting-fujairah")**: `window-tinting-fujairah` in EN and AR, category Glass works. Owner facts: film on existing glass, three types (heat rejection, reflective or mirror, frosted privacy; not safety film), from AED 45 per square metre (unit assumed square metre until the owner confirms), warranty depends on the film and is written into the quotation. Cards at the top of both blog indexes, both URLs in the sitemap, llms.txt Guides, article map row 45, and one inbound sentence before the FAQ on `services/glass-works`, `double-glazed-windows-uae` and `glass-works-fujairah-guide` (EN and AR). WhatsApp topic "window tinting" / "لتظليل زجاج النوافذ"; Claude's `wa_topics.py` now also maps `blacksmith-fujairah` ("metal work" / "لأعمال حدادة"), so a full run no longer resets that page.
+- Sitemap lastmod 2026-10-28 for `/` and `/services/metal-gates/`. No CSS or JS change, so the asset version stays `v=2026100902`.
+- Em dashes left in head tags: 14 titles and 72 meta descriptions (the homepage ones are gone).
 
 ## 8b. June 2026 state & changelog (historical; the background treatment below was removed by the Sep 2026 redesign)
 **State:** Fully bilingual EN/AR, responsive, RTL. 16 HTML pages. Blog = 5 articles. WhatsApp quote
