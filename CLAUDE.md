@@ -59,7 +59,7 @@ pergola/shed, powder coating, mall kiosks/retail counters.
 ```
 / (index.html)  /about/  /services/  /portfolio/  /blog/  /contact/      ← EN
 /ar/ + /ar/about/ /ar/services/ /ar/portfolio/ /ar/contact/              ← AR (RTL mirror)
-/blog/<slug>/index.html                ← 45 articles; 24 mirrored at /ar/blog/<slug>/ (see EN-AR-ARTICLE-MAP.md)
+/blog/<slug>/index.html                ← 47 articles; 26 mirrored at /ar/blog/<slug>/ (see EN-AR-ARTICLE-MAP.md)
 /assets/css/main.src.css  (readable source, numbered sections) → minified to main.css
 /assets/css/main.css      (ALL styling, minified; the Arabic RTL rules are section 29, there is no rtl.css any more)
 /assets/fonts/            (self-hosted woff2: Fraunces, Outfit, Cairo, plus their OFL licence files)
@@ -100,7 +100,7 @@ Homeowner first, phone first. The homepage walks through one villa from the gate
 
 ## 5. Blog — the primary SEO engine
 No Fujairah competitor has a functioning website, so well-targeted articles rank fast.
-**45 English articles** (28 Oct 2026); 24 have Arabic mirrors at `/ar/blog/<same slug>/`.
+**47 English articles** (30 Oct 2026); 26 have Arabic mirrors at `/ar/blog/<same slug>/`.
 Track mirrors in `EN-AR-ARTICLE-MAP.md` (repo root). English is the source of truth.
 
 **House style:** honest, specific, Fujairah-grounded, from real workshop experience. Each post:
@@ -117,7 +117,7 @@ Good untapped long-tail targets: `stair railing cost UAE`, `glass partition cost
 ## 6. Sitemap rules
 `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` — **never** revert to `http://sitemaps.org`
 (that bug got the sitemap rejected; it is fixed). All `<loc>` = https/non-www/trailing-slash.
-Currently **127 URLs** (28 Oct 2026). Resubmit in GSC after any page-set change.
+Currently **133 URLs** (30 Oct 2026). Resubmit in GSC after any page-set change.
 
 ## 7. HARD RULES / guardrails (break these = break the site or SEO)
 1. Sitemap namespace = `http://www.sitemaps.org/schemas/sitemap/0.9`. Never revert.
@@ -187,6 +187,17 @@ Currently **127 URLs** (28 Oct 2026). Resubmit in GSC after any page-set change.
 - Sitemap lastmod 2026-10-28 for `/` and `/services/metal-gates/`. No CSS or JS change, so the asset version stays `v=2026100902`.
 - Em dashes left in head tags: 14 titles and 72 meta descriptions (the homepage ones are gone).
 - **GA4 setup (29 Oct 2026, done in the GA4 admin):** key events `whatsapp_click`, `phone_click`, `email_click` (the photo and villa WhatsApp events are details of the same tap, so they are not key events); event data retention 14 months; saved comparison "Real visitors (city known)" (City is not empty) for reading reports without bots; Search Console was already linked (Jul 2026). October 1 to 28 before the fix: 557 sessions, 18 s average engagement; real visitors 382 sessions, 27 s; `/services` was 84 sessions at 5 s, of which 70 were bots with no city.
+
+## 8g. 30 Oct 2026: carpentry service page, kitchen renovation and kitchen ideas articles
+- **New service page `services/carpentry/` (EN + AR)**, built on `services/kitchens-joinery`. Targets carpentry work, carpenter, carpentry workshop, joinery and carpenter in Fujairah (AR أعمال النجارة, نجار, ورشة نجارة, نجار في الفجيرة, نجار في دبا الفجيرة). UAE wide copy, an east coast section (`#fujairah`) and a UAE section linking the area pages. Only facts already on the site: solid wood doors from our carpentry workshop, door refinishing (the before and after photo in the portfolio), wardrobes, TV walls, built in furniture, reception counters and timber screens, kitchens from AED 1,300 per running metre, 3 to 5 weeks plus 2 to 4 days, BWP plywood, WPC for wet rooms. Hero `wooden-door-al-taher-fujairah-01`, strip `svc-carpentry` (12 photos), 10 FAQs, Service `serviceType` "Carpentry and Joinery".
+- **Wiring:** "Carpentry" / "أعمال النجارة" in the footer Services list of every page, after Kitchens and joinery (13 service pages now); a tenth section `#carpentry` on both services hubs, with a jump link, and "Carpentry and Joinery" added to the hub Service `serviceType`; the homepage wardrobes panel link "See our joinery work" now opens the carpentry page (EN and AR); one line on `/fujairah/` and `/ar/fujairah/` ("Looking for a carpenter in Fujairah?"); a Services line in llms.txt.
+- **New articles (EN + AR), category Kitchens:** `kitchen-renovation-uae` (kitchen renovation UAE, Dubai and cost, replacing cabinet doors; AR تجديد المطبخ): three routes (refresh, replace on the same layout, new layout), how to check the carcasses, the market ranges already published in `fitted-kitchen-cost-uae`, and the order of work; hero `kitchen-glasswork-al-taher-fujairah-05`. `kitchen-design-ideas-uae` (kitchen ideas, kitchen design ideas, small kitchens, islands, modern, aluminium kitchens; AR تصميم مطابخ مودرن وصغيرة, مطابخ ألمنيوم): 15 numbered photos of our own kitchens, each with an "Ask about this kitchen" WhatsApp link (`a.strip__ask` in a `figure.strip--light`, so main.js counts the tap as `whatsapp_click` and `wa_topics.py` treats it as a photo link, label "Kitchen design ideas"). Cards at the top of both blog indexes, sitemap, llms.txt Guides, article map rows 46 and 47.
+- **Inbound links** (one sentence before the FAQ): `services/kitchens-joinery`, `services/upvc-wpc-doors`, `custom-wardrobes-fujairah` and `fitted-kitchen-cost-uae` (EN and AR), `wood-vs-aluminium-interior-uae` (EN).
+- **Share images** `wooden-door-al-taher-fujairah-01-og.jpg` and `kitchen-glasswork-al-taher-fujairah-05-og.jpg` were made from the 1200 derivatives (progressive JPEG, quality 82); `make_derivs.py` can rebuild them from the Images folder.
+- **WhatsApp topics** (Claude's `wa_topics.py`, run on the new pages only): carpentry "carpentry work" / "لأعمال النجارة", renovation "a kitchen renovation" / "لتجديد المطبخ", ideas "a new kitchen" / "لمطبخ جديد". Builder: Claude's `carpentry_kitchens.py`.
+- Sitemap: six new URLs (service pages 0.9 and 0.8, articles 0.6), lastmod 2026-10-30, also on `/services/` and `/ar/services/`. No CSS or JS change, so the asset version stays `v=2026100902`. axe clean on the six new pages and both hubs at 390px and 1280px; 7,857 internal links and 2,806 image references resolve.
+- Keyword evidence is Google UAE autocomplete only (no search volumes this time: the AdWhispr quota was used up and Chrome was offline); see `claude/KEYWORDS-CARPENTRY-KITCHENS-2026-10.md` in the claude.ai project.
+- Open for the owner: does kitchen installation include plumbing and electrical work? The Arabic services hub kitchen list says so ("تركيب كامل بما يشمل السباكة والكهرباء"); the English pages do not, so the new articles stay neutral. The Arabic services hub marble section has an empty description paragraph.
 
 ## 8b. June 2026 state & changelog (historical; the background treatment below was removed by the Sep 2026 redesign)
 **State:** Fully bilingual EN/AR, responsive, RTL. 16 HTML pages. Blog = 5 articles. WhatsApp quote

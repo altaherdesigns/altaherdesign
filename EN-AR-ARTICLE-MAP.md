@@ -1,8 +1,10 @@
 # English → Arabic article map
 
-**24 of 45 mirrored.** English is the source of truth; any Arabic page without an English counterpart is removed.
+**26 of 47 mirrored.** English is the source of truth; any Arabic page without an English counterpart is removed.
 
-Updated 28 Oct 2026: added `window-tinting-fujairah` (targets window tinting Fujairah and تظليل زجاج النوافذ), English and Arabic together.
+Updated 30 Oct 2026: added `kitchen-renovation-uae` (targets kitchen renovation and تجديد المطبخ) and `kitchen-design-ideas-uae` (targets kitchen design ideas, small kitchens and تصميم مطابخ), English and Arabic together.
+
+Earlier, 28 Oct 2026: added `window-tinting-fujairah` (targets window tinting Fujairah and تظليل زجاج النوافذ), English and Arabic together.
 
 Earlier, 18 Oct 2026: added `blacksmith-fujairah` (Arabic led, targets حداد في الفجيرة), English and Arabic together.
 
@@ -57,6 +59,8 @@ Earlier, 28 Sep 2026: added the three English articles published that day (`cust
 | 43 | `gate-name-plate-planning`<br>A Name Plate for Your Gate: What to Plan First | ✅ | لوحة اسم لبوابتك: ما الذي تخطط له قبل صنع البوابة |
 | 44 | `blacksmith-fujairah`<br>Blacksmith in Fujairah: Gates, Railings and Steel Work | ✅ | حداد في الفجيرة: بوابات ودرابزين وأعمال حديد |
 | 45 | `window-tinting-fujairah`<br>Window Tinting in Fujairah: Heat, Privacy and Cost | ✅ | تظليل زجاج النوافذ في الفجيرة: عازل حراري وخصوصية |
+| 46 | `kitchen-renovation-uae`<br>Kitchen Renovation in the UAE: Cost, Timeline and Options | ✅ | تجديد المطبخ في الإمارات: ماذا تُبقي وماذا تغيّر |
+| 47 | `kitchen-design-ideas-uae`<br>Kitchen Design Ideas for UAE Homes, From Kitchens We Built | ✅ | أفكار تصميم مطابخ من مطابخ نفذناها في الإمارات |
 
 ## Remaining 21
 
